@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--
+First FrontPanel Example
+Copyright (c) 2004, Opal Kelly Incorporated
+-->
+
+
+<resource version="2.3.0.1">
+<object class="okPanel" name="panel1">
+	<title>First FrontPanel Example</title>
+	<size>180,70</size>
+	<object class="okToggleButton">
+		<label>1</label>
+		<position>10,10</position>
+		<size>20,20</size>
+		<endpoint>0x00</endpoint>
+		<bit>0</bit>
+	</object>
+	<!-- LEDs -->
+	<object class="okLED">
+		<position>48,40</position>
+		<size>25,25</size>
+		<label>1</label>
+		<style>SQUARE</style>
+		<color>#00ff00</color>
+		<endpoint>0x20</endpoint>
+		<bit>0</bit>
+	</object>
+</object>
+</resource>
