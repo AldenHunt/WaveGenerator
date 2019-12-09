@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/ise_projects/Thesis/top.syr" 
