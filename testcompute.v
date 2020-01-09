@@ -43,7 +43,7 @@ module testcompute(
 	end
 	
 	sinetable sinl(
-		.phase(totalphase),
+		.phase(totalphase[15:2]),
 		.result(sineresult)
 	);
 	

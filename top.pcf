@@ -1,12 +1,10 @@
 //! **************************************************************************
-// Written by: Map P.20160913 on Thu Jan 09 00:35:40 2020
+// Written by: Map P.20160913 on Thu Jan 09 19:11:47 2020
 //! **************************************************************************
 
 SCHEMATIC START;
 CONFIG VCCAUX = "3.3";
 COMP "clk1" LOCATE = SITE "AB13" LEVEL 1;
-COMP "clk2" LOCATE = SITE "Y11" LEVEL 1;
-COMP "clk3" LOCATE = SITE "AB11" LEVEL 1;
 COMP "hi_inout<0>" LOCATE = SITE "AB12" LEVEL 1;
 COMP "hi_inout<1>" LOCATE = SITE "AA12" LEVEL 1;
 COMP "hi_inout<2>" LOCATE = SITE "Y13" LEVEL 1;

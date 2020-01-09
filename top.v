@@ -28,8 +28,8 @@ module top(
     inout wire hi_aa,
 	 
 	 input wire clk1,
-	 input wire clk2,
-	 input wire clk3,
+	 //input wire clk2,
+	 //input wire clk3,
 	 output wire [7:0] led
     );
 
