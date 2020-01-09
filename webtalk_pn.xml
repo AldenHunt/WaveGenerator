@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Mon Dec  9 05:30:30 2019">
+<application name="pn" timeStamp="Thu Jan  9 00:35:49 2020">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="CE4B518FB3276745A9332E0C3814A8B5" type="project"/>
-<property name="ProjectIteration" value="0" type="project"/>
+<property name="ProjectIteration" value="8" type="project"/>
 <property name="ProjectFile" value="/home/ise/ise_projects/Thesis/Thesis.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2019-12-09T03:03:38" type="project"/>
 </section>
@@ -18,6 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_ProjectDescription" value="All work for senior thesis." type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/testcompute_tb" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="HDL" type="design"/>
@@ -25,17 +26,21 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2019-12-09T03:03:38" type="design"/>
 <property name="PROP_intWbtProjectID" value="CE4B518FB3276745A9332E0C3814A8B5" type="design"/>
+<property name="PROP_intWbtProjectIteration" value="8" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
+<property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.testcompute_tb" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
-<property name="PROP_DevFamily" value="Automotive Spartan6" type="design"/>
-<property name="PROP_DevDevice" value="xa6slx4" type="design"/>
-<property name="PROP_DevFamilyPMName" value="aspartan6" type="design"/>
-<property name="PROP_DevPackage" value="csg225" type="design"/>
+<property name="PROP_DevFamily" value="Spartan6" type="design"/>
+<property name="PROP_DevDevice" value="xc6slx150" type="design"/>
+<property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
+<property name="PROP_DevPackage" value="fgg484" type="design"/>
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
-<property name="PROP_DevSpeed" value="-3" type="design"/>
+<property name="PROP_DevSpeed" value="-2" type="design"/>
 <property name="PROP_PreferredLanguage" value="Verilog" type="design"/>
-<property name="FILE_VERILOG" value="3" type="source"/>
+<property name="FILE_UCF" value="1" type="source"/>
+<property name="FILE_VERILOG" value="5" type="source"/>
 </section>
 </application>
 </document>

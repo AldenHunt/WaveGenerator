@@ -1,1 +1,2 @@
-verilog work "testadd.v"
+verilog work "sinetable.v"
+verilog work "testcompute.v"

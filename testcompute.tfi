@@ -1,0 +1,15 @@
+
+
+
+// Instantiate the module
+testcompute instance_name (
+    .amp(amp), 
+    .phaseoffset(phaseoffset), 
+    .deltat(deltat), 
+    .freq(freq), 
+    .clk(clk), 
+    .reset(reset), 
+    .result(result)
+    );
+
+

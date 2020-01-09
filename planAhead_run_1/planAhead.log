@@ -1,0 +1,109 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Jan  6 21:40:52 2020
+# Process ID: 2681
+# Log file: /home/ise/ise_projects/Thesis/planAhead_run_1/planAhead.log
+# Journal file: /home/ise/ise_projects/Thesis/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -981 day(s)
+INFO: [Device 21-36] Loading parts and site information from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [/opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source /home/ise/ise_projects/Thesis/pa.fromNetlist.tcl
+# create_project -name Thesis -dir "/home/ise/ise_projects/Thesis/planAhead_run_1" -part xa6slx4csg225-3
+# set_property design_mode GateLvl [get_property srcset [current_run -impl]]
+# set_property edif_top_file "/home/ise/ise_projects/Thesis/top.ngc" [ get_property srcset [ current_run ] ]
+# add_files -norecurse { {/home/ise/ise_projects/Thesis} }
+# set_param project.pinAheadLayout  yes
+# set_property target_constrs_file "top.ucf" [current_fileset -constrset]
+Adding file '/home/ise/ise_projects/Thesis/top.ucf' to fileset 'constrs_1'
+# add_files [list {top.ucf}] -fileset [get_property constrset [current_run]]
+# link_design
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+Design is defaulting to project part: xa6slx4csg225-3
+Release 14.7 - ngc2edif P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Release 14.7 - ngc2edif P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top.ngc ...
+WARNING:NetListWriters:298 - No output is written to top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+  finished :Prep
+Writing EDIF netlist file top.edif ...
+ngc2edif: Total memory usage is 105848 kilobytes
+
+Parsing EDIF File [./planAhead_run_1/Thesis.data/cache/top_ngc_574113cd.edif]
+Finished Parsing EDIF File [./planAhead_run_1/Thesis.data/cache/top_ngc_574113cd.edif]
+CRITICAL WARNING: [Designutils 20-1022] Could not resolve non-primitive black box cell 'okWireIn' instantiated in module 'ep00'.
+Resolution: File names need to match cell names: an EDIF definition will be found in okWireIn.edf; a HDL definition may be placed in any Verilog/VHDL file.
+CRITICAL WARNING: [Designutils 20-1022] Could not resolve non-primitive black box cell 'okWireOut' instantiated in module 'ep20'.
+Resolution: File names need to match cell names: an EDIF definition will be found in okWireOut.edf; a HDL definition may be placed in any Verilog/VHDL file.
+CRITICAL WARNING: [Designutils 20-1022] Could not resolve non-primitive black box cell 'okCoreHarness' instantiated in module 'okHI/core0'.
+Resolution: File names need to match cell names: an EDIF definition will be found in okCoreHarness.edf; a HDL definition may be placed in any Verilog/VHDL file.
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Loading clock regions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/aspartan6/xa6slx4/ClockRegion.xml
+Loading clock buffers from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/aspartan6/xa6slx4/ClockBuffers.xml
+Loading package pin functions from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/aspartan6/xa6slx4/csg225/Package.xml
+Loading io standards from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : /opt/Xilinx/14.7/ISE_DS/PlanAhead/data/./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [/home/ise/ise_projects/Thesis/top.ucf]
+Finished Parsing UCF File [/home/ise/ise_projects/Thesis/top.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  IOBUF => IOBUF (OBUFT, IBUF): 17 instances
+
+Phase 0 | Netlist Checksum: c92f40ce
+link_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2791.168 ; gain = 160.047
+refresh_design
+Parsing UCF File [/home/ise/ise_projects/Thesis/top.ucf]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y12 [/home/ise/ise_projects/Thesis/top.ucf:16]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB20 [/home/ise/ise_projects/Thesis/top.ucf:17]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB7 [/home/ise/ise_projects/Thesis/top.ucf:18]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB8 [/home/ise/ise_projects/Thesis/top.ucf:19]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA4 [/home/ise/ise_projects/Thesis/top.ucf:20]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB4 [/home/ise/ise_projects/Thesis/top.ucf:21]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y3 [/home/ise/ise_projects/Thesis/top.ucf:22]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB3 [/home/ise/ise_projects/Thesis/top.ucf:23]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y19 [/home/ise/ise_projects/Thesis/top.ucf:24]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA8 [/home/ise/ise_projects/Thesis/top.ucf:25]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB12 [/home/ise/ise_projects/Thesis/top.ucf:26]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA12 [/home/ise/ise_projects/Thesis/top.ucf:27]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y13 [/home/ise/ise_projects/Thesis/top.ucf:28]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB18 [/home/ise/ise_projects/Thesis/top.ucf:29]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA18 [/home/ise/ise_projects/Thesis/top.ucf:30]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site V15 [/home/ise/ise_projects/Thesis/top.ucf:31]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB2 [/home/ise/ise_projects/Thesis/top.ucf:32]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA2 [/home/ise/ise_projects/Thesis/top.ucf:33]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y7 [/home/ise/ise_projects/Thesis/top.ucf:34]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site Y4 [/home/ise/ise_projects/Thesis/top.ucf:35]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W4 [/home/ise/ise_projects/Thesis/top.ucf:36]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AB6 [/home/ise/ise_projects/Thesis/top.ucf:37]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA6 [/home/ise/ise_projects/Thesis/top.ucf:38]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site U13 [/home/ise/ise_projects/Thesis/top.ucf:39]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site U14 [/home/ise/ise_projects/Thesis/top.ucf:40]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site AA20 [/home/ise/ise_projects/Thesis/top.ucf:41]
+CRITICAL WARNING: [Designutils 20-30] Unrecognized site W11 [/home/ise/ise_projects/Thesis/top.ucf:42]
+Finished Parsing UCF File [/home/ise/ise_projects/Thesis/top.ucf]
+INFO: [Designutils 20-20] Invalid constraints found, use command 'write_ucf -constraints invalid <file>' to save all the invalid constraints to a file
+refresh_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2805.957 ; gain = 1.000
+exit
+ERROR: [#UNDEF] *** Exception: ui.h.b: Found deleted key in HTclEventBroker. Verify if the classes listed here call cleanup()
+HTclEvent: DEBUG_PORT_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: DEBUG_CORE_CONFIG_CHANGE   Classes: ui.views.aR 
+HTclEvent: SIGNAL_MODIFY   Classes: ui.views.aR 
+HTclEvent: SIGNAL_BUS_MODIFY   Classes: ui.views.aR 
+ (See /home/ise/ise_projects/Thesis/planAhead_pid2681.debug)
+ERROR: [Common 17-39] 'stop_gui' failed due to earlier errors.
+INFO: [Common 17-206] Exiting PlanAhead at Mon Jan  6 21:50:08 2020...
+INFO: [Common 17-83] Releasing license: PlanAhead

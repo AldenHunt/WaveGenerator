@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:24:36 MDT 2013
+# Start of session at: Mon Jan  6 21:54:17 2020
+# Process ID: 2978
+# Log file: /home/ise/ise_projects/Thesis/planAhead_run_2/planAhead.log
+# Journal file: /home/ise/ise_projects/Thesis/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source /home/ise/ise_projects/Thesis/pa.fromNetlist.tcl

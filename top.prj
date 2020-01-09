@@ -1,2 +1,4 @@
+verilog work "sinetable.v"
+verilog work "testcompute.v"
 verilog work "okLibrary.v"
 verilog work "top.v"

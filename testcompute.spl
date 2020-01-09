@@ -1,0 +1,13 @@
+[Inputs]
+clk
+reset
+=amp[15:0]=
+=phaseoffset[15:0]=
+=deltat[15:0]=
+=freq[15:0]=
+[Outputs]
+=result[15:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel testcompute
+
