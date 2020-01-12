@@ -20,19 +20,27 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module testcompute(
-    input wire [11:0] amp,
+    input wire signed [15:0] amp,
     input wire [15:0] phaseoffset,
 	 input wire [15:0] phaseadd,
 	 input wire clk,
 	 input wire reset,
-    output reg [11:0] result
+    output reg signed [15:0] result
     );
 
-	wire [11:0] sineresult;
+	wire signed [11:0] sineresult;
+	reg signed [15:0] signedsine;
+	reg signed [31:0] interimresult;
 	reg [15:0] totalphase;
 	
 	always@(*) begin
-		result = amp * sineresult;
+		signedsine = sineresult <<< 4;
+		interimresult = amp * signedsine;
+		if (interimresult == 32'h40000000) begin //Max value and only overflow into 31st bit
+			result = $signed(16'h7fff) >>> 5;
+		end else begin
+			result = $signed(interimresult[30:15]) >>> 5;
+		end
 	end
 	
 	always@(posedge clk) begin

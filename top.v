@@ -44,7 +44,7 @@ module top(
 	wire [15:0]  ep20wire;
 	
 	//Other variables
-	wire [11:0] finalSum;
+	wire [15:0] finalSum;
 	reg toSineClock;
 	reg [15:0] loops;
 	
@@ -74,7 +74,7 @@ module top(
 	end
 	
 	testcompute testc(
-		.amp(ep00wire[11:0]),
+		.amp(ep00wire),
 		.phaseoffset(ep01wire),
 		.phaseadd(ep02wire),
 		.clk(toSineClock),
@@ -82,8 +82,8 @@ module top(
 		.result(finalSum)
 	);
 	
-	assign ep20wire = {4'b0000, finalSum};
-	assign led = finalSum[11:4];
+	assign ep20wire = finalSum;
+	assign led = finalSum[10:3];
 	
 	okWireIn ep00 (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(ep00wire));
 	okWireIn ep01 (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(ep01wire));

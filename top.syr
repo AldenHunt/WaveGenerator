@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -247,13 +247,13 @@ Unit <okWireOR> synthesized.
 Synthesizing Unit <testcompute>.
     Related source file is "/home/ise/ise_projects/Thesis/testcompute.v".
     Found 16-bit register for signal <totalphase>.
-    Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_2_OUT> created at line 42.
-    Found 12x12-bit multiplier for signal <n0007> created at line 35.
+    Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_5_OUT> created at line 50.
+    Found 16x16-bit multiplier for signal <interimresult> created at line 38.
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <testcompute> synthesized.
 
 Synthesizing Unit <sinetable>.
@@ -270,15 +270,15 @@ Macro Statistics
 # RAMs                                                 : 1
  16384x12-bit single-port Read Only RAM                : 1
 # Multipliers                                          : 1
- 12x12-bit multiplier                                  : 1
+ 16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 2
  16-bit adder                                          : 1
  16-bit subtractor                                     : 1
 # Registers                                            : 3
  1-bit register                                        : 1
  16-bit register                                       : 2
-# Multiplexers                                         : 3
- 16-bit 2-to-1 multiplexer                             : 3
+# Multiplexers                                         : 4
+ 16-bit 2-to-1 multiplexer                             : 4
 
 =========================================================================
 
@@ -324,15 +324,15 @@ Macro Statistics
 # RAMs                                                 : 1
  16384x12-bit single-port distributed Read Only RAM    : 1
 # Multipliers                                          : 1
- 12x12-bit multiplier                                  : 1
+ 16x16-bit multiplier                                  : 1
 # Adders/Subtractors                                   : 1
  16-bit subtractor                                     : 1
 # Accumulators                                         : 1
  16-bit up loadable accumulator                        : 1
 # Registers                                            : 69
  Flip-Flops                                            : 69
-# Multiplexers                                         : 2
- 16-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 3
+ 16-bit 2-to-1 multiplexer                             : 3
 
 =========================================================================
 
@@ -392,18 +392,18 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 4019
+# BELS                             : 4037
 #      GND                         : 4
 #      INV                         : 47
 #      LUT1                        : 33
-#      LUT2                        : 84
+#      LUT2                        : 96
 #      LUT3                        : 102
-#      LUT4                        : 299
-#      LUT5                        : 450
-#      LUT6                        : 2465
+#      LUT4                        : 301
+#      LUT5                        : 451
+#      LUT6                        : 2469
 #      LUT6_2                      : 50
 #      MUXCY                       : 116
-#      MUXF7                       : 189
+#      MUXF7                       : 188
 #      MUXF8                       : 66
 #      VCC                         : 2
 #      XORCY                       : 112
@@ -450,17 +450,17 @@ Selected Device : 6slx150fgg484-2
 
 Slice Logic Utilization: 
  Number of Slice Registers:             702  out of  184304     0%  
- Number of Slice LUTs:                 3575  out of  92152     3%  
-    Number used as Logic:              3530  out of  92152     3%  
+ Number of Slice LUTs:                 3594  out of  92152     3%  
+    Number used as Logic:              3549  out of  92152     3%  
     Number used as Memory:               45  out of  21680     0%  
        Number used as RAM:               44
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3940
-   Number with an unused Flip Flop:    3238  out of   3940    82%  
-   Number with an unused LUT:           365  out of   3940     9%  
-   Number of fully used LUT-FF pairs:   337  out of   3940     8%  
+ Number of LUT Flip Flop pairs used:   3959
+   Number with an unused Flip Flop:    3257  out of   3959    82%  
+   Number with an unused LUT:           365  out of   3959     9%  
+   Number of fully used LUT-FF pairs:   337  out of   3959     8%  
    Number of unique control sets:        57
 
 IO Utilization: 
@@ -510,9 +510,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 7.715ns (Maximum Frequency: 129.618MHz)
+   Minimum period: 9.308ns (Maximum Frequency: 107.434MHz)
    Minimum input arrival time before clock: 7.073ns
-   Maximum output required time after clock: 19.957ns
+   Maximum output required time after clock: 24.190ns
    Maximum combinational path delay: 1.328ns
 
 Timing Details:
@@ -545,7 +545,7 @@ Delay:               4.641ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'toSineClock'
-  Clock period: 4.517ns (frequency: 221.389MHz)
+  Clock period: 4.517ns (frequency: 221.402MHz)
   Total number of paths / destination ports: 256 / 16
 -------------------------------------------------------------------------
 Delay:               4.517ns (Levels of Logic = 12)
@@ -558,7 +558,7 @@ Delay:               4.517ns (Levels of Logic = 12)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q            1569   0.525   3.034  testc/totalphase_5 (testc/totalphase_5)
+     FD:C->Q            1568   0.525   3.033  testc/totalphase_5 (testc/totalphase_5)
      LUT4:I0->O            1   0.254   0.000  testc/Maccum_totalphase_lut<5> (testc/Maccum_totalphase_lut<5>)
      MUXCY:S->O            1   0.215   0.000  testc/Maccum_totalphase_cy<5> (testc/Maccum_totalphase_cy<5>)
      MUXCY:CI->O           1   0.023   0.000  testc/Maccum_totalphase_cy<6> (testc/Maccum_totalphase_cy<6>)
@@ -573,32 +573,35 @@ Delay:               4.517ns (Levels of Logic = 12)
      XORCY:CI->O           1   0.206   0.000  testc/Maccum_totalphase_xor<15> (Result<15>)
      FD:D                      0.074          testc/totalphase_15
     ----------------------------------------
-    Total                      4.517ns (1.483ns logic, 3.034ns route)
+    Total                      4.517ns (1.483ns logic, 3.033ns route)
                                        (32.8% logic, 67.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hi_in<0>'
-  Clock period: 7.715ns (frequency: 129.618MHz)
-  Total number of paths / destination ports: 18632 / 1593
+  Clock period: 9.308ns (frequency: 107.434MHz)
+  Total number of paths / destination ports: 27992 / 1597
 -------------------------------------------------------------------------
-Delay:               7.715ns (Levels of Logic = 3)
-  Source:            okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
-  Destination:       okHI/core0/core0/a0/atmel_status_fuses_19 (FF)
+Delay:               9.308ns (Levels of Logic = 5)
+  Source:            ep00/ep_dataout_15 (FF)
+  Destination:       ep20/wirehold_0 (FF)
   Source Clock:      hi_in<0> rising
   Destination Clock: hi_in<0> rising
 
-  Data Path: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/atmel_status_fuses_19
+  Data Path: ep00/ep_dataout_15 to ep20/wirehold_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB16BWER:CLKA->DOA7   16   2.100   1.181  core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (core0/a0/pico_instr<7>)
-     LUT6_2:I3->O5        10   0.214   1.284  core0/a0/pc0/data_path_loop[6].output_data.sy_kk_mux_lut (core0/a0/pico_port_id<6>)
-     LUT5:I1->O            5   0.254   0.841  core0/a0/_n0189_inv11 (core0/a0/_n0189_inv1)
-     LUT5:I4->O           20   0.254   1.285  core0/a0/_n0210_inv1 (core0/a0/_n0210_inv)
-     FDE:CE                    0.302          core0/a0/atmel_status_fuses_0
+     FDRE:C->Q             3   0.525   0.765  ep_dataout_15 (ep_dataout<15>)
+     end scope: 'ep00:ep_dataout<15>'
+     DSP48A1:B15->M18      1   3.894   1.137  testc/Mmult_interimresult (testc/interimresult<18>)
+     LUT6:I0->O            1   0.254   1.112  testc/amp[15]_GND_13_o_equal_2_o<31>4 (testc/amp[15]_GND_13_o_equal_2_o<31>3)
+     LUT6:I1->O           11   0.254   1.039  testc/amp[15]_GND_13_o_equal_2_o<31>7 (testc/amp[15]_GND_13_o_equal_2_o)
+     LUT2:I1->O            7   0.254   0.000  finalSum<11>1 (finalSum<11>)
+     begin scope: 'ep20:ep_datain<15>'
+     FDRE:D                    0.074          wirehold_15
     ----------------------------------------
-    Total                      7.715ns (3.124ns logic, 4.591ns route)
-                                       (40.5% logic, 59.5% route)
+    Total                      9.308ns (5.255ns logic, 4.053ns route)
+                                       (56.5% logic, 43.5% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'okHI/core0/okCH<1>'
@@ -647,30 +650,33 @@ Offset:              7.073ns (Levels of Logic = 6)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
-  Total number of paths / destination ports: 134 / 29
+  Total number of paths / destination ports: 4790 / 29
 -------------------------------------------------------------------------
-Offset:              8.737ns (Levels of Logic = 3)
-  Source:            ep00/ep_dataout_11 (FF)
+Offset:              13.055ns (Levels of Logic = 6)
+  Source:            ep00/ep_dataout_15 (FF)
   Destination:       led<7> (PAD)
   Source Clock:      hi_in<0> rising
 
-  Data Path: ep00/ep_dataout_11 to led<7>
+  Data Path: ep00/ep_dataout_15 to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDRE:C->Q             1   0.525   0.681  ep_dataout_11 (ep_dataout<11>)
-     end scope: 'ep00:ep_dataout<11>'
-     DSP48A1:B11->M11      2   3.894   0.725  testc/Mmult_n0007 (led_7_OBUF)
+     FDRE:C->Q             3   0.525   0.765  ep_dataout_15 (ep_dataout<15>)
+     end scope: 'ep00:ep_dataout<15>'
+     DSP48A1:B15->M18      1   3.894   1.137  testc/Mmult_interimresult (testc/interimresult<18>)
+     LUT6:I0->O            1   0.254   1.112  testc/amp[15]_GND_13_o_equal_2_o<31>4 (testc/amp[15]_GND_13_o_equal_2_o<31>3)
+     LUT6:I1->O           11   0.254   1.039  testc/amp[15]_GND_13_o_equal_2_o<31>7 (testc/amp[15]_GND_13_o_equal_2_o)
+     LUT2:I1->O            7   0.254   0.909  finalSum<11>1 (finalSum<11>)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                      8.737ns (7.331ns logic, 1.406ns route)
-                                       (83.9% logic, 16.1% route)
+    Total                     13.055ns (8.093ns logic, 4.962ns route)
+                                       (62.0% logic, 38.0% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'toSineClock'
-  Total number of paths / destination ports: 145176 / 8
+  Total number of paths / destination ports: 4797672 / 8
 -------------------------------------------------------------------------
-Offset:              19.957ns (Levels of Logic = 10)
+Offset:              24.190ns (Levels of Logic = 13)
   Source:            testc/totalphase_5 (FF)
   Destination:       led<7> (PAD)
   Source Clock:      toSineClock rising
@@ -679,7 +685,7 @@ Offset:              19.957ns (Levels of Logic = 10)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q            1569   0.525   3.188  testc/totalphase_5 (testc/totalphase_5)
+     FD:C->Q            1568   0.525   3.187  testc/totalphase_5 (testc/totalphase_5)
      LUT6:I1->O           10   0.254   1.463  testc/sinl/Mram_result10551 (testc/sinl/Mram_result1055)
      LUT6:I0->O            1   0.254   0.958  testc/sinl/Mram_result1175133449 (testc/sinl/Mram_result1175133448)
      LUT6:I2->O            1   0.254   0.682  testc/sinl/Mram_result1175133458_SW0 (N133)
@@ -688,11 +694,14 @@ Offset:              19.957ns (Levels of Logic = 10)
      LUT6:I3->O            1   0.235   0.910  testc/sinl/Mram_result1175133553 (testc/sinl/Mram_result1175133552)
      LUT6:I3->O            1   0.235   0.790  testc/sinl/Mram_result1175133554 (testc/sinl/Mram_result1175133553)
      LUT4:I2->O            1   0.250   0.681  testc/sinl/Mram_result11751331002 (testc/sineresult<5>)
-     DSP48A1:A5->M11       2   3.265   0.725  testc/Mmult_n0007 (led_7_OBUF)
+     DSP48A1:A9->M18       1   3.265   1.137  testc/Mmult_interimresult (testc/interimresult<18>)
+     LUT6:I0->O            1   0.254   1.112  testc/amp[15]_GND_13_o_equal_2_o<31>4 (testc/amp[15]_GND_13_o_equal_2_o<31>3)
+     LUT6:I1->O           11   0.254   1.039  testc/amp[15]_GND_13_o_equal_2_o<31>7 (testc/amp[15]_GND_13_o_equal_2_o)
+     LUT2:I1->O            7   0.254   0.909  finalSum<11>1 (finalSum<11>)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                     19.957ns (8.692ns logic, 11.265ns route)
-                                       (43.6% logic, 56.4% route)
+    Total                     24.190ns (9.454ns logic, 14.736ns route)
+                                       (39.1% logic, 60.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -731,8 +740,8 @@ Clock to Setup on destination clock hi_in<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-hi_in<0>       |    7.715|         |         |         |
-toSineClock    |   17.119|         |         |         |
+hi_in<0>       |    9.308|         |         |         |
+toSineClock    |   20.443|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock okHI/core0/okCH<1>
@@ -755,13 +764,13 @@ toSineClock    |    4.517|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 363.00 secs
-Total CPU time to Xst completion: 348.20 secs
+Total REAL time to Xst completion: 371.00 secs
+Total CPU time to Xst completion: 359.73 secs
  
 --> 
 
 
-Total memory usage is 547368 kilobytes
+Total memory usage is 547700 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

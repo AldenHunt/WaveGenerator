@@ -25,22 +25,20 @@
 module testcompute_tb;
 
 	// Inputs
-	reg [11:0] amp;
-	reg [11:0] phaseoffset;
-	reg [11:0] deltat;
-	reg [11:0] freq;
+	reg [15:0] amp;
+	reg [15:0] phaseoffset;
+	reg [15:0] phaseadd;
 	reg clk;
 	reg reset;
 
 	// Outputs
-	wire [11:0] result;
+	wire [15:0] result;
 
 	// Instantiate the Unit Under Test (UUT)
 	testcompute uut (
 		.amp(amp), 
 		.phaseoffset(phaseoffset), 
-		.deltat(deltat), 
-		.freq(freq), 
+		.phaseadd(phaseadd), 
 		.clk(clk), 
 		.reset(reset), 
 		.result(result)
@@ -50,18 +48,17 @@ module testcompute_tb;
 		// Initialize Inputs
 		amp = 0;
 		phaseoffset = 0;
-		deltat = 0;
-		freq = 0;
+		phaseadd = 0;
 		clk = 0;
 		reset = 0;
 
 		// Wait 100 ns for global reset to finish
-		#100;
+		#10;
         
 		// Add stimulus here
-		amp = 1;
-		deltat = 1;
-		freq = 1;
+		amp = 16'h7fff;
+		phaseadd = 16'h2000;
+		phaseoffset = 16'h0101;
 		reset = 1;
 		#10 
 		clk = 1;

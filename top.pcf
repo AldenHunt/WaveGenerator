@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20160913 on Thu Jan 09 19:11:47 2020
+// Written by: Map P.20160913 on Sun Jan 12 02:48:54 2020
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -115,15 +115,20 @@ TIMEGRP okHI_dcm_clk0 = BEL "okHI/delays[15].fdrein0" BEL
         "ep00/ep_datahold_4" BEL "ep00/ep_datahold_5" BEL "ep00/ep_datahold_6"
         BEL "ep00/ep_datahold_7" BEL "ep00/ep_datahold_8" BEL
         "ep00/ep_datahold_9" BEL "ep00/ep_datahold_10" BEL
-        "ep00/ep_datahold_11" BEL "ep00/ep_dataout_0" BEL "ep00/ep_dataout_1"
+        "ep00/ep_datahold_11" BEL "ep00/ep_datahold_12" BEL
+        "ep00/ep_datahold_13" BEL "ep00/ep_datahold_14" BEL
+        "ep00/ep_datahold_15" BEL "ep00/ep_dataout_0" BEL "ep00/ep_dataout_1"
         BEL "ep00/ep_dataout_2" BEL "ep00/ep_dataout_3" BEL
         "ep00/ep_dataout_4" BEL "ep00/ep_dataout_5" BEL "ep00/ep_dataout_6"
         BEL "ep00/ep_dataout_7" BEL "ep00/ep_dataout_8" BEL
         "ep00/ep_dataout_9" BEL "ep00/ep_dataout_10" BEL "ep00/ep_dataout_11"
-        BEL "ep20/wirehold_0" BEL "ep20/wirehold_1" BEL "ep20/wirehold_2" BEL
-        "ep20/wirehold_3" BEL "ep20/wirehold_4" BEL "ep20/wirehold_5" BEL
-        "ep20/wirehold_6" BEL "ep20/wirehold_7" BEL "ep20/wirehold_8" BEL
-        "ep20/wirehold_9" BEL "ep20/wirehold_10" BEL "ep20/wirehold_11" BEL
+        BEL "ep00/ep_dataout_12" BEL "ep00/ep_dataout_13" BEL
+        "ep00/ep_dataout_14" BEL "ep00/ep_dataout_15" BEL "ep20/wirehold_0"
+        BEL "ep20/wirehold_1" BEL "ep20/wirehold_2" BEL "ep20/wirehold_3" BEL
+        "ep20/wirehold_4" BEL "ep20/wirehold_5" BEL "ep20/wirehold_6" BEL
+        "ep20/wirehold_7" BEL "ep20/wirehold_8" BEL "ep20/wirehold_9" BEL
+        "ep20/wirehold_10" BEL "ep20/wirehold_11" BEL "ep20/wirehold_12" BEL
+        "ep20/wirehold_13" BEL "ep20/wirehold_14" BEL "ep20/wirehold_15" BEL
         "okHI/core0/core0/state_FSM_FFd1" BEL
         "okHI/core0/core0/state_FSM_FFd8" BEL
         "okHI/core0/core0/state_FSM_FFd13" BEL
