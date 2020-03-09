@@ -1,4 +1,3 @@
 verilog work "sinetable.v"
 verilog work "singlecompute.v"
-verilog work "okLibrary.v"
-verilog work "top.v"
+verilog work "twoblock.v"

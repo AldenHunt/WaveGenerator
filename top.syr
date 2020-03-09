@@ -5,7 +5,7 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
@@ -110,8 +110,8 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
 Parsing module <sinetable>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/testcompute.v" into library work
-Parsing module <testcompute>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
+Parsing module <singlecompute>.
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/okLibrary.v" into library work
 Parsing module <okHost>.
 Parsing module <okCoreHarness>.
@@ -159,7 +159,7 @@ WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 56: Assign
 Elaborating module <okWireOR(N=1)>.
 WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 71: Result of 32-bit expression is truncated to fit in 16-bit target.
 
-Elaborating module <testcompute>.
+Elaborating module <singlecompute>.
 
 Elaborating module <sinetable>.
 
@@ -244,8 +244,8 @@ Synthesizing Unit <okWireOR>.
 	no macro.
 Unit <okWireOR> synthesized.
 
-Synthesizing Unit <testcompute>.
-    Related source file is "/home/ise/ise_projects/Thesis/testcompute.v".
+Synthesizing Unit <singlecompute>.
+    Related source file is "/home/ise/ise_projects/Thesis/singlecompute.v".
     Found 16-bit register for signal <totalphase>.
     Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_5_OUT> created at line 50.
     Found 16x16-bit multiplier for signal <interimresult> created at line 38.
@@ -254,7 +254,7 @@ Synthesizing Unit <testcompute>.
 	inferred   1 Adder/Subtractor(s).
 	inferred  16 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
-Unit <testcompute> synthesized.
+Unit <singlecompute> synthesized.
 
 Synthesizing Unit <sinetable>.
     Related source file is "/home/ise/ise_projects/Thesis/sinetable.v".
@@ -313,9 +313,9 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_result> will be implemented on LUTs 
     -----------------------------------------------------------------------
 Unit <sinetable> synthesized (advanced).
 
-Synthesizing (advanced) Unit <testcompute>.
+Synthesizing (advanced) Unit <singlecompute>.
 The following registers are absorbed into accumulator <totalphase>: 1 register on signal <totalphase>.
-Unit <testcompute> synthesized (advanced).
+Unit <singlecompute> synthesized (advanced).
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -764,13 +764,13 @@ toSineClock    |    4.517|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 371.00 secs
-Total CPU time to Xst completion: 359.73 secs
+Total REAL time to Xst completion: 359.00 secs
+Total CPU time to Xst completion: 345.56 secs
  
 --> 
 
 
-Total memory usage is 547700 kilobytes
+Total memory usage is 547692 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    4 (   0 filtered)

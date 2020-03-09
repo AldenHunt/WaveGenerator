@@ -1,0 +1,6 @@
+verilog work "sinetable.v"
+verilog work "singlecompute.v"
+verilog work "twoblock.v"
+verilog work "fourblock.v"
+verilog work "eightblock.v"
+verilog work "sixteenblock.v"

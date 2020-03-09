@@ -41,7 +41,10 @@ module top(
 	
 	//Endpoint connections
 	wire [15:0]  ep00wire, ep01wire, ep02wire, ep03wire, ep04wire;
+	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
+	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
 	wire [15:0]  ep20wire;
+	
 	
 	//Other variables
 	wire [15:0] finalSum;
@@ -73,7 +76,7 @@ module top(
 		end
 	end
 	
-	testcompute testc(
+	singlecompute testc(
 		.amp(ep00wire),
 		.phaseoffset(ep01wire),
 		.phaseadd(ep02wire),
@@ -90,6 +93,14 @@ module top(
 	okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(ep02wire));
 	okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(ep03wire));
 	okWireIn ep04 (.ok1(ok1), .ep_addr(8'h04), .ep_dataout(ep04wire));
+	
+	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
+	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
+	okPipeIn phasewordpipe(.ok1(ok1), .ok2(ok2x[2*17 +: 17]), .ep_addr(8'h82), .ep_write(phasewordwrite), .ep_dataout(phasewordwire));
+	okPipeIn clkpipe(.ok1(ok1), .ok2(ok2x[3*17 +: 17]), .ep_addr(8'h83), .ep_write(clkwrite), .ep_dataout(clkwire));
+
+
+	
 	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(ep20wire));
 
 endmodule

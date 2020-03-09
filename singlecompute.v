@@ -19,7 +19,7 @@
 // Additional Comments: 
 //
 //////////////////////////////////////////////////////////////////////////////////
-module testcompute(
+module singlecompute(
     input wire signed [15:0] amp,
     input wire [15:0] phaseoffset,
 	 input wire [15:0] phaseadd,
@@ -37,9 +37,9 @@ module testcompute(
 		signedsine = sineresult <<< 4;
 		interimresult = amp * signedsine;
 		if (interimresult == 32'h40000000) begin //Max value and only overflow into 31st bit
-			result = $signed(16'h7fff) >>> 5;
+			result = $signed(16'h7fff) >>> 6;
 		end else begin
-			result = $signed(interimresult[30:15]) >>> 5;
+			result = $signed(interimresult[30:15]) >>> 6;
 		end
 	end
 	
