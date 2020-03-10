@@ -1,0 +1,92 @@
+Release 14.7 - xst P.20160913 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to /home/ise/ise_projects/Thesis/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Parameter xsthdpdir set to /home/ise/ise_projects/Thesis/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.10 secs
+ 
+--> 
+Reading design: top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
+Parsing module <sinetable>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
+Parsing module <singlecompute>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
+Parsing module <twoblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
+Parsing module <fourblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
+Parsing module <eightblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixteenblock.v" into library work
+Parsing module <sixteenblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/thirtytwoblock.v" into library work
+Parsing module <thirtytwoblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock.v" into library work
+Parsing module <sixtyfourblock>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/okLibrary.v" into library work
+Parsing module <okHost>.
+Parsing module <okCoreHarness>.
+Parsing module <okWireIn>.
+Parsing module <okWireOut>.
+Parsing module <okTriggerIn>.
+Parsing module <okTriggerOut>.
+Parsing module <okPipeIn>.
+Parsing module <okPipeOut>.
+Parsing module <okBTPipeIn>.
+Parsing module <okBTPipeOut>.
+Parsing module <okWireOR>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
+Parsing module <controlcombiner>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/top.v" into library work
+Parsing module <top>.
+ERROR:HDLCompiler:69 - "/home/ise/ise_projects/Thesis/top.v" Line 69: <loopswire> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/ise_projects/Thesis/top.v" Line 72: <loopswire> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/ise_projects/Thesis/top.v" Line 82: <currBlock> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/ise_projects/Thesis/top.v" Line 90: <currBlock> is not declared.
+ERROR:HDLCompiler:69 - "/home/ise/ise_projects/Thesis/top.v" Line 98: <currBlock> is not declared.
+ERROR:HDLCompiler:598 - "/home/ise/ise_projects/Thesis/top.v" Line 24: Module <top> ignored due to previous errors.
+Verilog file /home/ise/ise_projects/Thesis/top.v ignored due to errors
+--> 
+
+
+Total memory usage is 303652 kilobytes
+
+Number of errors   :    6 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

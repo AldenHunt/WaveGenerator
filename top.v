@@ -40,16 +40,18 @@ module top(
 	wire [1*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  ep00wire, ep01wire, ep02wire, ep03wire, ep04wire;
+	wire [15:0]  resetwire, dividewire;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
 	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
-	wire [15:0]  ep20wire;
+	wire signed [15:0]  finalSum;
 	
 	
 	//Other variables
-	wire [15:0] finalSum;
-	reg toSineClock;
+	reg [63:0] allClocks;
 	reg [15:0] loops;
+	wire [5:0] currBlock;
+	wire [1023:0] preamps, preoffsets, prephasewords;
+	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
 	okHost okHI( 
 		.hi_in(hi_in),
@@ -64,35 +66,61 @@ module top(
 	okWireOR # (.N(1)) wireOR (ok2, ok2x);
 	  
 	always@(posedge clk1) begin
-		if (ep03wire[0] == 1'b1) begin
-			loops <= ep04wire;
-			toSineClock <= 1'b0;
+		if (resetwire[0] == 1'b1) begin
+			loops <= dividewire;
+			allClocks <= 0;
 		end else if (loops == 0) begin
-			loops <= ep04wire;
-			toSineClock <= 1'b1;
+			loops <= dividewire;
+			allClocks <= 1;
 		end else begin
 			loops <= loops - 1;
-			toSineClock <= 1'b0;
+			allClocks <= 0;
 		end
 	end
 	
-	singlecompute testc(
-		.amp(ep00wire),
-		.phaseoffset(ep01wire),
-		.phaseadd(ep02wire),
-		.clk(toSineClock),
-		.reset(ep03wire[0]),
-		.result(finalSum)
+	always@(posedge ti_clk) begin
+		if (resetwire[0] == 1) currBlock <= 0;
+		else currBlock <= currBlock + 1;
+	end
+	
+	controlcombiner amps(
+		.signal(ampwire),
+		.blockaddress(currBlock),
+		.write(ampwrite),
+		.clk(ti_clk),
+		.combinedout(preamps)
 	);
 	
-	assign ep20wire = finalSum;
+	controlcombiner offsets(
+		.signal(offsetwire),
+		.blockaddress(currBlock),
+		.write(offsetwrite),
+		.clk(ti_clk),
+		.combinedout(preoffsets)
+	);
+	
+	controlcombiner phasewords(
+		.signal(phasewordwire),
+		.blockaddress(currBlock),
+		.write(phasewordwrite),
+		.clk(ti_clk),
+		.combinedout(preoffsets)
+	);
+	
+	
+	sixtyfourblock theBigOne(
+		.amps(activeamps),
+		.offsets(activeoffsets),
+		.phasewords(activephasewords),
+		.clks(allClocks),
+		.reset(resetwire),
+		.results(finalSum)
+	);
+
 	assign led = finalSum[10:3];
 	
-	okWireIn ep00 (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(ep00wire));
-	okWireIn ep01 (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(ep01wire));
-	okWireIn ep02 (.ok1(ok1), .ep_addr(8'h02), .ep_dataout(ep02wire));
-	okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(ep03wire));
-	okWireIn ep04 (.ok1(ok1), .ep_addr(8'h04), .ep_dataout(ep04wire));
+	okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(resetwire));
+	okWireIn ep04 (.ok1(ok1), .ep_addr(8'h04), .ep_dataout(dividewire));
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
@@ -101,6 +129,6 @@ module top(
 
 
 	
-	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 0*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(ep20wire));
+	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 4*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(finalSum));
 
 endmodule
