@@ -23,7 +23,7 @@ module fourblock(
     input wire signed [63:0] amps,
     input wire [63:0] offsets,
     input wire [63:0] phasewords,
-    input wire [3:0] clks,
+    input wire clk,
     input wire reset,
     output reg signed [15:0] results
     );
@@ -34,7 +34,7 @@ module fourblock(
 		.amps(amps[63:32]),
 		.offsets(offsets[63:32]),
 		.phasewords(phasewords[63:32]),
-		.clks(clks[3:2]),
+		.clk(clk),
 		.reset(reset),
 		.results(a)
 	);
@@ -43,7 +43,7 @@ module fourblock(
 		.amps(amps[31:0]),
 		.offsets(offsets[31:0]),
 		.phasewords(phasewords[31:0]),
-		.clks(clks[1:0]),
+		.clk(clk),
 		.reset(reset),
 		.results(b)
 	);

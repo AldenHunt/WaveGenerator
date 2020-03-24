@@ -23,7 +23,7 @@ module sixteenblock(
     input wire signed [255:0] amps,
     input wire [255:0] offsets,
     input wire [255:0] phasewords,
-    input wire [15:0] clks,
+    input wire clk,
     input wire reset,
     output reg signed [15:0] results
     );
@@ -34,7 +34,7 @@ module sixteenblock(
 		.amps(amps[255:128]),
 		.offsets(offsets[255:128]),
 		.phasewords(phasewords[255:128]),
-		.clks(clks[15:8]),
+		.clk(clk),
 		.reset(reset),
 		.results(a)
 	);
@@ -43,7 +43,7 @@ module sixteenblock(
 		.amps(amps[127:0]),
 		.offsets(offsets[127:0]),
 		.phasewords(phasewords[127:0]),
-		.clks(clks[7:0]),
+		.clk(clk),
 		.reset(reset),
 		.results(b)
 	);

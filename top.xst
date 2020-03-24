@@ -1,5 +1,5 @@
-set -tmpdir "/home/ise/ise_projects/Thesis/xst/projnav.tmp"
-set -xsthdpdir "/home/ise/ise_projects/Thesis/xst"
+set -tmpdir "/home/ise/ise_projects/WaveGenerator/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/ise_projects/WaveGenerator/xst"
 run -compileonly yes
 -p xc6slx150-2-fgg484
 -top top

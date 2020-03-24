@@ -23,7 +23,7 @@ module eightblock(
     input wire signed [127:0] amps,
     input wire [127:0] offsets,
     input wire [127:0] phasewords,
-    input wire [7:0] clks,
+    input wire clk,
     input wire reset,
     output reg signed [15:0] results
     );
@@ -34,7 +34,7 @@ module eightblock(
 		.amps(amps[127:64]),
 		.offsets(offsets[127:64]),
 		.phasewords(phasewords[127:64]),
-		.clks(clks[7:4]),
+		.clk(),
 		.reset(reset),
 		.results(a)
 	);
@@ -43,7 +43,7 @@ module eightblock(
 		.amps(amps[63:0]),
 		.offsets(offsets[63:0]),
 		.phasewords(phasewords[63:0]),
-		.clks(clks[3:0]),
+		.clk(clk),
 		.reset(reset),
 		.results(b)
 	);

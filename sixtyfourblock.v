@@ -23,7 +23,7 @@ module sixtyfourblock(
     input wire signed [1023:0] amps,
     input wire [1023:0] offsets,
     input wire [1023:0] phasewords,
-    input wire [63:0] clks,
+    input wire clk,
     input wire reset,
     output reg signed [15:0] results
     );
@@ -34,7 +34,7 @@ module sixtyfourblock(
 		.amps(amps[1023:512]),
 		.offsets(offsets[1023:512]),
 		.phasewords(phasewords[1023:512]),
-		.clks(clks[63:32]),
+		.clk(),
 		.reset(reset),
 		.results(a)
 	);
@@ -43,7 +43,7 @@ module sixtyfourblock(
 		.amps(amps[511:0]),
 		.offsets(offsets[511:0]),
 		.phasewords(phasewords[511:0]),
-		.clks(clks[31:0]),
+		.clk(clk),
 		.reset(reset),
 		.results(b)
 	);

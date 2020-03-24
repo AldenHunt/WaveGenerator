@@ -23,7 +23,7 @@ module thirtytwoblock(
     input wire signed [511:0] amps,
     input wire [511:0] offsets,
     input wire [511:0] phasewords,
-    input wire [31:0] clks,
+    input wire clk,
     input wire reset,
     output reg signed [15:0] results
     );
@@ -34,7 +34,7 @@ module thirtytwoblock(
 		.amps(amps[511:256]),
 		.offsets(offsets[511:256]),
 		.phasewords(phasewords[511:256]),
-		.clks(clks[31:16]),
+		.clk(clk),
 		.reset(reset),
 		.results(a)
 	);
@@ -43,7 +43,7 @@ module thirtytwoblock(
 		.amps(amps[255:0]),
 		.offsets(offsets[255:0]),
 		.phasewords(phasewords[255:0]),
-		.clks(clks[15:0]),
+		.clk(clk),
 		.reset(reset),
 		.results(b)
 	);

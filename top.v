@@ -40,16 +40,14 @@ module top(
 	wire [1*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  resetwire, dividewire;
+	wire [15:0]  resetwire;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
 	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
 	wire signed [15:0]  finalSum;
 	
 	
 	//Other variables
-	reg [63:0] allClocks;
-	reg [15:0] loops;
-	wire [5:0] currBlock;
+	reg [5:0] currBlock;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
@@ -64,22 +62,14 @@ module top(
    );
 	
 	okWireOR # (.N(1)) wireOR (ok2, ok2x);
-	  
-	always@(posedge clk1) begin
-		if (resetwire[0] == 1'b1) begin
-			loops <= dividewire;
-			allClocks <= 0;
-		end else if (loops == 0) begin
-			loops <= dividewire;
-			allClocks <= 1;
-		end else begin
-			loops <= loops - 1;
-			allClocks <= 0;
-		end
-	end
 	
 	always@(posedge ti_clk) begin
-		if (resetwire[0] == 1) currBlock <= 0;
+		if (resetwire[0] == 1) begin
+			currBlock <= 0;
+			activeamps <= preamps;
+			activeoffsets <= preoffsets;
+			activephasewords <= prephasewords;
+		end
 		else currBlock <= currBlock + 1;
 	end
 	
@@ -104,7 +94,7 @@ module top(
 		.blockaddress(currBlock),
 		.write(phasewordwrite),
 		.clk(ti_clk),
-		.combinedout(preoffsets)
+		.combinedout(prephasewords)
 	);
 	
 	
@@ -112,7 +102,7 @@ module top(
 		.amps(activeamps),
 		.offsets(activeoffsets),
 		.phasewords(activephasewords),
-		.clks(allClocks),
+		.clk(clk1),
 		.reset(resetwire),
 		.results(finalSum)
 	);
@@ -120,7 +110,6 @@ module top(
 	assign led = finalSum[10:3];
 	
 	okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(resetwire));
-	okWireIn ep04 (.ok1(ok1), .ep_addr(8'h04), .ep_dataout(dividewire));
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
