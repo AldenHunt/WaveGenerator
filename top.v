@@ -37,7 +37,7 @@ module top(
 	wire ti_clk;
 	wire [16:0] ok2;
 	wire [30:0] ok1;
-	wire [1*17-1:0] ok2x;
+	wire [5*17-1:0] ok2x;
 	
 	//Endpoint connections
 	wire [15:0]  resetwire;
