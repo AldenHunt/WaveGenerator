@@ -34,7 +34,7 @@ module eightblock(
 		.amps(amps[127:64]),
 		.offsets(offsets[127:64]),
 		.phasewords(phasewords[127:64]),
-		.clk(),
+		.clk(clk),
 		.reset(reset),
 		.results(a)
 	);

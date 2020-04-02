@@ -37,7 +37,7 @@ module top(
 	wire ti_clk;
 	wire [16:0] ok2;
 	wire [30:0] ok1;
-	wire [5*17-1:0] ok2x;
+	wire [4*17-1:0] ok2x;
 	
 	//Endpoint connections
 	wire [15:0]  resetwire;
@@ -61,7 +61,7 @@ module top(
 		.ok2(ok2)
    );
 	
-	okWireOR # (.N(1)) wireOR (ok2, ok2x);
+	okWireOR # (.N(4)) wireOR (ok2, ok2x);
 	
 	always@(posedge ti_clk) begin
 		if (resetwire[0] == 1) begin
@@ -103,7 +103,7 @@ module top(
 		.offsets(activeoffsets),
 		.phasewords(activephasewords),
 		.clk(clk1),
-		.reset(resetwire),
+		.reset(resetwire[0]),
 		.results(finalSum)
 	);
 
@@ -114,10 +114,7 @@ module top(
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
 	okPipeIn phasewordpipe(.ok1(ok1), .ok2(ok2x[2*17 +: 17]), .ep_addr(8'h82), .ep_write(phasewordwrite), .ep_dataout(phasewordwire));
-	okPipeIn clkpipe(.ok1(ok1), .ok2(ok2x[3*17 +: 17]), .ep_addr(8'h83), .ep_write(clkwrite), .ep_dataout(clkwire));
-
-
 	
-	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 4*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(finalSum));
+	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(finalSum));
 
 endmodule

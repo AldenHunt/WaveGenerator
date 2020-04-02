@@ -144,3 +144,6 @@ xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/i
 xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/ise_projects/Thesis/top.syr" 
 xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
 xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/ise_projects/Thesis/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/ise_projects/Thesis/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/Thesis/top.xst" -ofn "/home/ise/ise_projects/Thesis/top.syr" 

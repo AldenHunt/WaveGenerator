@@ -34,7 +34,7 @@ module sixtyfourblock(
 		.amps(amps[1023:512]),
 		.offsets(offsets[1023:512]),
 		.phasewords(phasewords[1023:512]),
-		.clk(),
+		.clk(clk),
 		.reset(reset),
 		.results(a)
 	);

@@ -208,8 +208,8 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585065282" xil_pn:in_ck="-4264548586934325992" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4915678235467090866" xil_pn:start_ts="1585063349">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1585798330" xil_pn:in_ck="-4264548586934325992" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="4915678235467090866" xil_pn:start_ts="1585794026">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
@@ -217,10 +217,8 @@
       <outfile xil_pn:name="top.ngc"/>
       <outfile xil_pn:name="top.ngr"/>
       <outfile xil_pn:name="top.prj"/>
-      <outfile xil_pn:name="top.stx"/>
       <outfile xil_pn:name="top.syr"/>
       <outfile xil_pn:name="top.xst"/>
-      <outfile xil_pn:name="top_xst.xrpt"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
@@ -233,6 +231,7 @@
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
