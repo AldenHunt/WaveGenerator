@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
@@ -108,23 +108,23 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sinetable.v" into library work
 Parsing module <sinetable>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/singlecompute.v" into library work
 Parsing module <singlecompute>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/twoblock.v" into library work
 Parsing module <twoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/fourblock.v" into library work
 Parsing module <fourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/eightblock.v" into library work
 Parsing module <eightblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixteenblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixteenblock.v" into library work
 Parsing module <sixteenblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/thirtytwoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v" into library work
 Parsing module <thirtytwoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v" into library work
 Parsing module <sixtyfourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/okLibrary.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/okLibrary.v" into library work
 Parsing module <okHost>.
 Parsing module <okCoreHarness>.
 Parsing module <okWireIn>.
@@ -136,9 +136,9 @@ Parsing module <okPipeOut>.
 Parsing module <okBTPipeIn>.
 Parsing module <okBTPipeOut>.
 Parsing module <okWireOR>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/controlcombiner.v" into library work
 Parsing module <controlcombiner>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/top.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/top.v" into library work
 Parsing module <top>.
 
 =========================================================================
@@ -146,8 +146,8 @@ Parsing module <top>.
 =========================================================================
 
 Elaborating module <top>.
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 68: Port BUSY is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance
 
 Elaborating module <okHost>.
 
@@ -170,7 +170,7 @@ Elaborating module <OBUF>.
 Elaborating module <okCoreHarness>.
 
 Elaborating module <okWireOR(N=4)>.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 73: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 73: Result of 7-bit expression is truncated to fit in 6-bit target.
 
 Elaborating module <controlcombiner>.
 
@@ -201,7 +201,7 @@ Elaborating module <okWireOut>.
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "/home/ise/ise_projects/Thesis/top.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/top.v".
     Found 1024-bit register for signal <activeamps>.
     Found 1024-bit register for signal <activeoffsets>.
     Found 1024-bit register for signal <activephasewords>.
@@ -213,7 +213,7 @@ Synthesizing Unit <top>.
 Unit <top> synthesized.
 
 Synthesizing Unit <okHost>.
-    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
     Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
@@ -267,14 +267,14 @@ Synthesizing Unit <okHost>.
 Unit <okHost> synthesized.
 
 Synthesizing Unit <okWireOR>.
-    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
         N = 4
     Summary:
 	no macro.
 Unit <okWireOR> synthesized.
 
 Synthesizing Unit <controlcombiner>.
-    Related source file is "/home/ise/ise_projects/Thesis/controlcombiner.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/controlcombiner.v".
     Found 1024-bit register for signal <combinedout>.
     Found 1024-bit 64-to-1 multiplexer for signal <blockaddress[5]_signal[15]_wide_mux_1_OUT> created at line 16.
     Summary:
@@ -283,49 +283,49 @@ Synthesizing Unit <controlcombiner>.
 Unit <controlcombiner> synthesized.
 
 Synthesizing Unit <sixtyfourblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/sixtyfourblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <sixtyfourblock> synthesized.
 
 Synthesizing Unit <thirtytwoblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/thirtytwoblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <thirtytwoblock> synthesized.
 
 Synthesizing Unit <sixteenblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/sixteenblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sixteenblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <sixteenblock> synthesized.
 
 Synthesizing Unit <eightblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/eightblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/eightblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <eightblock> synthesized.
 
 Synthesizing Unit <fourblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/fourblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/fourblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <fourblock> synthesized.
 
 Synthesizing Unit <twoblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/twoblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/twoblock.v".
     Found 16-bit adder for signal <results> created at line 52.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 Unit <twoblock> synthesized.
 
 Synthesizing Unit <singlecompute>.
-    Related source file is "/home/ise/ise_projects/Thesis/singlecompute.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/singlecompute.v".
     Found 16-bit register for signal <totalphase>.
     Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_5_OUT> created at line 50.
     Found 16x16-bit multiplier for signal <interimresult> created at line 38.
@@ -337,8 +337,8 @@ Synthesizing Unit <singlecompute>.
 Unit <singlecompute> synthesized.
 
 Synthesizing Unit <sinetable>.
-    Related source file is "/home/ise/ise_projects/Thesis/sinetable.v".
-    Found 16384x12-bit Read Only RAM for signal <result>
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sinetable.v".
+    Found 4096x10-bit Read Only RAM for signal <result>
     Summary:
 	inferred   1 RAM(s).
 Unit <sinetable> synthesized.
@@ -348,7 +348,7 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 64
- 16384x12-bit single-port Read Only RAM                : 64
+ 4096x10-bit single-port Read Only RAM                 : 64
 # Multipliers                                          : 64
  16x16-bit multiplier                                  : 64
 # Adders/Subtractors                                   : 128
@@ -387,7 +387,7 @@ INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_result> will be implemented on LUTs 
     | ram_type           | Distributed                         |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 16384-word x 12-bit                 |          |
+    |     aspect ratio   | 4096-word x 10-bit                  |          |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <phase>         |          |
     |     diA            | connected to signal <GND>           |          |
@@ -428,7 +428,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 64
- 16384x12-bit single-port distributed Read Only RAM    : 64
+ 4096x10-bit single-port distributed Read Only RAM     : 64
 # Multipliers                                          : 64
  16x16-bit multiplier                                  : 64
 # Adder Trees                                          : 1
@@ -459,10 +459,460 @@ Optimizing unit <controlcombiner> ...
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 150.
-Optimizing block <top> to meet ratio 100 (+ 5) of 23038 slices :
-WARNING:Xst:2254 - Area constraint could not be met for block <top>, final ratio is 142.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 37.
 INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <okHI/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <core0/a0/pc0/sync_interrupt_flop> in Unit <okHI/core0> is equivalent to the following FF/Latch : <core0/a0/pc0/sync_sleep_flop> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.wr/gwss.wsts/ram_full_fb_i> 
+INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <BU2> is equivalent to the following FF/Latch : <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 6202
+ Flip-Flops                                            : 6202
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : top.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 43202
+#      GND                         : 7
+#      INV                         : 33
+#      LUT1                        : 30
+#      LUT2                        : 1848
+#      LUT3                        : 1274
+#      LUT4                        : 3260
+#      LUT5                        : 6384
+#      LUT6                        : 26719
+#      LUT6_2                      : 50
+#      MUXCY                       : 1676
+#      MUXF7                       : 143
+#      VCC                         : 2
+#      XORCY                       : 1776
+# FlipFlops/Latches                : 6790
+#      FD                          : 1163
+#      FDC                         : 9
+#      FDCE                        : 124
+#      FDE                         : 5203
+#      FDP                         : 32
+#      FDPE                        : 8
+#      FDR                         : 68
+#      FDRE                        : 174
+#      FDS                         : 7
+#      FDSE                        : 2
+# RAMS                             : 17
+#      RAM128X1S                   : 8
+#      RAM32M                      : 4
+#      RAM64M                      : 2
+#      RAM64X1D                    : 2
+#      RAMB16BWER                  : 1
+# Shift Registers                  : 1
+#      SRLC16E                     : 1
+# Clock Buffers                    : 2
+#      BUFG                        : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 35
+#      IBUF                        : 7
+#      IBUFG                       : 1
+#      IOBUF                       : 17
+#      OBUF                        : 10
+# DCMs                             : 1
+#      DCM_SP                      : 1
+# DSPs                             : 64
+#      DSP48A1                     : 64
+# Others                           : 17
+#      DNA_PORT                    : 1
+#      IODELAY2                    : 16
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx150fgg484-2 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:            6742  out of  184304     3%  
+ Number of Slice LUTs:                39643  out of  92152    43%  
+    Number used as Logic:             39598  out of  92152    42%  
+    Number used as Memory:               45  out of  21680     0%  
+       Number used as RAM:               44
+       Number used as SRL:                1
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:  41179
+   Number with an unused Flip Flop:   34437  out of  41179    83%  
+   Number with an unused LUT:          1536  out of  41179     3%  
+   Number of fully used LUT-FF pairs:  5206  out of  41179    12%  
+   Number of unique control sets:        58
+
+IO Utilization: 
+ Number of IOs:                          36
+ Number of bonded IOBs:                  36  out of    338    10%  
+    IOB Flip Flops/Latches:              48
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of    268     0%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+ Number of DSP48A1s:                     64  out of    180    35%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------------------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)                                      | Load  |
+-----------------------------------+------------------------------------------------------------+-------+
+hi_in<0>                           | DCM_SP:CLK0                                                | 5848  |
+clk1                               | BUFGP                                                      | 1024  |
+okHI/core0/okCH<1>                 | NONE(okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
+-----------------------------------+------------------------------------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -2
+
+   Minimum period: 19.167ns (Maximum Frequency: 52.174MHz)
+   Minimum input arrival time before clock: 7.073ns
+   Maximum output required time after clock: 29.958ns
+   Maximum combinational path delay: 1.328ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'hi_in<0>'
+  Clock period: 19.167ns (frequency: 52.174MHz)
+  Total number of paths / destination ports: 1984522019 / 12829
+-------------------------------------------------------------------------
+Delay:               19.167ns (Levels of Logic = 30)
+  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (DSP)
+  Destination:       ep20/wirehold_15 (FF)
+  Source Clock:      hi_in<0> rising
+  Destination Clock: hi_in<0> rising
+
+  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult to ep20/wirehold_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->M18      1   4.371   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/interimresult<18>)
+     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>3)
+     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7)
+     LUT4:I2->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<2> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<3> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<4> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<5> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<6> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<6>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd39_xor<7> (theBigOne/ADDERTREE_INTERNAL_Madd_739)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd407 (theBigOne/ADDERTREE_INTERNAL_Madd407)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>8 (theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>8)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>_7 (theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>8)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd40_xor<0>_8 (theBigOne/ADDERTREE_INTERNAL_Madd_940)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_lut<9> (theBigOne/ADDERTREE_INTERNAL_Madd44_lut<9>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_cy<9> (theBigOne/ADDERTREE_INTERNAL_Madd44_cy<9>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd44_xor<10> (theBigOne/ADDERTREE_INTERNAL_Madd_1044)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd4510 (theBigOne/ADDERTREE_INTERNAL_Madd4510)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>11 (theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>11)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>_10 (theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>11)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd45_xor<0>_11 (theBigOne/ADDERTREE_INTERNAL_Madd_1246)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_lut<12> (theBigOne/ADDERTREE_INTERNAL_Madd61_lut<12>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_cy<12> (theBigOne/ADDERTREE_INTERNAL_Madd61_cy<12>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd61_xor<13> (theBigOne/ADDERTREE_INTERNAL_Madd_1361)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd6213 (theBigOne/ADDERTREE_INTERNAL_Madd6213)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>14 (theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>14)
+     MUXCY:S->O            0   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>_13 (theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>14)
+     XORCY:CI->O           1   0.206   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_xor<0>_14 (finalSum<15>)
+     begin scope: 'ep20:ep_datain<15>'
+     FDRE:D                    0.074          wirehold_15
+    ----------------------------------------
+    Total                     19.167ns (9.892ns logic, 9.274ns route)
+                                       (51.6% logic, 48.4% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk1'
+  Clock period: 4.218ns (frequency: 237.076MHz)
+  Total number of paths / destination ports: 16384 / 1024
+-------------------------------------------------------------------------
+Delay:               4.218ns (Levels of Logic = 13)
+  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_4 (FF)
+  Destination:       theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_15 (FF)
+  Source Clock:      clk1 rising
+  Destination Clock: clk1 rising
+
+  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_4 to theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             288   0.525   2.712  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_4)
+     LUT4:I0->O            1   0.254   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_lut<4> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<4> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<5> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<6> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<7> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<8> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<9> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<10> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<11> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<12> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<13> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<14> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_cy<14>)
+     XORCY:CI->O           1   0.206   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Maccum_totalphase_xor<15> (theBigOne/Result<15>63)
+     FD:D                      0.074          theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_15
+    ----------------------------------------
+    Total                      4.218ns (1.507ns logic, 2.712ns route)
+                                       (35.7% logic, 64.3% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'okHI/core0/okCH<1>'
+  Clock period: 3.081ns (frequency: 324.570MHz)
+  Total number of paths / destination ports: 18 / 18
+-------------------------------------------------------------------------
+Delay:               3.081ns (Levels of Logic = 0)
+  Source:            okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Destination:       okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (RAM)
+  Source Clock:      okHI/core0/okCH<1> rising
+  Destination Clock: okHI/core0/okCH<1> rising
+
+  Data Path: okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom to okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB15    1   2.100   0.681  core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom (core0/a0/pm0/n0016<15>)
+     RAMB16BWER:DIB15          0.300          core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom
+    ----------------------------------------
+    Total                      3.081ns (2.400ns logic, 0.681ns route)
+                                       (77.9% logic, 22.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 1040 / 250
+-------------------------------------------------------------------------
+Offset:              7.073ns (Levels of Logic = 6)
+  Source:            hi_in<7> (PAD)
+  Destination:       okHI/core0/core0/ti_dataout_15 (FF)
+  Destination Clock: hi_in<0> rising
+
+  Data Path: hi_in<7> to okHI/core0/core0/ti_dataout_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            22   1.328   1.610  hi_in_7_IBUF (hi_in_7_IBUF)
+     begin scope: 'okHI/core0:okHC<7>'
+     LUT4:I0->O            2   0.254   0.726  core0/hi_addr[3]_hi_addr[3]_OR_157_o1 (core0/hi_addr[3]_hi_addr[3]_OR_157_o)
+     LUT4:I3->O            1   0.254   0.682  core0/state[31]_ti_dataout[15]_select_93_OUT<0>13 (core0/state[31]_ti_dataout[15]_select_93_OUT<0>13)
+     LUT5:I4->O           16   0.254   1.637  core0/state[31]_ti_dataout[15]_select_93_OUT<0>14 (core0/state[31]_ti_dataout[15]_select_93_OUT<0>1)
+     LUT6:I0->O            1   0.254   0.000  core0/state[31]_ti_dataout[15]_select_93_OUT<3>1 (core0/state[31]_ti_dataout[15]_select_93_OUT<3>)
+     FDE:D                     0.074          core0/ti_dataout_3
+    ----------------------------------------
+    Total                      7.073ns (2.418ns logic, 4.655ns route)
+                                       (34.2% logic, 65.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'hi_in<0>'
+  Total number of paths / destination ports: 176843936 / 29
+-------------------------------------------------------------------------
+Offset:              22.613ns (Levels of Logic = 25)
+  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (DSP)
+  Destination:       led<7> (PAD)
+  Source Clock:      hi_in<0> rising
+
+  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     DSP48A1:CLK->M18      1   4.371   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/interimresult<18>)
+     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>3)
+     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7)
+     LUT4:I2->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd39_xor<2> (theBigOne/ADDERTREE_INTERNAL_Madd_239)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd402 (theBigOne/ADDERTREE_INTERNAL_Madd402)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3 (theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>_2 (theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>3)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd40_xor<0>_3 (theBigOne/ADDERTREE_INTERNAL_Madd_440)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd44_xor<5> (theBigOne/ADDERTREE_INTERNAL_Madd_544)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd455 (theBigOne/ADDERTREE_INTERNAL_Madd455)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6 (theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>_5 (theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>6)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd45_xor<0>_6 (theBigOne/ADDERTREE_INTERNAL_Madd_745)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd61_xor<8> (theBigOne/ADDERTREE_INTERNAL_Madd_861)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd628 (theBigOne/ADDERTREE_INTERNAL_Madd628)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9 (theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>_8 (theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>9)
+     XORCY:CI->O           2   0.206   0.725  theBigOne/ADDERTREE_INTERNAL_Madd62_xor<0>_9 (led_7_OBUF)
+     OBUF:I->O                 2.912          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                     22.613ns (12.614ns logic, 9.999ns route)
+                                       (55.8% logic, 44.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
+  Total number of paths / destination ports: 444107154150 / 8
+-------------------------------------------------------------------------
+Offset:              29.958ns (Levels of Logic = 31)
+  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_5 (FF)
+  Destination:       led<7> (PAD)
+  Source Clock:      clk1 rising
+
+  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_5 to led<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q             301   0.525   2.867  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_5 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_5)
+     LUT5:I0->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471953 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471952)
+     LUT6:I5->O            1   0.254   0.958  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471954 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471953)
+     LUT6:I2->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471956 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471955)
+     LUT6:I5->O            1   0.254   0.790  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471963 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471962)
+     LUT6:I4->O            1   0.250   0.681  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471964 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sineresult<6>)
+     DSP48A1:A12->M18      1   3.265   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/interimresult<18>)
+     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>3)
+     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_20_o_equal_2_o<31>7)
+     LUT4:I2->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd39_xor<2> (theBigOne/ADDERTREE_INTERNAL_Madd_239)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd402 (theBigOne/ADDERTREE_INTERNAL_Madd402)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3 (theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>_2 (theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>3)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd40_xor<0>_3 (theBigOne/ADDERTREE_INTERNAL_Madd_440)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd44_xor<5> (theBigOne/ADDERTREE_INTERNAL_Madd_544)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd455 (theBigOne/ADDERTREE_INTERNAL_Madd455)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6 (theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>_5 (theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>6)
+     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd45_xor<0>_6 (theBigOne/ADDERTREE_INTERNAL_Madd_745)
+     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7>)
+     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd61_xor<8> (theBigOne/ADDERTREE_INTERNAL_Madd_861)
+     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd628 (theBigOne/ADDERTREE_INTERNAL_Madd628)
+     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9 (theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>_8 (theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>9)
+     XORCY:CI->O           2   0.206   0.725  theBigOne/ADDERTREE_INTERNAL_Madd62_xor<0>_9 (led_7_OBUF)
+     OBUF:I->O                 2.912          led_7_OBUF (led<7>)
+    ----------------------------------------
+    Total                     29.958ns (13.299ns logic, 16.659ns route)
+                                       (44.4% logic, 55.6% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Delay:               1.328ns (Levels of Logic = 1)
+  Source:            hi_inout<15> (PAD)
+  Destination:       okHI/delays[15].iodelay_inst:IDATAIN (PAD)
+
+  Data Path: hi_inout<15> to okHI/delays[15].iodelay_inst:IDATAIN
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O           0   1.328   0.000  okHI/delays[15].iobf0 (okHI/iobf0_hi_datain<15>)
+    IODELAY2:IDATAIN           0.000          okHI/delays[15].iodelay_inst
+    ----------------------------------------
+    Total                      1.328ns (1.328ns logic, 0.000ns route)
+                                       (100.0% logic, 0.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk1
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |    4.218|         |         |         |
+hi_in<0>       |    5.281|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock hi_in<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk1           |   26.512|         |         |         |
+hi_in<0>       |   19.167|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock okHI/core0/okCH<1>
+------------------+---------+---------+---------+---------+
+                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+------------------+---------+---------+---------+---------+
+okHI/core0/okCH<1>|    3.081|         |         |         |
+------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 512.00 secs
+Total CPU time to Xst completion: 504.73 secs
+ 
+--> 
+
+
+Total memory usage is 1072156 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    3 (   0 filtered)
+Number of infos    :   16 (   0 filtered)
+

@@ -3,8 +3,8 @@ from bitstring import BitArray, Bits
 
 f = open("sinetable.v", "w")
 
-resultBits = 12
-precisionBits = 14
+resultBits = 10
+precisionBits = 12
 totalEntries = 2**precisionBits
 f.write("`timescale 1ns / 1ps\n")
 f.write("`default_nettype none\n\n\n")

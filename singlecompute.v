@@ -28,13 +28,13 @@ module singlecompute(
     output reg signed [15:0] result
     );
 
-	wire signed [11:0] sineresult;
+	wire signed [9:0] sineresult;
 	reg signed [15:0] signedsine;
 	reg signed [31:0] interimresult;
 	reg [15:0] totalphase;
 	
 	always@(*) begin
-		signedsine = sineresult <<< 4;
+		signedsine = sineresult <<< 6;
 		interimresult = amp * signedsine;
 		if (interimresult == 32'h40000000) begin //Max value and only overflow into 31st bit
 			result = $signed(16'h7fff) >>> 6;
@@ -51,7 +51,7 @@ module singlecompute(
 	end
 	
 	sinetable sinl(
-		.phase(totalphase[15:2]),
+		.phase(totalphase[15:4]),
 		.result(sineresult)
 	);
 	
