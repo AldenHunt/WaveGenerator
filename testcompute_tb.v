@@ -22,7 +22,7 @@
 // 
 ////////////////////////////////////////////////////////////////////////////////
 
-module testcompute_tb;
+module singlecompute_tb;
 
 	// Inputs
 	reg [15:0] amp;
@@ -35,7 +35,7 @@ module testcompute_tb;
 	wire [15:0] result;
 
 	// Instantiate the Unit Under Test (UUT)
-	testcompute uut (
+	singlecompute uut (
 		.amp(amp), 
 		.phaseoffset(phaseoffset), 
 		.phaseadd(phaseadd), 
@@ -57,12 +57,12 @@ module testcompute_tb;
         
 		// Add stimulus here
 		amp = 16'h7fff;
-		phaseadd = 16'h2000;
+		phaseadd = 16'h0040;
 		phaseoffset = 16'h0101;
 		reset = 1;
-		#10 
+		#5;
 		clk = 1;
-		#10;
+		#5;
 		reset = 0;
 		forever
 			#50 clk = !clk;
