@@ -1,6 +1,6 @@
 import ok
 import sys
-import pandas as pd
+import csv
 import matplotlib.pyplot as plt
 dev = ok.okCFrontPanel()
 dev.OpenBySerial("")
@@ -13,25 +13,45 @@ if dev.IsFrontPanelEnabled() == True:
 else:
     print("FrontPanel host interface not detected.")
 
-# Read in wave attributes from command line
-maxArg = 0xFFFF
+# Read in csv from command line and send via pipes to FPGA
+MAXARG = 0xFFFF
+SINEMODULES = 64
 wavelist = []
-amp = int(sys.argv[1], 16)
-offset = int(sys.argv[2], 16)
-phaseadd = int(sys.argv[3], 16)
-freqdivider = int(sys.argv[4], 16)
-if ((amp > maxArg) | (offset > maxArg) | (phaseadd > maxArg) | (freqdivider > maxArg)):
-    sys.exit("Error: Wave arguments must be less than 0xFFFF")
 
-dev.SetWireInValue(0x00, amp)
-dev.SetWireInValue(0x01, offset)
-dev.SetWireInValue(0x02, phaseadd)
-dev.SetWireInValue(0x04, freqdivider)
-# Reset FPGA and start accumulator
-dev.SetWireInValue(0x03, 1)
-dev.UpdateWireIns()
-dev.SetWireInValue(0x03, 0)
-dev.UpdateWireIns()
+#Open CSV
+fileName = sys.argv[1]
+with open(fileName, newline='') as sineParameters:
+    reader = csv.reader(sineParameters)
+
+    for row in reader:
+        #Go through one row of values and put in pipes
+        for i in range(SINEMODULES):
+            amp = int(row[i])
+            offset = int(row[i+SINEMODULES])
+            phaseadd = int(row[i+2*SINEMODULES])  
+
+            #Check vals within range
+            if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
+                sys.exit("Error at row {}: Wave arguments must be less than 0xFFFF".format(i))
+            
+            #Write to pipes
+            dev.WriteToPipeIn(0x80, amp)
+            dev.WriteToPipeIn(0x81, offset)
+            dev.WriteToPipeIn(0x82, phaseadd)
+
+        #Reset (this switches over piped-in values to be active)
+        dev.SetWireInValue(0x03, 1)
+        dev.UpdateWireIns()
+        dev.SetWireInValue(0x03, 0)
+        dev.UpdateWireIns()    
+
+
+
+
+
+
+
+
 while(True):
     dev.UpdateWireOuts()
     sVOne = dev.GetWireOutValue(0x20)
