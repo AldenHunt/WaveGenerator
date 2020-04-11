@@ -40,7 +40,7 @@ module top(
 	wire [4*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  resetwire;
+	wire [15:0]  resetsignal, length;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
 	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
 	wire signed [15:0]  finalSum;
@@ -109,7 +109,8 @@ module top(
 
 	assign led = finalSum[10:3];
 	
-	okWireIn ep03 (.ok1(ok1), .ep_addr(8'h03), .ep_dataout(resetwire));
+	okWireIn resetwire (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(resetsignal));
+	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(length))
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));

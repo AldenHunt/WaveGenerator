@@ -32,17 +32,23 @@ with open(fileName, newline='') as sineParameters:
 
             #Check vals within range
             if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
-                sys.exit("Error at row {}: Wave arguments must be less than 0xFFFF".format(i))
+                sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
             
             #Write to pipes
             dev.WriteToPipeIn(0x80, amp)
             dev.WriteToPipeIn(0x81, offset)
             dev.WriteToPipeIn(0x82, phaseadd)
 
-        #Reset (this switches over piped-in values to be active)
-        dev.SetWireInValue(0x03, 1)
+        #Send length of time
+        time = int(row[3*SINEMODULES])
+        if (time > MAXARG):
+            sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
+        dev.SetWireInValue(0x01, time)
         dev.UpdateWireIns()
-        dev.SetWireInValue(0x03, 0)
+        #Reset (this switches over piped-in values to be active)
+        dev.SetWireInValue(0x00, 1)
+        dev.UpdateWireIns()
+        dev.SetWireInValue(0x00, 0)
         dev.UpdateWireIns()    
 
 
