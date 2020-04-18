@@ -63,6 +63,15 @@ module top(
 	
 	okWireOR # (.N(4)) wireOR (ok2, ok2x);
 	
+	outfifo fifo(
+		.din(finalSum),
+      .dout(dataout),
+      .wr_en(fifowrite),
+      .rd_en(fiforead),
+      .clk(ti_clk),
+      .rst(reset)
+	);
+	
 	always@(posedge ti_clk) begin
 		if (resetwire[0] == 1) begin
 			currBlock <= 0;
@@ -110,7 +119,7 @@ module top(
 	assign led = finalSum[10:3];
 	
 	okWireIn resetwire (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(resetsignal));
-	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(length))
+	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(length));
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
