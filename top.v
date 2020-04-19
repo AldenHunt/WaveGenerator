@@ -63,23 +63,16 @@ module top(
 	
 	okWireOR # (.N(4)) wireOR (ok2, ok2x);
 	
-	outfifo fifo(
-		.din(finalSum),
-      .dout(dataout),
-      .wr_en(fifowrite),
-      .rd_en(fiforead),
-      .clk(ti_clk),
-      .rst(reset)
-	);
+	
 	
 	always@(posedge ti_clk) begin
-		if (resetwire[0] == 1) begin
+		if (resetsignal[0] == 1) begin
 			currBlock <= 0;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
 		end
-		else currBlock <= currBlock + 1;
+		else if (ampwrite[0]) currBlock <= currBlock + 1;
 	end
 	
 	controlcombiner amps(
@@ -112,7 +105,7 @@ module top(
 		.offsets(activeoffsets),
 		.phasewords(activephasewords),
 		.clk(clk1),
-		.reset(resetwire[0]),
+		.reset(resetsignal[0]),
 		.results(finalSum)
 	);
 

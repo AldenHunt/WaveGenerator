@@ -18,38 +18,50 @@ MAXARG = 0xFFFF
 SINEMODULES = 64
 wavelist = []
 
+#Take one row and send it to FPGA in appropriate pipes
+def sendRowToFPGA(row):
+    for i in range(SINEMODULES):
+        amp = int(row[i])
+        offset = int(row[i+SINEMODULES])
+        phaseadd = int(row[i+2*SINEMODULES])  
+
+        #Check vals within range
+        if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
+            sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
+        
+        #Write to pipes
+        dev.WriteToPipeIn(0x80, amp)
+        dev.WriteToPipeIn(0x81, offset)
+        dev.WriteToPipeIn(0x82, phaseadd)
+
+    #Send length of time
+    time = int(row[3*SINEMODULES])
+    if (time > MAXARG):
+        sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
+    dev.SetWireInValue(0x01, time)
+    dev.UpdateWireIns()
+    #Reset (this switches over piped-in values to be active)
+    dev.SetWireInValue(0x00, 1)
+    dev.UpdateWireIns()
+    dev.SetWireInValue(0x00, 0)
+    dev.UpdateWireIns() 
+
 #Open CSV
 fileName = sys.argv[1]
 with open(fileName, newline='') as sineParameters:
     reader = csv.reader(sineParameters)
+    if (reader.line_num < 2):
+        sys.exit("Error: Your CSV must have at one line of data")
+    
+    next(reader) #Discard first line (headers)
+    firstinputs = next(reader)
+    sendRowToFPGA(firstinputs)
 
     for row in reader:
         #Go through one row of values and put in pipes
-        for i in range(SINEMODULES):
-            amp = int(row[i])
-            offset = int(row[i+SINEMODULES])
-            phaseadd = int(row[i+2*SINEMODULES])  
+        sendRowToFPGA(row)
 
-            #Check vals within range
-            if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
-                sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
-            
-            #Write to pipes
-            dev.WriteToPipeIn(0x80, amp)
-            dev.WriteToPipeIn(0x81, offset)
-            dev.WriteToPipeIn(0x82, phaseadd)
-
-        #Send length of time
-        time = int(row[3*SINEMODULES])
-        if (time > MAXARG):
-            sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
-        dev.SetWireInValue(0x01, time)
-        dev.UpdateWireIns()
-        #Reset (this switches over piped-in values to be active)
-        dev.SetWireInValue(0x00, 1)
-        dev.UpdateWireIns()
-        dev.SetWireInValue(0x00, 0)
-        dev.UpdateWireIns()    
+           
 
 
 
