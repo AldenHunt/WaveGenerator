@@ -18,6 +18,15 @@ MAXARG = 0xFFFF
 SINEMODULES = 64
 wavelist = []
 
+#Endpoints:
+# 0x01: time input wire
+# 0x40: reset/state triggerIn (0:startup 1:after load new row of values)
+# 0x60: timeup triggerOut (0: completed certain waveforms)
+# 0x80: amp input pipe
+# 0x81: offset input pipe
+# 0x82: phaseadd input pipe
+# 0xA0: waveform output pipe
+
 #Take one row and send it to FPGA in appropriate pipes
 def sendRowToFPGA(row):
     for i in range(SINEMODULES):
@@ -41,10 +50,16 @@ def sendRowToFPGA(row):
     dev.SetWireInValue(0x01, time)
     dev.UpdateWireIns()
     #Reset (this switches over piped-in values to be active)
-    dev.SetWireInValue(0x00, 1)
-    dev.UpdateWireIns()
-    dev.SetWireInValue(0x00, 0)
-    dev.UpdateWireIns() 
+    dev.ActivateTriggerIn(0x40, 1)
+    return time
+
+#Read a certain number of values from the FPGA (usually equivalent to a multiple of the timestep provided)
+def readOut(num):
+    buf = bytearray(2*num)
+    dev.ReadFromPipeOut(0xA0, buf)
+    for i in num:
+        val = int.from_bytes(buf[2*i:2*i+1], byteorder='big', signed=True)
+        wavelist.append(val)
 
 #Open CSV
 fileName = sys.argv[1]
@@ -55,11 +70,36 @@ with open(fileName, newline='') as sineParameters:
     
     next(reader) #Discard first line (headers)
     firstinputs = next(reader)
-    sendRowToFPGA(firstinputs)
+    dev.ActivateTriggerIn(0x40, 0)
+    lastTime = sendRowToFPGA(firstinputs)
 
     for row in reader:
         #Go through one row of values and put in pipes
-        sendRowToFPGA(row)
+        newerTime = sendRowToFPGA(row)
+        
+        #Wait until got word that last sequence was completed
+        while(True):
+            dev.UpdateTriggerOuts()
+            if (dev.IsTriggered(0x60, 0) == True):
+                break
+        
+        #read recently completed values and add to array
+        readOut(lastTime)
+        lastTime = newerTime
+
+    #When no more rows from csv to send to FPGA, do one last read
+    while(True):
+        dev.UpdateTriggerOuts()
+        if (dev.IsTriggered(0x60, 0) == True):
+            break
+    
+    #read recently completed values and add to array
+    readOut(lastTime)
+
+    #Final plot
+    plt.plot(wavelist)
+    plt.title("FPGA-Generated Wave")
+    plt.savefig("FPGAwave.png")
 
            
 
@@ -70,22 +110,7 @@ with open(fileName, newline='') as sineParameters:
 
 
 
-while(True):
-    dev.UpdateWireOuts()
-    sVOne = dev.GetWireOutValue(0x20)
-    if abs(sVOne) < 10: break
-for i in range(2000):
-    dev.UpdateWireOuts()
-    sineValue = dev.GetWireOutValue(0x20)
-    if sineValue >= 0x1000:
-        sineValue = sineValue - 2**16
-    divSine = float(sineValue) / float(2**10)
-    wavelist.append(divSine)
-plt.plot(wavelist)
-    
 
-plt.title("FPGA-Generated Wave")
-plt.savefig("gensine.png")
   
 
     

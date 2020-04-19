@@ -40,10 +40,10 @@ module top(
 	wire [4*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  resetsignal, length;
+	wire [15:0]  resetsignal, finishedsignal, length;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
 	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
-	wire signed [15:0]  finalSum;
+	wire signed [15:0]  finalSum, fifoout;
 	
 	
 	//Other variables
@@ -66,7 +66,12 @@ module top(
 	
 	
 	always@(posedge ti_clk) begin
-		if (resetsignal[0] == 1) begin
+		if (resetsignal[0]) begin
+			currBlock <= 0;
+			activeamps <= 0;
+			activeoffsets <= 0;
+			activephasewords <= 0;
+		end else if (resetsignal[1] == 1) begin
 			currBlock <= 0;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
@@ -111,13 +116,17 @@ module top(
 
 	assign led = finalSum[10:3];
 	
-	okWireIn resetwire (.ok1(ok1), .ep_addr(8'h00), .ep_dataout(resetsignal));
+
 	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(length));
+	
+	okTriggerIn resetTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
+	
+	okTriggerOut finishedTrigger (.ok1(ok1), .ok2(ok2), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger(finishedsignal));
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
 	okPipeIn phasewordpipe(.ok1(ok1), .ok2(ok2x[2*17 +: 17]), .ep_addr(8'h82), .ep_write(phasewordwrite), .ep_dataout(phasewordwire));
 	
-	okWireOut ep20 (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'h20), .ep_datain(finalSum));
+	okPipeOut outputpipe (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'ha0), .ep_datain(fifoout));
 
 endmodule
