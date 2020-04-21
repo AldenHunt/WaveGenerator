@@ -37,7 +37,7 @@ module top(
 	wire ti_clk;
 	wire [16:0] ok2;
 	wire [30:0] ok1;
-	wire [4*17-1:0] ok2x;
+	wire [5*17-1:0] ok2x;
 	
 	//Endpoint connections
 	wire [15:0]  resetsignal;
@@ -81,24 +81,25 @@ module top(
 		.ok2(ok2)
    );
 	
-	okWireOR # (.N(4)) wireOR (ok2, ok2x);
+	okWireOR # (.N(5)) wireOR (ok2, ok2x);
 	
 	always@(posedge ti_clk) begin
-		if (switchinputs) begin
+		if (resetsignal[2]) begin
 			currBlock <= 0;
+		end
+		else if (phasewordwrite) currBlock <= currBlock + 1; //Once done with all three, will increment
+	end
+	
+	always@(posedge clk1) begin
+		if (switchinputs) begin
 			timeup <= 0;
-			finishedsignal[0] <= 0;
+			finishedsignal <= 0;
 			currTime <= endtime;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
 			endtime <= timewire;
-		end
-		else if (phasewordwrite) currBlock <= currBlock + 1; //Once done all three will increment
-	end
-	
-	always@(posedge clk1) begin
-		if (currTime != 0) begin
+		end else if (currTime != 0) begin
 			currTime <= currTime - 1;
 		end else if (currTime == 0) begin
 			finishedsignal[0] <= !timeup;
@@ -145,12 +146,12 @@ module top(
 	
 	okTriggerIn resetTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
 	
-	okTriggerOut finishedTrigger (.ok1(ok1), .ok2(ok2), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger(finishedsignal));
+	okTriggerOut finishedTrigger (.ok1(ok1), .ok2(ok2x[4*17 +: 17]), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger(finishedsignal));
 	
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
 	okPipeIn phasewordpipe(.ok1(ok1), .ok2(ok2x[2*17 +: 17]), .ep_addr(8'h82), .ep_write(phasewordwrite), .ep_dataout(phasewordwire));
 	
-	okPipeOut outputpipe (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'ha0), .ep_read(readout), .ep_datain(fifoout));
+	okPipeOut outputpipe (.ok1(ok1), .ok2(ok2x[3*17 +: 17]), .ep_addr(8'ha0), .ep_read(readout), .ep_datain(fifoout));
 
 endmodule
