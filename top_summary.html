@@ -2,7 +2,7 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'>
-<TD ALIGN=CENTER COLSPAN='4'><B>top Project Status (04/02/2020 - 04:49:06)</B></TD></TR>
+<TD ALIGN=CENTER COLSPAN='4'><B>top Project Status (04/21/2020 - 04:43:14)</B></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project File:</B></TD>
 <TD>Thesis.xise</TD>
@@ -13,7 +13,7 @@
 <TD BGCOLOR='#FFFF99'><B>Module Name:</B></TD>
 <TD>top</TD>
 <TD BGCOLOR='#FFFF99'><B>Implementation State:</B></TD>
-<TD>Synthesized</TD>
+<TD>Synthesized (Failed)</TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Target Device:</B></TD>
@@ -21,12 +21,12 @@
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Errors:</B></LI></UL></TD>
 <TD>
 <font color="red"; face="Arial"><b>X </b></font>
-<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/*.xmsgs?&DataKey=Error'>2 Errors (2 new)</A></TD>
+<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/*.xmsgs?&DataKey=Error'>1 Error (1 new)</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Product Version:</B></TD><TD>ISE 14.7</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Warnings:</B></LI></UL></TD>
-<TD ALIGN=LEFT>No Warnings</TD>
+<TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/*.xmsgs?&DataKey=Warning'>10 Warnings (7 new)</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Goal:</B></dif></TD>
@@ -56,7 +56,17 @@ System Settings</A>
 
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='2'><B>Current Warnings</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=CurrentWarnings"><B>[-]</B></a></TD></TR>
-<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD COLSPAN='3'><B>No Warnings Found</B></TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Synthesis Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1127: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 60: Assignment to fifowriteen ignored, since the identifier is never used</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1499: - "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module &lt;two_clk_fifo&gt; remains a black box.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1127: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 70: Assignment to fifofull ignored, since the identifier is never used</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1127: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 71: Assignment to fifoem ignored, since the identifier is never used</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1016: - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1016: - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:413: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 97: Result of 7-bit expression is truncated to fit in 6-bit target.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:413: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 102: Result of 32-bit expression is truncated to fit in 16-bit target.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:634: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 52: Net &lt;finishedsignal[15]&gt; does not have a driver.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1499: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 24: Empty module &lt;top&gt; remains a black box.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 </TABLE>
 
 
@@ -73,7 +83,7 @@ System Settings</A>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='6'><B>Detailed Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DetailedReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD><B>Generated</B></TD>
 <TD ALIGN=LEFT><B>Errors</B></TD><TD ALIGN=LEFT><B>Warnings</B></TD><TD ALIGN=LEFT COLSPAN='2'><B>Infos</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Sat Apr 18 22:17:36 2020</TD><TD ALIGN=LEFT><font color="red"; face="Arial"><b>X </b></font><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Error'>2 Errors (2 new)</A></TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Tue Apr 21 04:43:14 2020</TD><TD ALIGN=LEFT><font color="red"; face="Arial"><b>X </b></font><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Error'>1 Error (1 new)</A></TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Warning'>10 Warnings (7 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
 <TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.bld'>Translation Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:31:01 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Warning'>3 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
 <TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_map.mrp'>Map Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:37:51 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Warning'>4 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Info'>8 Infos (0 new)</A></TD></TR>
 <TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.par'>Place and Route Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:46:19 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Warning'>7 Warnings (1 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Info'>1 Info (0 new)</A></TD></TR>
@@ -89,5 +99,5 @@ System Settings</A>
 </TABLE>
 
 
-<br><center><b>Date Generated:</b> 04/21/2020 - 00:57:50</center>
+<br><center><b>Date Generated:</b> 04/21/2020 - 04:43:15</center>
 </BODY></HTML>

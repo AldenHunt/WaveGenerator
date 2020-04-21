@@ -136,19 +136,124 @@ Parsing module <okPipeOut>.
 Parsing module <okBTPipeIn>.
 Parsing module <okBTPipeOut>.
 Parsing module <okWireOR>.
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" into library work
+Parsing module <two_clk_fifo>.
 Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/controlcombiner.v" into library work
 Parsing module <controlcombiner>.
 Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/top.v" into library work
 Parsing module <top>.
-ERROR:HDLCompiler:77 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 69: <resetwire> is illegally used in this expression.
-ERROR:HDLCompiler:598 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 24: Module <top> ignored due to previous errors.
-Verilog file /home/ise/ise_projects/WaveGenerator/top.v ignored due to errors
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <top>.
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 60: Assignment to fifowriteen ignored, since the identifier is never used
+
+Elaborating module <two_clk_fifo>.
+WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 70: Assignment to fifofull ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 71: Assignment to fifoem ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance
+
+Elaborating module <okHost>.
+
+Elaborating module <DCM_SP>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <FDS>.
+
+Elaborating module <FD>.
+
+Elaborating module <IOBUF>.
+
+Elaborating module <IODELAY2(IDELAY_TYPE="FIXED",IDELAY_VALUE=100,DELAY_SRC="IDATAIN")>.
+
+Elaborating module <FDRE>.
+
+Elaborating module <OBUF>.
+
+Elaborating module <okCoreHarness>.
+
+Elaborating module <okWireOR(N=4)>.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 97: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 102: Result of 32-bit expression is truncated to fit in 16-bit target.
+
+Elaborating module <controlcombiner>.
+
+Elaborating module <sixtyfourblock>.
+
+Elaborating module <thirtytwoblock>.
+
+Elaborating module <sixteenblock>.
+
+Elaborating module <eightblock>.
+
+Elaborating module <fourblock>.
+
+Elaborating module <twoblock>.
+
+Elaborating module <singlecompute>.
+
+Elaborating module <sinetable>.
+
+Elaborating module <okWireIn>.
+
+Elaborating module <okTriggerIn>.
+
+Elaborating module <okTriggerOut>.
+
+Elaborating module <okPipeIn>.
+
+Elaborating module <okPipeOut>.
+ERROR:HDLCompiler:1401 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 86: Signal currTime[15] in unit top is connected to following multiple drivers:
+Driver 0: output signal currTime[15] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[15] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[14] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[14] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[13] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[13] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[12] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[12] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[11] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[11] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[10] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[10] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[9] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[9] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[8] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[8] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[7] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[7] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[6] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[6] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[5] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[5] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[4] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[4] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[3] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[3] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[2] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[2] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[1] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[1] of instance Flip-flop (_i000023).
+Driver 0: output signal currTime[0] of instance Flip-flop (currTime).
+Driver 1: output signal currTime[0] of instance Flip-flop (_i000023).
+WARNING:HDLCompiler:634 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 52: Net <finishedsignal[15]> does not have a driver.
+Driver 0: output signal finishedsignal[0] of instance Flip-Flop (finishedsignal[0]).
+Driver 1: output signal finishedsignal[0] of instance Flip-Flop (_i000024).
+Driver 0: output signal timeup of instance Flip-Flop (timeup).
+Driver 1: output signal timeup of instance Flip-Flop (_i000025).
+Module top remains a blackbox, due to errors in its contents
+WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 24: Empty module <top> remains a black box.
 --> 
 
 
-Total memory usage is 408164 kilobytes
+Total memory usage is 428888 kilobytes
 
-Number of errors   :    2 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    1 (   0 filtered)
+Number of warnings :   10 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -5,10 +5,37 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="error" file="HDLCompiler" num="77" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 69: &lt;<arg fmt="%s" index="1">resetwire</arg>&gt; is illegally used in this expression.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 60: Assignment to <arg fmt="%s" index="1">fifowriteen</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="error" file="HDLCompiler" num="598" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 24: Module &lt;<arg fmt="%s" index="1">top</arg>&gt; ignored due to previous errors.
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">two_clk_fifo</arg>&gt; remains a black box.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 70: Assignment to <arg fmt="%s" index="1">fifofull</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 71: Assignment to <arg fmt="%s" index="1">fifoem</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port <arg fmt="%s" index="1">CLK180</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="new" >"/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port <arg fmt="%s" index="1">BUSY</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 97: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 102: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">16</arg>-bit target.
+</msg>
+
+<msg type="error" file="HDLCompiler" num="1401" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 86: Signal <arg fmt="%s" index="1">currTime[15]</arg> in unit <arg fmt="%s" index="2">top</arg> is connected to following multiple drivers:
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 52: Net &lt;<arg fmt="%s" index="1">finishedsignal[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/ise/ise_projects/WaveGenerator/top.v" Line 24: Empty module &lt;<arg fmt="%s" index="1">top</arg>&gt; remains a black box.
 </msg>
 
 </messages>

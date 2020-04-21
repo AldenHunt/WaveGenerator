@@ -155,3 +155,7 @@ trce -intstyle ise -v 3 -s 2 -n 3 -fastpaths -xml top.twx top.ncd -o top.twr top
 bitgen -intstyle ise -f top.ut top.ncd 
 xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
 xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 
+xst -intstyle ise -ifn "/home/ise/ise_projects/WaveGenerator/top.xst" -ofn "/home/ise/ise_projects/WaveGenerator/top.syr" 

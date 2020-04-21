@@ -77,6 +77,7 @@ def main():
         firstinputs = next(reader)
         dev.ActivateTriggerIn(0x40, 0)
         lastTime = sendRowToFPGA(firstinputs, dev)
+        dev.ActivateTriggerIn(0x40, 0)
 
         for row in reader:
             #Go through one row of values and put in pipes

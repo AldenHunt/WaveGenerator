@@ -43,19 +43,33 @@ module top(
 	wire [15:0]  resetsignal;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, timewire;
 	wire ampwrite, offsetwrite, phasewordwrite;
-	wire timeup, switchinputs;
+	wire switchinputs;
 	wire signed [15:0]  finalSum, fifoout;
 	
 	
 	//Other variables
 	reg [5:0] currBlock;
-	reg [15:0] currTime, finishedsignal;
+	reg [15:0] currTime, finishedsignal, endtime;
+	reg timeup;
+	wire readout, fifoem, fifofull, fifowriteen;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
 	assign led = finalSum[10:3];
 	assign switchinputs = (resetsignal[0] || (resetsignal[1] && timeup));
+	assign fifowriteen = ~timeup;
 	
+	two_clk_fifo outfifo(
+	  .rst(switchinputs),
+	  .wr_clk(clk1),
+	  .rd_clk(ti_clk),
+	  .din(finalSum),
+	  .wr_en(timeup),
+	  .rd_en(readout),
+	  .dout(fifoout),
+	  .full(fifofull),
+	  .empty(fifoem)
+	);
 	
 	okHost okHI( 
 		.hi_in(hi_in),
@@ -69,28 +83,25 @@ module top(
 	
 	okWireOR # (.N(4)) wireOR (ok2, ok2x);
 	
-	
-	
 	always@(posedge ti_clk) begin
 		if (switchinputs) begin
 			currBlock <= 0;
 			timeup <= 0;
+			finishedsignal[0] <= 0;
+			currTime <= endtime;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
 			endtime <= timewire;
 		end
-		else if (ampwrite[0]) currBlock <= currBlock + 1;
+		else if (phasewordwrite) currBlock <= currBlock + 1; //Once done all three will increment
 	end
 	
 	always@(posedge clk1) begin
-		if (switchinputs) begin
-			finishedsignal <= 0;
-			currTime <= endtime;
-		end else if (currTime != 0) begin
+		if (currTime != 0) begin
 			currTime <= currTime - 1;
 		end else if (currTime == 0) begin
-			finishedsignal <= 1;
+			finishedsignal[0] <= !timeup;
 			timeup <= 1;
 		end
 				
@@ -140,6 +151,6 @@ module top(
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));
 	okPipeIn phasewordpipe(.ok1(ok1), .ok2(ok2x[2*17 +: 17]), .ep_addr(8'h82), .ep_write(phasewordwrite), .ep_dataout(phasewordwire));
 	
-	okPipeOut outputpipe (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'ha0), .ep_datain(fifoout));
+	okPipeOut outputpipe (.ok1(ok1), .ok2(ok2x[ 3*17 +: 17 ]), .ep_addr(8'ha0), .ep_read(readout), .ep_datain(fifoout));
 
 endmodule
