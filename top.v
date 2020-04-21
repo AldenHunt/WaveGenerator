@@ -40,16 +40,22 @@ module top(
 	wire [4*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  resetsignal, finishedsignal, length;
-	wire [15:0]  ampwire, offsetwire, phasewordwire, clkwire;
-	wire ampwrite, offsetwrite, phasewordwrite, clkwrite;
+	wire [15:0]  resetsignal;
+	wire [15:0]  ampwire, offsetwire, phasewordwire, timewire;
+	wire ampwrite, offsetwrite, phasewordwrite;
+	wire timeup, switchinputs;
 	wire signed [15:0]  finalSum, fifoout;
 	
 	
 	//Other variables
 	reg [5:0] currBlock;
+	reg [15:0] currTime, finishedsignal;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
+	
+	assign led = finalSum[10:3];
+	assign switchinputs = (resetsignal[0] || (resetsignal[1] && timeup));
+	
 	
 	okHost okHI( 
 		.hi_in(hi_in),
@@ -66,18 +72,28 @@ module top(
 	
 	
 	always@(posedge ti_clk) begin
-		if (resetsignal[0]) begin
+		if (switchinputs) begin
 			currBlock <= 0;
-			activeamps <= 0;
-			activeoffsets <= 0;
-			activephasewords <= 0;
-		end else if (resetsignal[1] == 1) begin
-			currBlock <= 0;
+			timeup <= 0;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
+			endtime <= timewire;
 		end
 		else if (ampwrite[0]) currBlock <= currBlock + 1;
+	end
+	
+	always@(posedge clk1) begin
+		if (switchinputs) begin
+			finishedsignal <= 0;
+			currTime <= endtime;
+		end else if (currTime != 0) begin
+			currTime <= currTime - 1;
+		end else if (currTime == 0) begin
+			finishedsignal <= 1;
+			timeup <= 1;
+		end
+				
 	end
 	
 	controlcombiner amps(
@@ -110,14 +126,11 @@ module top(
 		.offsets(activeoffsets),
 		.phasewords(activephasewords),
 		.clk(clk1),
-		.reset(resetsignal[0]),
+		.reset(resetsignal[1]),
 		.results(finalSum)
 	);
 
-	assign led = finalSum[10:3];
-	
-
-	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(length));
+	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(timewire));
 	
 	okTriggerIn resetTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
 	
