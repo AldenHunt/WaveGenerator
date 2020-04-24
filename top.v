@@ -50,13 +50,13 @@ module top(
 	//Other variables
 	reg [5:0] currBlock;
 	reg [15:0] currTime, finishedsignal, endtime;
-	reg timeup;
+	reg timeup, finishedloadin;
 	wire readout, fifoem, fifofull, fifowriteen;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
 	assign led = finalSum[10:3];
-	assign switchinputs = (resetsignal[0] || (resetsignal[1] && timeup));
+	assign switchinputs = (resetsignal[0] || (finishedloadin && timeup));
 	assign fifowriteen = ~timeup;
 	
 	two_clk_fifo outfifo(
@@ -91,9 +91,13 @@ module top(
 	end
 	
 	always@(posedge clk1) begin
+		if (resetsignal[1]) begin
+			finishedloadin <= 1;
+		end
 		if (switchinputs) begin
 			timeup <= 0;
 			finishedsignal <= 0;
+			finishedloadin <= 0;
 			currTime <= endtime;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;

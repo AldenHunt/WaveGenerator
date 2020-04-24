@@ -10,23 +10,23 @@ Target Device  : xc6slx150
 Target Package : fgg484
 Target Speed   : -2
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Apr  2 04:31:07 2020
+Mapped Date    : Fri Apr 24 17:38:39 2020
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    4
 Slice Logic Utilization:
-  Number of Slice Registers:                 6,974 out of 184,304    3%
-    Number used as Flip Flops:               6,703
+  Number of Slice Registers:                 7,302 out of 184,304    3%
+    Number used as Flip Flops:               7,029
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
-    Number used as AND/OR logics:              271
-  Number of Slice LUTs:                     35,982 out of  92,152   39%
-    Number used as logic:                   35,887 out of  92,152   38%
-      Number using O6 output only:          32,141
-      Number using O5 output only:              29
-      Number using O5 and O6:                3,717
+    Number used as AND/OR logics:              273
+  Number of Slice LUTs:                     37,934 out of  92,152   41%
+    Number used as logic:                   37,856 out of  92,152   41%
+      Number using O6 output only:          36,128
+      Number using O5 output only:              59
+      Number using O5 and O6:                1,669
       Number used as ROM:                        0
     Number used as Memory:                      45 out of  21,680    1%
       Number used as Dual Port RAM:             20
@@ -41,21 +41,21 @@ Slice Logic Utilization:
         Number using O6 output only:             1
         Number using O5 output only:             0
         Number using O5 and O6:                  0
-    Number used exclusively as route-thrus:     50
-      Number with same-slice register load:     49
-      Number with same-slice carry load:         1
+    Number used exclusively as route-thrus:     33
+      Number with same-slice register load:     30
+      Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                13,530 out of  23,038   58%
-  Number of MUXCYs used:                     1,804 out of  46,076    3%
-  Number of LUT Flip Flop pairs used:       37,110
-    Number with an unused Flip Flop:        30,225 out of  37,110   81%
-    Number with an unused LUT:               1,128 out of  37,110    3%
-    Number of fully used LUT-FF pairs:       5,757 out of  37,110   15%
-    Number of unique control sets:              51
+  Number of occupied Slices:                13,834 out of  23,038   60%
+  Number of MUXCYs used:                     1,884 out of  46,076    4%
+  Number of LUT Flip Flop pairs used:       38,938
+    Number with an unused Flip Flop:        31,731 out of  38,938   81%
+    Number with an unused LUT:               1,004 out of  38,938    2%
+    Number of fully used LUT-FF pairs:       6,203 out of  38,938   15%
+    Number of unique control sets:              68
     Number of slice register sites lost
-      to control set restrictions:             172 out of 184,304    1%
+      to control set restrictions:             222 out of 184,304    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -69,7 +69,7 @@ IO Utilization:
     IOB Flip Flops:                             48
 
 Specific Feature Utilization:
-  Number of RAMB16BWERs:                         1 out of     268    1%
+  Number of RAMB16BWERs:                        61 out of     268   22%
   Number of RAMB8BWERs:                          0 out of     536    0%
   Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
     Number used as BUFIO2s:                      1
@@ -106,11 +106,11 @@ Specific Feature Utilization:
   Number of STARTUPs:                            0 out of       1    0%
   Number of SUSPEND_SYNCs:                       0 out of       1    0%
 
-Average Fanout of Non-Clock Nets:                4.95
+Average Fanout of Non-Clock Nets:                5.18
 
-Peak Memory Usage:  1520 MB
-Total REAL time to MAP completion:  6 mins 45 secs 
-Total CPU time to MAP completion:   6 mins 40 secs 
+Peak Memory Usage:  1461 MB
+Total REAL time to MAP completion:  7 mins 48 secs 
+Total CPU time to MAP completion:   7 mins 46 secs 
 
 Table of Contents
 -----------------
@@ -139,23 +139,25 @@ Xilinx software updates or new releases.
 WARNING:Timing:3175 - hi_in<0> does not clock data to hi_out<1>
 WARNING:Timing:3225 - Timing constraint COMP "hi_out<1>" OFFSET = OUT 11.93 ns AFTER COMP "hi_in<0>" "RISING" ignored during timing analysis
 WARNING:PhysDesignRules:367 - The signal
-   <okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O> is
+   <okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
 WARNING:PhysDesignRules:367 - The signal
-   <okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O> is
+   <okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O> is
    incomplete. The signal does not drive any load pins in the design.
 
 Section 3 - Informational
 -------------------------
 INFO:Security:56 - Part 'xc6slx150' is not a WebPack part.
 INFO:LIT:243 - Logical network ok1<30> has no load.
-INFO:LIT:395 - The above info message is repeated 19 more times for the
+INFO:LIT:395 - The above info message is repeated 17 more times for the
    following (max. 5 shown):
-   ok1<29>,
-   ok1<26>,
-   ep03/ep_dataout<15>,
-   ep03/ep_dataout<14>,
-   ep03/ep_dataout<13>
+   outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gw
+   as.wsts/ram_full_i,
+   outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr
+   as.rsts/ram_empty_i,
+   resetTrigger/ep_trigger<15>,
+   resetTrigger/ep_trigger<14>,
+   resetTrigger/ep_trigger<13>
    To see the details of these info messages, please use the -detail switch.
 INFO:MapLib:562 - No environment variables are currently set.
 INFO:LIT:244 - All of the single ended outputs in this design are using slew
@@ -171,9 +173,9 @@ INFO:Pack:1650 - Map created a placed design.
 
 Section 4 - Removed Logic Summary
 ---------------------------------
-  62 block(s) removed
-  12 block(s) optimized away
-  39 signal(s) removed
+ 107 block(s) removed
+  30 block(s) optimized away
+  84 signal(s) removed
 
 Section 5 - Removed Logic
 -------------------------
@@ -216,64 +218,222 @@ Loadless block "theBigOne/ADDERTREE_INTERNAL_Madd5815" (ROM) removed.
 Loadless block "theBigOne/ADDERTREE_INTERNAL_Madd6015" (ROM) removed.
 Loadless block "theBigOne/ADDERTREE_INTERNAL_Madd6215" (ROM) removed.
 Loadless block "theBigOne/ADDERTREE_INTERNAL_Madd915" (ROM) removed.
-The signal "ep03/ep_dataout<15>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<14>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<13>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<12>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<11>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<10>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<9>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<8>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<7>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<6>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<5>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<4>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<3>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<2>" is sourceless and has been removed.
-The signal "ep03/ep_dataout<1>" is sourceless and has been removed.
-The signal "ep03/ep_datahold<1>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_1" (SFF) removed.
-The signal "ep03/ep_datahold<2>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_2" (SFF) removed.
-The signal "ep03/ep_datahold<3>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_3" (SFF) removed.
-The signal "ep03/ep_datahold<4>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_4" (SFF) removed.
-The signal "ep03/ep_datahold<5>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_5" (SFF) removed.
-The signal "ep03/ep_datahold<6>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_6" (SFF) removed.
-The signal "ep03/ep_datahold<7>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_7" (SFF) removed.
-The signal "ep03/ep_datahold<8>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_8" (SFF) removed.
-The signal "ep03/ep_datahold<9>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_9" (SFF) removed.
-The signal "ep03/ep_datahold<10>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_10" (SFF) removed.
-The signal "ep03/ep_datahold<11>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_11" (SFF) removed.
-The signal "ep03/ep_datahold<12>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_12" (SFF) removed.
-The signal "ep03/ep_datahold<13>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_13" (SFF) removed.
-The signal "ep03/ep_datahold<14>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_14" (SFF) removed.
-The signal "ep03/ep_datahold<15>" is sourceless and has been removed.
- Sourceless block "ep03/ep_dataout_15" (SFF) removed.
-The signal "okHI/core0/core0/GND_2_o_host_datain[2]_MUX_730_o" is sourceless and
+The signal
+"outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas
+.wsts/ram_full_i" is sourceless and has been removed.
+The signal
+"outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras
+.rsts/ram_empty_i" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<15>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<14>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<13>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<12>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<11>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<10>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<9>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<8>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<7>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<6>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<5>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<4>" is sourceless and has been removed.
+The signal "resetTrigger/ep_trigger<3>" is sourceless and has been removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<3>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_3" (SFF) removed.
+  The signal "resetTrigger/eptrig<3>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_3" (FF) removed.
+    The signal "resetTrigger/trigff0<3>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_3" (FF) removed.
+      The signal "resetTrigger/trigff1<3>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_3_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<3>" is sourceless and
 has been removed.
- Sourceless block "okHI/core0/core0/ti_trigupdate" (SFF) removed.
-  The signal "ok1<29>" is sourceless and has been removed.
-The signal "okHI/core0/core0/state[31]_GND_2_o_Select_96_o" is sourceless and
+         Sourceless block "resetTrigger/ep_trigger_3" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_3_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<4>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_4" (SFF) removed.
+  The signal "resetTrigger/eptrig<4>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_4" (FF) removed.
+    The signal "resetTrigger/trigff0<4>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_4" (FF) removed.
+      The signal "resetTrigger/trigff1<4>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_4_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<4>" is sourceless and
 has been removed.
- Sourceless block "okHI/core0/core0/ti_read" (SFF) removed.
-  The signal "ok1<26>" is sourceless and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_4" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_4_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<5>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_5" (SFF) removed.
+  The signal "resetTrigger/eptrig<5>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_5" (FF) removed.
+    The signal "resetTrigger/trigff0<5>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_5" (FF) removed.
+      The signal "resetTrigger/trigff1<5>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_5_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<5>" is sourceless and
+has been removed.
+         Sourceless block "resetTrigger/ep_trigger_5" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_5_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<6>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_6" (SFF) removed.
+  The signal "resetTrigger/eptrig<6>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_6" (FF) removed.
+    The signal "resetTrigger/trigff0<6>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_6" (FF) removed.
+      The signal "resetTrigger/trigff1<6>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_6_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<6>" is sourceless and
+has been removed.
+         Sourceless block "resetTrigger/ep_trigger_6" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_6_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<7>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_7" (SFF) removed.
+  The signal "resetTrigger/eptrig<7>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_7" (FF) removed.
+    The signal "resetTrigger/trigff0<7>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_7" (FF) removed.
+      The signal "resetTrigger/trigff1<7>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_7_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<7>" is sourceless and
+has been removed.
+         Sourceless block "resetTrigger/ep_trigger_7" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_7_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<8>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_8" (SFF) removed.
+  The signal "resetTrigger/eptrig<8>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_8" (FF) removed.
+    The signal "resetTrigger/trigff0<8>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_8" (FF) removed.
+      The signal "resetTrigger/trigff1<8>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_8_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<8>" is sourceless and
+has been removed.
+         Sourceless block "resetTrigger/ep_trigger_8" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_8_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<9>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_9" (SFF) removed.
+  The signal "resetTrigger/eptrig<9>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_9" (FF) removed.
+    The signal "resetTrigger/trigff0<9>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_9" (FF) removed.
+      The signal "resetTrigger/trigff1<9>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_9_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<9>" is sourceless and
+has been removed.
+         Sourceless block "resetTrigger/ep_trigger_9" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_9_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<10>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_10" (SFF) removed.
+  The signal "resetTrigger/eptrig<10>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_10" (FF) removed.
+    The signal "resetTrigger/trigff0<10>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_10" (FF) removed.
+      The signal "resetTrigger/trigff1<10>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_10_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<10>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_10" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_10_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<11>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_11" (SFF) removed.
+  The signal "resetTrigger/eptrig<11>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_11" (FF) removed.
+    The signal "resetTrigger/trigff0<11>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_11" (FF) removed.
+      The signal "resetTrigger/trigff1<11>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_11_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<11>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_11" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_11_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<12>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_12" (SFF) removed.
+  The signal "resetTrigger/eptrig<12>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_12" (FF) removed.
+    The signal "resetTrigger/trigff0<12>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_12" (FF) removed.
+      The signal "resetTrigger/trigff1<12>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_12_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<12>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_12" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_12_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<13>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_13" (SFF) removed.
+  The signal "resetTrigger/eptrig<13>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_13" (FF) removed.
+    The signal "resetTrigger/trigff0<13>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_13" (FF) removed.
+      The signal "resetTrigger/trigff1<13>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_13_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<13>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_13" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_13_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<14>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_14" (SFF) removed.
+  The signal "resetTrigger/eptrig<14>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_14" (FF) removed.
+    The signal "resetTrigger/trigff0<14>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_14" (FF) removed.
+      The signal "resetTrigger/trigff1<14>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_14_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<14>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_14" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_14_xo<0>1" (ROM) removed.
+The signal "resetTrigger/eptrig[15]_ti_datain[15]_xor_11_OUT<15>" is sourceless
+and has been removed.
+ Sourceless block "resetTrigger/eptrig_15" (SFF) removed.
+  The signal "resetTrigger/eptrig<15>" is sourceless and has been removed.
+   Sourceless block "resetTrigger/trigff0_15" (FF) removed.
+    The signal "resetTrigger/trigff0<15>" is sourceless and has been removed.
+     Sourceless block "resetTrigger/trigff1_15" (FF) removed.
+      The signal "resetTrigger/trigff1<15>" is sourceless and has been removed.
+       Sourceless block "resetTrigger/Mxor_trigff0[15]_trigff1[15]_xor_3_OUT_15_xo<0>1"
+(ROM) removed.
+        The signal "resetTrigger/trigff0[15]_trigff1[15]_xor_3_OUT<15>" is sourceless
+and has been removed.
+         Sourceless block "resetTrigger/ep_trigger_15" (FF) removed.
+   Sourceless block
+"resetTrigger/Mxor_eptrig[15]_ti_datain[15]_xor_11_OUT_15_xo<0>1" (ROM) removed.
 The signal "okHI/core0/core0/a0/pc0/active_interrupt_value" is sourceless and
 has been removed.
-The signal "okHI/core0/N4" is sourceless and has been removed.
- Sourceless block "okHI/core0/core0/state_state[31]_GND_2_o_Select_96_o" (ROM)
-removed.
 
 The trimmed logic reported below is either:
    1. part of a cycle
@@ -282,34 +442,51 @@ The trimmed logic reported below is either:
 
 The signal "ok1<30>" is unused and has been removed.
  Unused block "okHI/core0/core0/ti_blockstrobe" (SFF) removed.
-Unused block "ep03/ep_datahold_1" (SFF) removed.
-Unused block "ep03/ep_datahold_10" (SFF) removed.
-Unused block "ep03/ep_datahold_11" (SFF) removed.
-Unused block "ep03/ep_datahold_12" (SFF) removed.
-Unused block "ep03/ep_datahold_13" (SFF) removed.
-Unused block "ep03/ep_datahold_14" (SFF) removed.
-Unused block "ep03/ep_datahold_15" (SFF) removed.
-Unused block "ep03/ep_datahold_2" (SFF) removed.
-Unused block "ep03/ep_datahold_3" (SFF) removed.
-Unused block "ep03/ep_datahold_4" (SFF) removed.
-Unused block "ep03/ep_datahold_5" (SFF) removed.
-Unused block "ep03/ep_datahold_6" (SFF) removed.
-Unused block "ep03/ep_datahold_7" (SFF) removed.
-Unused block "ep03/ep_datahold_8" (SFF) removed.
-Unused block "ep03/ep_datahold_9" (SFF) removed.
-Unused block "okHI/core0/core0/Mmux_GND_2_o_host_datain[2]_MUX_730_o11" (ROM)
-removed.
 Unused block "okHI/core0/core0/a0/cb0/GND" (ZERO) removed.
 Unused block "okHI/core0/core0/a0/cb0/VCC" (ONE) removed.
-Unused block "okHI/core0/core0/state_state[31]_GND_2_o_Select_96_o_SW0" (ROM)
-removed.
+Unused block
+"outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras
+.rsts/ram_empty_i" (FF) removed.
+Unused block
+"outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas
+.wsts/ram_full_i" (FF) removed.
 
 Optimized Block(s):
 TYPE 		BLOCK
 GND 		XST_GND
 VCC 		XST_VCC
 GND 		amppipe/XST_GND
-GND 		ep20/XST_GND
+GND 		finishedTrigger/XST_GND
+FDC 		finishedTrigger/ep_trigger0_1
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_10
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_11
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_12
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_13
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_14
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_15
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_2
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_3
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_4
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_5
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_6
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_7
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_8
+   optimized to 0
+FDC 		finishedTrigger/ep_trigger0_9
+   optimized to 0
 GND 		offsetpipe/XST_GND
 GND 		okHI/core0/XST_GND
 VCC 		okHI/core0/XST_VCC
@@ -318,6 +495,11 @@ FD 		okHI/core0/core0/a0/pc0/sync_interrupt_flop
    optimized to 0
 FD 		okHI/core0/core0/a0/pc0/sync_sleep_flop
    optimized to 0
+GND
+		outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gb
+mg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/XST_GND
+GND 		outfifo/XST_GND
+VCC 		outfifo/XST_VCC
 GND 		phasewordpipe/XST_GND
 FD 		okHI/core0/core0/a0/pc0/active_interrupt_flop
    optimized to 0

@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Tue Apr 21 04:19:37 2020
+# Date: Fri Apr 24 16:55:14 2020
 #
 ##############################################################
 #
@@ -103,7 +103,7 @@ CSET fifo_application_type_rdch=Data_FIFO
 CSET fifo_application_type_wach=Data_FIFO
 CSET fifo_application_type_wdch=Data_FIFO
 CSET fifo_application_type_wrch=Data_FIFO
-CSET fifo_implementation=Independent_Clocks_Distributed_RAM
+CSET fifo_implementation=Independent_Clocks_Block_RAM
 CSET fifo_implementation_axis=Common_Clock_Block_RAM
 CSET fifo_implementation_rach=Common_Clock_Block_RAM
 CSET fifo_implementation_rdch=Common_Clock_Block_RAM
@@ -210,4 +210,4 @@ CSET wuser_width=1
 MISC pkg_timestamp=2012-11-19T12:39:56Z
 # END Extra information
 GENERATE
-# CRC: caa456d5
+# CRC: 830bc914

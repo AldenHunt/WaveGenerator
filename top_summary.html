@@ -2,7 +2,7 @@
 <BODY TEXT='#000000' BGCOLOR='#FFFFFF' LINK='#0000EE' VLINK='#551A8B' ALINK='#FF0000'>
 <TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'>
-<TD ALIGN=CENTER COLSPAN='4'><B>top Project Status (04/21/2020 - 15:56:54)</B></TD></TR>
+<TD ALIGN=CENTER COLSPAN='4'><B>top Project Status (04/24/2020 - 17:53:46)</B></TD></TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project File:</B></TD>
 <TD>Thesis.xise</TD>
@@ -13,7 +13,7 @@
 <TD BGCOLOR='#FFFF99'><B>Module Name:</B></TD>
 <TD>top</TD>
 <TD BGCOLOR='#FFFF99'><B>Implementation State:</B></TD>
-<TD>Synthesized</TD>
+<TD>Programming File Generated</TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Target Device:</B></TD>
@@ -25,20 +25,21 @@ No Errors</TD>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Product Version:</B></TD><TD>ISE 14.7</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Warnings:</B></LI></UL></TD>
-<TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/*.xmsgs?&DataKey=Warning'>38 Warnings (30 new)</A></TD>
+<TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/*.xmsgs?&DataKey=Warning'>55 Warnings (2 new)</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Goal:</B></dif></TD>
 <TD>Balanced</TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Routing Results:</B></LI></UL></TD>
 <TD>
-&nbsp;</TD>
+<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.unroutes'>All Signals Completely Routed</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Design Strategy:</B></dif></TD>
 <TD><A HREF_DISABLED='Xilinx Default (unlocked)?&DataKey=Strategy'>Xilinx Default (unlocked)</A></TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Timing Constraints:</B></LI></UL></TD>
-<TD>&nbsp;</TD>
+<TD>
+<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.ptwx?&DataKey=ConstraintsData'>All Constraints Met</A></TD>
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Environment:</B></dif></TD>
@@ -47,7 +48,7 @@ No Errors</TD>
 System Settings</A>
 </TD>
 <TD BGCOLOR='#FFFF99'><UL><LI><B>Final Timing Score:</B></LI></UL></TD>
-<TD>&nbsp;&nbsp;</TD>
+<TD>0 &nbsp;<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.twx?&DataKey=XmlTimingReport'>(Timing Report)</A></TD>
 </TR>
 </TABLE>
 
@@ -63,85 +64,549 @@ System Settings</A>
 <TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1016: - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:HDLCompiler:1016: - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 <TR ALIGN=LEFT><TD>WARNING:HDLCompiler:413: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 90: Result of 7-bit expression is truncated to fit in 6-bit target.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:413: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 103: Result of 32-bit expression is truncated to fit in 16-bit target.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1710: - FF/Latch &lt;finishedsignal_15&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_14&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_13&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_10&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_12&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_11&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_9&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_8&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_7&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_6&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_3&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_5&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_4&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_2&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_1&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1710: - FF/Latch &lt;finishedsignal_13&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_15&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_14&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_12&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_11&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_8&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_10&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_9&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_7&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_6&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_5&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_4&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_3&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_2&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
-<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_1&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:HDLCompiler:413: - "/home/ise/ise_projects/WaveGenerator/top.v" Line 107: Result of 32-bit expression is truncated to fit in 16-bit target.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1710: - FF/Latch &lt;finishedsignal_15&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_14&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_13&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_12&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_9&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_11&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_10&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_8&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_7&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_6&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_5&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_2&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_4&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_3&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_1&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1710: - FF/Latch &lt;finishedsignal_13&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_15&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_14&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_12&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_11&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_8&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_10&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_9&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_7&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_6&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_5&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_4&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_3&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_2&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Xst:1895: - Due to other FF/Latch trimming, FF/Latch &lt;finishedsignal_1&gt; (without init value) has a constant value of 0 in block &lt;top&gt;. This FF/Latch will be trimmed during the optimization process.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Translation Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:NgdBuild:443: - SFF primitive 'okHI/core0/core0/a0/pc0/read_strobe_flop' has unconnected output pin</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:NgdBuild:443: - SFF primitive 'okHI/core0/core0/a0/pc0/k_write_strobe_flop' has unconnected output pin</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:NgdBuild:440: - FF primitive 'okHI/core0/core0/a0/pc0/interrupt_ack_flop' has unconnected output pin</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Map Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3175: - hi_in&lt;0&gt; does not clock data to hi_out&lt;1&gt;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3225: - Timing constraint COMP "hi_out&lt;1&gt;" OFFSET = OUT 11.93 ns AFTER COMP "hi_in&lt;0&gt;" "RISING" ignored during timing analysis</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:PhysDesignRules:367: - The signal &lt;okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O&gt; is incomplete. The signal does not drive any load pins in the design.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:PhysDesignRules:367: - The signal &lt;okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O&gt; is incomplete. The signal does not drive any load pins in the design.</TD><TD COLSPAN='2'>New</TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Place and Route Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3175: - hi_in&lt;0&gt; does not clock data to hi_out&lt;1&gt;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3225: - Timing constraint COMP "hi_out&lt;1&gt;" OFFSET = OUT 11.93 ns AFTER COMP "hi_in&lt;0&gt;" "RISING"; ignored during timing analysis</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:288: - The signal okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O has no load. PAR will not attempt to route this signal.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:ParHelpers:361: - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Par:283: - There are 2 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Timing Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3175: - hi_in&lt;0&gt; does not clock data to hi_out&lt;1&gt;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:Timing:3225: - Timing constraint COMP "hi_out&lt;1&gt;" OFFSET = OUT 11.93 ns AFTER COMP "hi_in&lt;0&gt;" "RISING"; ignored during timing analysis</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT BGCOLOR='#FFFF99'><TD><B>Bitgen Warnings</B></TD><TD COLSPAN='2'><B>New</B></TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:PhysDesignRules:367: - The signal &lt;okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM2_RAMD_O&gt; is incomplete. The signal does not drive any load pins in the design.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
+<TR ALIGN=LEFT><TD>WARNING:PhysDesignRules:367: - The signal &lt;okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/mem/gdm.dm/Mram_RAM1_RAMD_O&gt; is incomplete. The signal does not drive any load pins in the design.</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
 </TABLE>
 
 
 
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
-<TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='4'><B>Device Utilization Summary (estimated values)</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DeviceUtilizationSummary(estimatedvalues)"><B>[-]</B></a></TD></TR>
+<TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='5'><B>Device Utilization Summary</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DeviceUtilizationSummary"><B>[-]</B></a></TD></TR>
 <TR ALIGN=CENTER BGCOLOR='#FFFF99'>
-<TD ALIGN=LEFT><B>Logic Utilization</B></TD><TD><B>Used</B></TD><TD><B>Available</B></TD><TD COLSPAN='2'><B>Utilization</B></TD></TR>
+<TD ALIGN=LEFT><B>Slice Logic Utilization</B></TD><TD><B>Used</B></TD><TD><B>Available</B></TD><TD><B>Utilization</B></TD><TD COLSPAN='2'><B>Note(s)</B></TD>
+</TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Slice Registers</TD>
-<TD ALIGN=RIGHT>6875</TD>
-<TD ALIGN=RIGHT>184304</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>3%</TD>
+<TD ALIGN=RIGHT>7,302</TD>
+<TD ALIGN=RIGHT>184,304</TD>
+<TD ALIGN=RIGHT>3%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Flip Flops</TD>
+<TD ALIGN=RIGHT>7,029</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Latches</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Latch-thrus</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as AND/OR logics</TD>
+<TD ALIGN=RIGHT>273</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Slice LUTs</TD>
-<TD ALIGN=RIGHT>39736</TD>
-<TD ALIGN=RIGHT>92152</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>43%</TD>
+<TD ALIGN=RIGHT>37,934</TD>
+<TD ALIGN=RIGHT>92,152</TD>
+<TD ALIGN=RIGHT>41%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of fully used LUT-FF pairs</TD>
-<TD ALIGN=RIGHT>5420</TD>
-<TD ALIGN=RIGHT>41191</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>13%</TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as logic</TD>
+<TD ALIGN=RIGHT>37,856</TD>
+<TD ALIGN=RIGHT>92,152</TD>
+<TD ALIGN=RIGHT>41%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of bonded IOBs</TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>36,128</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 output only</TD>
+<TD ALIGN=RIGHT>59</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 and O6</TD>
+<TD ALIGN=RIGHT>1,669</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number used as ROM</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as Memory</TD>
+<TD ALIGN=RIGHT>45</TD>
+<TD ALIGN=RIGHT>21,680</TD>
+<TD ALIGN=RIGHT>1%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number used as Dual Port RAM</TD>
+<TD ALIGN=RIGHT>20</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>12</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 output only</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 and O6</TD>
+<TD ALIGN=RIGHT>8</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number used as Single Port RAM</TD>
+<TD ALIGN=RIGHT>24</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 output only</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 and O6</TD>
+<TD ALIGN=RIGHT>8</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number used as Shift Register</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O6 output only</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 output only</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number using O5 and O6</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used exclusively as route-thrus</TD>
+<TD ALIGN=RIGHT>33</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number with same-slice register load</TD>
+<TD ALIGN=RIGHT>30</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number with same-slice carry load</TD>
+<TD ALIGN=RIGHT>3</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Number with other load</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of occupied Slices</TD>
+<TD ALIGN=RIGHT>13,834</TD>
+<TD ALIGN=RIGHT>23,038</TD>
+<TD ALIGN=RIGHT>60%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of MUXCYs used</TD>
+<TD ALIGN=RIGHT>1,884</TD>
+<TD ALIGN=RIGHT>46,076</TD>
+<TD ALIGN=RIGHT>4%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of LUT Flip Flop pairs used</TD>
+<TD ALIGN=RIGHT>38,938</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number with an unused Flip Flop</TD>
+<TD ALIGN=RIGHT>31,731</TD>
+<TD ALIGN=RIGHT>38,938</TD>
+<TD ALIGN=RIGHT>81%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number with an unused LUT</TD>
+<TD ALIGN=RIGHT>1,004</TD>
+<TD ALIGN=RIGHT>38,938</TD>
+<TD ALIGN=RIGHT>2%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of fully used LUT-FF pairs</TD>
+<TD ALIGN=RIGHT>6,203</TD>
+<TD ALIGN=RIGHT>38,938</TD>
+<TD ALIGN=RIGHT>15%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of unique control sets</TD>
+<TD ALIGN=RIGHT>68</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of slice register sites lost<BR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to control set restrictions</TD>
+<TD ALIGN=RIGHT>222</TD>
+<TD ALIGN=RIGHT>184,304</TD>
+<TD ALIGN=RIGHT>1%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of bonded <A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_map.xrpt?&DataKey=IOBProperties'>IOBs</A></TD>
 <TD ALIGN=RIGHT>36</TD>
 <TD ALIGN=RIGHT>338</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>10%</TD>
+<TD ALIGN=RIGHT>10%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of Block RAM/FIFO</TD>
-<TD ALIGN=RIGHT>1</TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number of LOCed IOBs</TD>
+<TD ALIGN=RIGHT>36</TD>
+<TD ALIGN=RIGHT>36</TD>
+<TD ALIGN=RIGHT>100%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;IOB Flip Flops</TD>
+<TD ALIGN=RIGHT>48</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of RAMB16BWERs</TD>
+<TD ALIGN=RIGHT>61</TD>
 <TD ALIGN=RIGHT>268</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>0%</TD>
+<TD ALIGN=RIGHT>22%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
-<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFG/BUFGCTRLs</TD>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of RAMB8BWERs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>536</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFIO2/BUFIO2_2CLKs</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>32</TD>
+<TD ALIGN=RIGHT>3%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFIO2s</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFIO2_2CLKs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFIO2FB/BUFIO2FB_2CLKs</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>32</TD>
+<TD ALIGN=RIGHT>3%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFIO2FBs</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFIO2FB_2CLKs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFG/BUFGMUXs</TD>
 <TD ALIGN=RIGHT>2</TD>
 <TD ALIGN=RIGHT>16</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>12%</TD>
+<TD ALIGN=RIGHT>12%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFGs</TD>
+<TD ALIGN=RIGHT>2</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as BUFGMUX</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of DCM/DCM_CLKGENs</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>12</TD>
+<TD ALIGN=RIGHT>8%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as DCMs</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as DCM_CLKGENs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of ILOGIC2/ISERDES2s</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ALIGN=RIGHT>586</TD>
+<TD ALIGN=RIGHT>2%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as ILOGIC2s</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as ISERDES2s</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of IODELAY2/IODRP2/IODRP2_MCBs</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ALIGN=RIGHT>586</TD>
+<TD ALIGN=RIGHT>2%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as IODELAY2s</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as IODRP2s</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as IODRP2_MCBs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of OLOGIC2/OSERDES2s</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD ALIGN=RIGHT>586</TD>
+<TD ALIGN=RIGHT>2%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as OLOGIC2s</TD>
+<TD ALIGN=RIGHT>16</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>&nbsp;&nbsp;&nbsp;&nbsp;Number used as OSERDES2s</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BSCANs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>4</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFHs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>384</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFPLLs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>8</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of BUFPLL_MCBs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>4</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 <TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of DSP48A1s</TD>
 <TD ALIGN=RIGHT>64</TD>
 <TD ALIGN=RIGHT>180</TD>
-<TD ALIGN=RIGHT COLSPAN='2'>35%</TD>
+<TD ALIGN=RIGHT>35%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of ICAPs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of MCBs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>4</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of PCILOGICSEs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>2</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of PLL_ADVs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>6</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of PMVs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of STARTUPs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Number of SUSPEND_SYNCs</TD>
+<TD ALIGN=RIGHT>0</TD>
+<TD ALIGN=RIGHT>1</TD>
+<TD ALIGN=RIGHT>0%</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TR>
+<TR ALIGN=RIGHT><TD ALIGN=LEFT>Average Fanout of Non-Clock Nets</TD>
+<TD ALIGN=RIGHT>5.18</TD>
+<TD>&nbsp;</TD>
+<TD>&nbsp;</TD>
+<TD COLSPAN='2'>&nbsp;</TD>
 </TR>
 </TABLE>
 
 
 
-
+&nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
+<TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='4'><B>Performance Summary</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=PerformanceSummary"><B>[-]</B></a></TD></TR>
+<TR ALIGN=LEFT>
+<TD BGCOLOR='#FFFF99'><B>Final Timing Score:</B></TD>
+<TD>0 (Setup: 0, Hold: 0, Component Switching Limit: 0)</TD>
+<TD BGCOLOR='#FFFF99'><B>Pinout Data:</B></TD>
+<TD COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_par.xrpt?&DataKey=PinoutData'>Pinout Report</A></TD>
+</TR>
+<TR ALIGN=LEFT>
+<TD BGCOLOR='#FFFF99'><B>Routing Results:</B></TD><TD>
+<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.unroutes'>All Signals Completely Routed</A></TD>
+<TD BGCOLOR='#FFFF99'><B>Clock Data:</B></TD>
+<TD COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_par.xrpt?&DataKey=ClocksData'>Clock Report</A></TD>
+</TR>
+<TR ALIGN=LEFT>
+<TD BGCOLOR='#FFFF99'><B>Timing Constraints:</B></TD>
+<TD>
+<A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.ptwx?&DataKey=ConstraintsData'>All Constraints Met</A></TD>
+<TD BGCOLOR='#FFFF99'><B>&nbsp;</B></TD>
+<TD COLSPAN='2'>&nbsp;</TD>
+</TABLE>
 
 
 
@@ -149,21 +614,21 @@ System Settings</A>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='6'><B>Detailed Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=DetailedReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD><B>Generated</B></TD>
 <TD ALIGN=LEFT><B>Errors</B></TD><TD ALIGN=LEFT><B>Warnings</B></TD><TD ALIGN=LEFT COLSPAN='2'><B>Infos</B></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Tue Apr 21 15:56:54 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Warning'>38 Warnings (30 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Info'>18 Infos (0 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.bld'>Translation Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:31:01 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Warning'>3 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_map.mrp'>Map Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:37:51 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Warning'>4 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Info'>8 Infos (0 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.par'>Place and Route Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:46:19 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Warning'>7 Warnings (1 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Info'>1 Info (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.syr'>Synthesis Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:37:25 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Warning'>38 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/xst.xmsgs?&DataKey=Info'>26 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.bld'>Translation Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:38:34 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Warning'>3 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/ngdbuild.xmsgs?&DataKey=Info'>2 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top_map.mrp'>Map Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:46:27 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Warning'>4 Warnings (2 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/map.xmsgs?&DataKey=Info'>8 Infos (2 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.par'>Place and Route Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:50:34 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Warning'>6 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/par.xmsgs?&DataKey=Info'>1 Info (0 new)</A></TD></TR>
 <TR ALIGN=LEFT><TD>Power Report</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD>&nbsp;</TD><TD COLSPAN='2'>&nbsp;</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.twr'>Post-PAR Static Timing Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:47:11 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/trce.xmsgs?&DataKey=Warning'>2 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/trce.xmsgs?&DataKey=Info'>3 Infos (0 new)</A></TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.bgn'>Bitgen Report</A></TD><TD>Out of Date</TD><TD>Thu Apr 2 04:49:02 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/bitgen.xmsgs?&DataKey=Warning'>2 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.twr'>Post-PAR Static Timing Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:51:13 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/trce.xmsgs?&DataKey=Warning'>2 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/trce.xmsgs?&DataKey=Info'>3 Infos (0 new)</A></TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/top.bgn'>Bitgen Report</A></TD><TD>Current</TD><TD>Fri Apr 24 17:53:40 2020</TD><TD ALIGN=LEFT>0</TD><TD ALIGN=LEFT><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/_xmsgs/bitgen.xmsgs?&DataKey=Warning'>2 Warnings (0 new)</A></TD><TD ALIGN=LEFT COLSPAN='2'>0</TD></TR>
 </TABLE>
 &nbsp;<BR><TABLE BORDER CELLSPACING=0 CELLPADDING=3 WIDTH='100%'>
 <TR ALIGN=CENTER BGCOLOR='#99CCFF'><TD ALIGN=CENTER COLSPAN='3'><B>Secondary Reports</B></TD><TD ALIGN=RIGHT WIDTH='10%'COLSPAN=1> <A HREF_DISABLED="?&ExpandedTable=SecondaryReports"><B>[-]</B></a></TD></TR>
 <TR BGCOLOR='#FFFF99'><TD><B>Report Name</B></TD><TD><B>Status</B></TD><TD COLSPAN='2'><B>Generated</B></TD></TR>
 <TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/isim.log'>ISIM Simulator Log</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Tue Apr 7 01:01:50 2020</TD></TR>
-<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/webtalk.log'>WebTalk Log File</A></TD><TD>Out of Date</TD><TD COLSPAN='2'>Thu Apr 2 04:49:06 2020</TD></TR>
+<TR ALIGN=LEFT><TD><A HREF_DISABLED='/home/ise/ise_projects/WaveGenerator/webtalk.log'>WebTalk Log File</A></TD><TD>Current</TD><TD COLSPAN='2'>Fri Apr 24 17:53:45 2020</TD></TR>
 </TABLE>
 
 
-<br><center><b>Date Generated:</b> 04/21/2020 - 15:56:54</center>
+<br><center><b>Date Generated:</b> 04/24/2020 - 17:53:47</center>
 </BODY></HTML>
