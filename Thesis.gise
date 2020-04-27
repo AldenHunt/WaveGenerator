@@ -35,17 +35,18 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="clockedadd.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="clockedadd.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="clockedadd.xst"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="controlcompiler_tb_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="controlcompiler_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="controlcompiler_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="eightblock.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="eightblock.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="eightblock.xst"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fourblock.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="fourblock.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="fourblock.xst"/>
-    <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
-    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="okHost.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="okHost.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="okHost.xst"/>
@@ -61,9 +62,7 @@
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="singlecompute.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="singlecompute.stx"/>
     <file xil_pn:fileType="FILE_XST" xil_pn:name="singlecompute.xst"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="singlecompute_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="singlecompute_tb_isim_beh.exe"/>
-    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="singlecompute_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="singlecompute_tb_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="sixteenblock.prj"/>
     <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="sixteenblock.stx"/>
@@ -134,15 +133,12 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585927933" xil_pn:in_ck="1463795564708938062" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1585927933">
+    <transform xil_pn:end_ts="1588019020" xil_pn:in_ck="-7097868747131014107" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1588019020">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="clockedadd.v"/>
       <outfile xil_pn:name="controlcombiner.v"/>
+      <outfile xil_pn:name="controlcompiler_tb.v"/>
       <outfile xil_pn:name="eightblock.v"/>
       <outfile xil_pn:name="fourblock.v"/>
       <outfile xil_pn:name="okLibrary.v"/>
@@ -155,32 +151,33 @@
       <outfile xil_pn:name="top.v"/>
       <outfile xil_pn:name="twoblock.v"/>
     </transform>
-    <transform xil_pn:end_ts="1585927936" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-2864715167324792725" xil_pn:start_ts="1585927936">
+    <transform xil_pn:end_ts="1588018821" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="879019528596461096" xil_pn:start_ts="1588018821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1585927936" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-5400457807844989399" xil_pn:start_ts="1585927936">
+    <transform xil_pn:end_ts="1588018821" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="675198608522411494" xil_pn:start_ts="1588018821">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1578449432" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9072504835956155139" xil_pn:start_ts="1578449432">
+    <transform xil_pn:end_ts="1588018822" xil_pn:in_ck="-7542726891390822851" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="9072504835956155139" xil_pn:start_ts="1588018821">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/two_clk_fifo.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/two_clk_fifo.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1588018968" xil_pn:in_ck="-5509178004513747090" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1588018968">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputAdded"/>
-      <status xil_pn:value="InputChanged"/>
-    </transform>
-    <transform xil_pn:end_ts="1585927936" xil_pn:in_ck="1463795564708938062" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1585927936">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="clockedadd.v"/>
       <outfile xil_pn:name="controlcombiner.v"/>
+      <outfile xil_pn:name="controlcompiler_tb.v"/>
       <outfile xil_pn:name="eightblock.v"/>
       <outfile xil_pn:name="fourblock.v"/>
+      <outfile xil_pn:name="ipcore_dir/two_clk_fifo.v"/>
       <outfile xil_pn:name="okLibrary.v"/>
       <outfile xil_pn:name="sinetable.v"/>
       <outfile xil_pn:name="singlecompute.v"/>
@@ -191,28 +188,20 @@
       <outfile xil_pn:name="top.v"/>
       <outfile xil_pn:name="twoblock.v"/>
     </transform>
-    <transform xil_pn:end_ts="1585927945" xil_pn:in_ck="1463795564708938062" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5708416263742170923" xil_pn:start_ts="1585927936">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1588018972" xil_pn:in_ck="-5509178004513747090" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-894898022597539537" xil_pn:start_ts="1588018968">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="singlecompute_tb_beh.prj"/>
-      <outfile xil_pn:name="singlecompute_tb_isim_beh.exe"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1585927945" xil_pn:in_ck="-7649149934100340444" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4190353399469754968" xil_pn:start_ts="1585927945">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1588018827" xil_pn:in_ck="-8871069659430909020" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-6281374751122337646" xil_pn:start_ts="1588018826">
+      <status xil_pn:value="AbortedRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForced"/>
+      <outfile xil_pn:name="controlcompiler_tb_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="singlecompute_tb_isim_beh.wdb"/>
     </transform>
     <transform xil_pn:end_ts="1578347499" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1578347498">
       <status xil_pn:value="SuccessfullyRun"/>

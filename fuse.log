@@ -1,24 +1,22 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/ise_projects/Thesis/singlecompute_tb_isim_beh.exe -prj /home/ise/ise_projects/Thesis/singlecompute_tb_beh.prj work.singlecompute_tb work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/ise_projects/Thesis/controlcompiler_tb_isim_beh.exe" -prj "/home/ise/ise_projects/Thesis/controlcompiler_tb_beh.prj" "work.controlcompiler_tb" "work.glbl" 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/testcompute_tb.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcompiler_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 97536 KB
-Fuse CPU Usage: 910 ms
-Compiling module sinetable
-Compiling module singlecompute
-Compiling module singlecompute_tb
+Fuse Memory Usage: 94948 KB
+Fuse CPU Usage: 1220 ms
+Compiling module controlcombiner
+Compiling module controlcompiler_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 4 Verilog Units
-Built simulation executable /home/ise/ise_projects/Thesis/singlecompute_tb_isim_beh.exe
-Fuse Memory Usage: 407464 KB
-Fuse CPU Usage: 1280 ms
-GCC CPU Usage: 6920 ms
+Compiled 3 Verilog Units
+Built simulation executable /home/ise/ise_projects/Thesis/controlcompiler_tb_isim_beh.exe
+Fuse Memory Usage: 391252 KB
+Fuse CPU Usage: 1250 ms
+GCC CPU Usage: 180 ms
