@@ -8,12 +8,12 @@
 <msg type="info" file="LIT" num="243" delta="old" >Logical network <arg fmt="%s" index="1">ok1&lt;30&gt;</arg> has no load.
 </msg>
 
-<msg type="info" file="LIT" num="395" delta="old" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">17</arg> more times for the following (max. 5 shown):
+<msg type="info" file="LIT" num="395" delta="new" >The above <arg fmt="%s" index="1">info</arg> message is repeated <arg fmt="%d" index="2">33</arg> more times for the following (max. 5 shown):
 <arg fmt="%s" index="3">outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i,
 outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i,
-resetTrigger/ep_trigger&lt;15&gt;,
-resetTrigger/ep_trigger&lt;14&gt;,
-resetTrigger/ep_trigger&lt;13&gt;</arg>
+resetCurrBlockTrigger/ep_trigger&lt;15&gt;,
+resetCurrBlockTrigger/ep_trigger&lt;14&gt;,
+resetCurrBlockTrigger/ep_trigger&lt;13&gt;</arg>
 To see the details of these <arg fmt="%s" index="4">info</arg> messages, please use the -detail switch.
 </msg>
 

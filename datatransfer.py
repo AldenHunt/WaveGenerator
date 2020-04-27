@@ -10,6 +10,7 @@ wavelist = []
 #Endpoints:
 # 0x01: time input wire
 # 0x40: reset/state triggerIn (0:startup 1:after load new row of values 2:reset currBlock to 0)
+# 0x41: resetcurrBlock triggerIn (0:reset currBlock to 0)
 # 0x60: timeup triggerOut (0: completed one configuration of waveforms)
 # 0x80: amp input pipe
 # 0x81: offset input pipe
@@ -18,7 +19,7 @@ wavelist = []
 
 #Take one row and send it to FPGA in appropriate pipes
 def sendRowToFPGA(row, dev):
-    dev.ActivateTriggerIn(0x40, 2)
+    dev.ActivateTriggerIn(0x41, 0)
     for i in range(SINEMODULES):
         amp = int(row[i])
         offset = int(row[i+SINEMODULES])
@@ -60,8 +61,7 @@ def main():
     dev.OpenBySerial("")
     dev.LoadDefaultPLLConfiguration()
     error = dev.ConfigureFPGA("top.bit")
-    if error:
-        print(error)
+    print(error)
     if dev.IsFrontPanelEnabled() == True:
         print("FrontPanel host interface enabled.")
     else:
@@ -76,12 +76,13 @@ def main():
         
         next(reader) #Discard first line (headers)
         firstinputs = next(reader)
-        dev.ActivateTriggerIn(0x40, 2)
+        dev.ActivateTriggerIn(0x41, 0)
         lastTime = sendRowToFPGA(firstinputs, dev)
         dev.ActivateTriggerIn(0x40, 0)
-
+        print("Sent one row of inputs in and triggered")
         for row in reader:
             #Go through one row of values and put in pipes
+            print("Looping row send {}", reader.line_num)
             newerTime = sendRowToFPGA(row, dev)
             
             #Wait until got word that last sequence was completed

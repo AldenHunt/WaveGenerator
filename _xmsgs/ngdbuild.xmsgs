@@ -9,7 +9,7 @@
 <arg fmt="%s" index="7">CLK0</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_okHI_dcm_clk0 = PERIOD &quot;okHI_dcm_clk0&quot; TS_okHostClk HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">okHI/hi_dcm</arg> to <arg fmt="%s" index="4">20.830000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_okHostClk&quot; = PERIOD &quot;okHostClk&quot; 20.83 ns HIGH 50%;&gt; [top.ucf(46)]</arg>).
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">okHI/hi_dcm</arg> to <arg fmt="%s" index="4">20.830000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC &quot;TS_okHostClk&quot; = PERIOD &quot;okHostClk&quot; 20.83 ns HIGH 50%;&gt; [top.ucf(48)]</arg>).
 </msg>
 
 <msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">okHI/core0/core0/a0/pc0/read_strobe_flop</arg>&apos; has unconnected output pin

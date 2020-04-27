@@ -9,7 +9,9 @@
 # $Rev$ $Date$
 #-------------------------------------------------------------------------
 CONFIG VCCAUX = "3.3"; //Required for Spartan-6
-
+NET "hi_muxsel"     LOC = "AA22" | IOSTANDARD="LVCMOS33";
+NET "i2c_sda"       LOC = "AB9"  | IOSTANDARD="LVCMOS33" | PULLUP;
+NET "i2c_scl"       LOC = "Y9"   | IOSTANDARD="LVCMOS33" | PULLUP;
 ############################################################################
 ## FrontPanel Host Interface pins                                                       
 ############################################################################

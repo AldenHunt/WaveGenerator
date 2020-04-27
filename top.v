@@ -30,6 +30,9 @@ module top(
 	 input wire clk1,
 	 //input wire clk2,
 	 //input wire clk3,
+	 output wire i2c_sda,
+	 output wire i2c_scl,
+	 output wire hi_muxsel,
 	 output wire [7:0] led
     );
 
@@ -40,7 +43,7 @@ module top(
 	wire [5*17-1:0] ok2x;
 	
 	//Endpoint connections
-	wire [15:0]  resetsignal;
+	wire [15:0]  resetsignal, currblockreset;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, timewire;
 	wire ampwrite, offsetwrite, phasewordwrite;
 	wire switchinputs;
@@ -50,11 +53,17 @@ module top(
 	//Other variables
 	reg [5:0] currBlock;
 	reg [15:0] currTime, finishedsignal, endtime;
-	reg timeup, finishedloadin;
+	reg timeup, finishedloadin, resetbigblock;
 	wire readout, fifoem, fifofull, fifowriteen;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
+	//Required values
+	assign i2c_sda = 1'bz;
+	assign i2c_scl = 1'bz;
+	assign hi_muxsel = 1'b0;
+	
+	//Wire combinations
 	assign led = finalSum[10:3];
 	assign switchinputs = (resetsignal[0] || (finishedloadin && timeup));
 	assign fifowriteen = ~timeup;
@@ -84,8 +93,8 @@ module top(
 	okWireOR # (.N(5)) wireOR (ok2, ok2x);
 	
 	always@(posedge ti_clk) begin
-		if (resetsignal[2]) begin
-			currBlock <= 0;
+		if (currblockreset[0]) begin
+			currBlock <= 6'b0;
 		end
 		else if (phasewordwrite) currBlock <= currBlock + 1; //Once done with all three, will increment
 	end
@@ -98,14 +107,17 @@ module top(
 			timeup <= 0;
 			finishedsignal <= 0;
 			finishedloadin <= 0;
+			resetbigblock <= 1;
 			currTime <= endtime;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
 			endtime <= timewire;
 		end else if (currTime != 0) begin
+			resetbigblock <= 0;
 			currTime <= currTime - 1;
 		end else if (currTime == 0) begin
+			resetbigblock <= 0;
 			finishedsignal[0] <= !timeup;
 			timeup <= 1;
 		end
@@ -142,13 +154,14 @@ module top(
 		.offsets(activeoffsets),
 		.phasewords(activephasewords),
 		.clk(clk1),
-		.reset(resetsignal[1]),
+		.reset(resetbigblock),
 		.results(finalSum)
 	);
 
 	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(timewire));
 	
-	okTriggerIn resetTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
+	okTriggerIn nextSequenceTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
+	okTriggerIn resetCurrBlockTrigger (.ok1(ok1), .ep_addr(8'h41), .ep_clk(ti_clk), .ep_trigger(currblockreset));
 	
 	okTriggerOut finishedTrigger (.ok1(ok1), .ok2(ok2x[4*17 +: 17]), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger(finishedsignal));
 	

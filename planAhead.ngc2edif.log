@@ -20,3 +20,504 @@ Processing design ...
 Writing EDIF netlist file top.edif ...
 ngc2edif: Total memory usage is 105852 kilobytes
 
+Release 14.7 - ngc2edif P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+Reading design top.ngc ...
+WARNING:NetListWriters:298 - No output is written to top.xncf, ignored.
+Processing design ...
+   Preping design's networks ...
+   Preping design's macros ...
+WARNING:NetListWriters:306 - Signal bus finishedsignal<10 : 0> on block top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/two
+   blockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/two
+   blockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/two
+   blockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/two
+   blockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/add
+   er/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twobl
+   ockOne/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twobl
+   ockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twobl
+   ockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twobl
+   ockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder
+   /a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/two
+   blockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/two
+   blockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/two
+   blockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/two
+   blockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/add
+   er/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/tw
+   oblockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/tw
+   oblockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/tw
+   oblockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/tw
+   oblockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/ad
+   der/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/two
+   blockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/two
+   blockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/two
+   blockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/two
+   blockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add
+   er/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twobl
+   ockOne/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twobl
+   ockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twobl
+   ockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twobl
+   ockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder
+   /a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblo
+   ckOne/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblo
+   ckZero/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblo
+   ckOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblo
+   ckZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/
+   a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twobl
+   ockOne/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twobl
+   ockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twobl
+   ockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twobl
+   ockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder
+   /a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/two
+   blockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/two
+   blockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/two
+   blockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/two
+   blockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/add
+   er/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twobl
+   ockOne/adder/sum<15 : 0> on block top is not reconstructed, because there are
+   some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twobl
+   ockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twobl
+   ockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed,
+   because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twobl
+   ockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder
+   /a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twob
+   lockOne/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twob
+   lockZero/adder/sum<15 : 0> on block top is not reconstructed, because there
+   are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twob
+   lockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twob
+   lockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adde
+   r/a[15]_b[15]_add_1_OUT<15 : 0> on block top is not reconstructed, because
+   there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder
+   /sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/a[15]_b[15]_
+   add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/add
+   er/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/a[15]_b[15]
+   _add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/
+   sum<15 : 0> on block top is not reconstructed, because there are some missing
+   bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder
+   /sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/a[15]_b[15]_a
+   dd_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder
+   /sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/a[15]_b[15]_
+   add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add
+   er/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/a[15]_b[15]
+   _add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/add
+   er/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/ad
+   der/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/a[15]_b[15
+   ]_add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder
+   /sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/a[15]_b[15]_
+   add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adde
+   r/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/add
+   er/sum<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/a[15]_b[15]
+   _add_1_OUT<15 : 0> on block top is not reconstructed, because there are some
+   missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/adder/a[15]_b[15]_add_1_OUT<15 :
+   0> on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/sum<15 :
+   0> on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/adder/a[15]_b[15]_add_1_OUT<15
+   : 0> on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/adder/a[15]_b[15]_add_1_OUT<15 :
+   0> on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/sum<15 : 0>
+   on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/adder/a[15]_b[15]_add_1_OUT<15 :
+   0> on block top is not reconstructed, because there are some missing bus
+   signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockOne/adder/sum<15 : 0> on block top is
+   not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/sixteenblockZero/adder/sum<15 : 0> on block top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockOne/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockOne/adder/sum<15 : 0> on block top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/sixteenblockZero/adder/sum<15 : 0> on block top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/adder/a[15]_b[15]_add_1_OUT<15 : 0> on block top
+   is not reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus
+   theBigOne/thirtytwoblockZero/adder/sum<15 : 0> on block top is not
+   reconstructed, because there are some missing bus signals.
+WARNING:NetListWriters:306 - Signal bus theBigOne/thirtytwoblockOne/adder/sum<15
+   : 0> on block top is not reconstructed, because there are some missing bus
+   signals.
+  finished :Prep
+Writing EDIF netlist file top.edif ...
+ngc2edif: Total memory usage is 221072 kilobytes
+

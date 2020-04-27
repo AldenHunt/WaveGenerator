@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Apr 25 19:07:47 2020
+Mon Apr 27 17:29:33 2020
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -63,7 +63,7 @@ Pinout by Pin Number:
 |AA19      |            |         |VCCO_2                       |         |           |2             |          |         |           |         |3.30     |          |           |                |
 |AA20      |hi_inout<15>|IOB      |IO_L3P_D0_DIN_MISO_MISO1_2   |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AA21      |            |IOBM     |IO_L2P_CMPCLK_2              |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|AA22      |            |IOBS     |IO_L1N_M0_CMPMISO_2          |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|AA22      |hi_muxsel   |IOB      |IO_L1N_M0_CMPMISO_2          |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |AB1       |            |         |GND                          |         |           |              |          |         |           |         |         |          |           |                |
 |AB2       |hi_inout<6> |IOB      |IO_L64N_D9_2                 |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AB3       |hi_in<7>    |IOB      |IO_L58N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
@@ -72,7 +72,7 @@ Pinout by Pin Number:
 |AB6       |hi_inout<11>|IOB      |IO_L49N_D4_2                 |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |AB7       |hi_in<2>    |IOB      |IO_L48N_RDWR_B_VREF_2        |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |AB8       |hi_in<3>    |IOB      |IO_L45N_2                    |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
-|AB9       |            |IOBS     |IO_L43N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|AB9       |i2c_sda     |IOB      |IO_L43N_2                    |TRISTATE |LVCMOS33   |2             |12        |SLOW     |PULLUP     |         |         |LOCATED   |NO         |NONE            |
 |AB10      |led<7>      |IOB      |IO_L41N_VREF_2               |OUTPUT   |LVCMOS33   |2             |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
 |AB11      |            |IOBS     |IO_L32N_GCLK28_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |AB12      |hi_inout<0> |IOB      |IO_L31N_GCLK30_D15_2         |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
@@ -490,7 +490,7 @@ Pinout by Pin Number:
 |Y6        |            |IOBS     |IO_L53N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |Y7        |hi_inout<8> |IOB      |IO_L48P_D7_2                 |BIDIR    |LVCMOS33   |2             |12        |SLOW     |           |NONE     |         |LOCATED   |YES        |NONE            |
 |Y8        |            |IOBS     |IO_L47N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
-|Y9        |            |IOBM     |IO_L43P_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
+|Y9        |i2c_scl     |IOB      |IO_L43P_2                    |TRISTATE |LVCMOS33   |2             |12        |SLOW     |PULLUP     |         |         |LOCATED   |NO         |NONE            |
 |Y10       |            |IOBS     |IO_L44N_2                    |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |Y11       |            |IOBM     |IO_L32P_GCLK29_2             |UNUSED   |           |2             |          |         |           |         |         |          |           |                |
 |Y12       |hi_in<0>    |IOB      |IO_L29N_GCLK2_2              |INPUT    |LVCMOS33   |2             |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
