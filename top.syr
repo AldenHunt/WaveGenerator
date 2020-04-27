@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.05 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: top.prj
@@ -111,25 +111,25 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" into library work
-Parsing module <two_clk_fifo>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sinetable.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
 Parsing module <sinetable>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/singlecompute.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
 Parsing module <singlecompute>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/twoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/clockedadd.v" into library work
+Parsing module <clockedadd>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
 Parsing module <twoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/fourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
 Parsing module <fourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/eightblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
 Parsing module <eightblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixteenblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixteenblock.v" into library work
 Parsing module <sixteenblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/thirtytwoblock.v" into library work
 Parsing module <thirtytwoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock.v" into library work
 Parsing module <sixtyfourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/okLibrary.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/okLibrary.v" into library work
 Parsing module <okHost>.
 Parsing module <okCoreHarness>.
 Parsing module <okWireIn>.
@@ -141,9 +141,11 @@ Parsing module <okPipeOut>.
 Parsing module <okBTPipeIn>.
 Parsing module <okBTPipeOut>.
 Parsing module <okWireOR>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/controlcombiner.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/ipcore_dir/two_clk_fifo.v" into library work
+Parsing module <two_clk_fifo>.
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
 Parsing module <controlcombiner>.
-Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/top.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/top.v" into library work
 Parsing module <top>.
 
 =========================================================================
@@ -151,14 +153,14 @@ Parsing module <top>.
 =========================================================================
 
 Elaborating module <top>.
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 60: Assignment to fifowriteen ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 60: Assignment to fifowriteen ignored, since the identifier is never used
 
 Elaborating module <two_clk_fifo>.
-WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 70: Assignment to fifofull ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 71: Assignment to fifoem ignored, since the identifier is never used
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance
+WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/Thesis/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 70: Assignment to fifofull ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 71: Assignment to fifoem ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 68: Port BUSY is not connected to this instance
 
 Elaborating module <okHost>.
 
@@ -181,8 +183,8 @@ Elaborating module <OBUF>.
 Elaborating module <okCoreHarness>.
 
 Elaborating module <okWireOR(N=5)>.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 90: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 107: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 90: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 107: Result of 32-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <controlcombiner>.
 
@@ -202,6 +204,8 @@ Elaborating module <singlecompute>.
 
 Elaborating module <sinetable>.
 
+Elaborating module <clockedadd>.
+
 Elaborating module <okWireIn>.
 
 Elaborating module <okTriggerIn>.
@@ -217,9 +221,9 @@ Elaborating module <okPipeOut>.
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/top.v".
-INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 62: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 62: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
+    Related source file is "/home/ise/ise_projects/Thesis/top.v".
+INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 62: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 62: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
     Found 1-bit register for signal <finishedloadin>.
     Found 1-bit register for signal <timeup>.
     Found 1-bit register for signal <finishedsignal<15>>.
@@ -253,7 +257,7 @@ INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 62: Output por
 Unit <top> synthesized.
 
 Synthesizing Unit <okHost>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
     Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
@@ -307,14 +311,14 @@ Synthesizing Unit <okHost>.
 Unit <okHost> synthesized.
 
 Synthesizing Unit <okWireOR>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
         N = 5
     Summary:
 	no macro.
 Unit <okWireOR> synthesized.
 
 Synthesizing Unit <controlcombiner>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/controlcombiner.v".
+    Related source file is "/home/ise/ise_projects/Thesis/controlcombiner.v".
     Found 1024-bit register for signal <combinedout>.
     Found 1024-bit 64-to-1 multiplexer for signal <blockaddress[5]_signal[15]_wide_mux_1_OUT> created at line 16.
     Summary:
@@ -323,49 +327,43 @@ Synthesizing Unit <controlcombiner>.
 Unit <controlcombiner> synthesized.
 
 Synthesizing Unit <sixtyfourblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/sixtyfourblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <sixtyfourblock> synthesized.
 
 Synthesizing Unit <thirtytwoblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/thirtytwoblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <thirtytwoblock> synthesized.
 
 Synthesizing Unit <sixteenblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/sixteenblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/sixteenblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <sixteenblock> synthesized.
 
 Synthesizing Unit <eightblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/eightblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/eightblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <eightblock> synthesized.
 
 Synthesizing Unit <fourblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/fourblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/fourblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <fourblock> synthesized.
 
 Synthesizing Unit <twoblock>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/twoblock.v".
-    Found 16-bit adder for signal <results> created at line 52.
+    Related source file is "/home/ise/ise_projects/Thesis/twoblock.v".
     Summary:
-	inferred   1 Adder/Subtractor(s).
+	no macro.
 Unit <twoblock> synthesized.
 
 Synthesizing Unit <singlecompute>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/singlecompute.v".
+    Related source file is "/home/ise/ise_projects/Thesis/singlecompute.v".
     Found 16-bit register for signal <totalphase>.
     Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_5_OUT> created at line 50.
     Found 16x16-bit multiplier for signal <interimresult> created at line 38.
@@ -377,11 +375,20 @@ Synthesizing Unit <singlecompute>.
 Unit <singlecompute> synthesized.
 
 Synthesizing Unit <sinetable>.
-    Related source file is "/home/ise/ise_projects/WaveGenerator/sinetable.v".
+    Related source file is "/home/ise/ise_projects/Thesis/sinetable.v".
     Found 4096x10-bit Read Only RAM for signal <result>
     Summary:
 	inferred   1 RAM(s).
 Unit <sinetable> synthesized.
+
+Synthesizing Unit <clockedadd>.
+    Related source file is "/home/ise/ise_projects/Thesis/clockedadd.v".
+    Found 16-bit register for signal <sum>.
+    Found 16-bit adder for signal <a[15]_b[15]_add_1_OUT> created at line 31.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  16 D-type flip-flop(s).
+Unit <clockedadd> synthesized.
 
 =========================================================================
 HDL Synthesis Report
@@ -395,10 +402,10 @@ Macro Statistics
  16-bit adder                                          : 127
  16-bit subtractor                                     : 1
  6-bit adder                                           : 1
-# Registers                                            : 91
+# Registers                                            : 154
  1-bit register                                        : 18
  1024-bit register                                     : 6
- 16-bit register                                       : 66
+ 16-bit register                                       : 129
  6-bit register                                        : 1
 # Multiplexers                                         : 132
  1024-bit 64-to-1 multiplexer                          : 3
@@ -462,26 +469,6 @@ Synthesizing (advanced) Unit <singlecompute>.
 The following registers are absorbed into accumulator <totalphase>: 1 register on signal <totalphase>.
 Unit <singlecompute> synthesized (advanced).
 
-Synthesizing (advanced) Unit <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <Madd_results1> :
- 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>,
-	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>,
-	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>,
-	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockZero/Madd_results1> :
- 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockOne/Madd_results1> :
- 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockOne/sixteenblockZero/Madd_results1> :
- 	<thirtytwoblockOne/sixteenblockZero/eightblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockZero/eightblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockOne/sixteenblockOne/Madd_results1> :
- 	<thirtytwoblockOne/sixteenblockOne/eightblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockOne/sixteenblockOne/eightblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockZero/sixteenblockZero/Madd_results1> :
- 	<thirtytwoblockZero/sixteenblockZero/eightblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockZero/eightblockZero/Madd_results> in block <sixtyfourblock>.
-	The following adders/subtractors are grouped into adder tree <thirtytwoblockZero/sixteenblockOne/Madd_results1> :
- 	<thirtytwoblockZero/sixteenblockOne/eightblockOne/Madd_results> in block <sixtyfourblock>, 	<thirtytwoblockZero/sixteenblockOne/eightblockZero/Madd_results> in block <sixtyfourblock>.
-Unit <sixtyfourblock> synthesized (advanced).
-
 Synthesizing (advanced) Unit <top>.
 The following registers are absorbed into counter <currTime>: 1 register on signal <currTime>.
 The following registers are absorbed into counter <currBlock>: 1 register on signal <currBlock>.
@@ -495,15 +482,15 @@ Macro Statistics
  4096x10-bit single-port distributed Read Only RAM     : 64
 # Multipliers                                          : 64
  16x16-bit multiplier                                  : 64
-# Adder Trees                                          : 1
- 16-bit / 64-inputs adder tree                         : 1
+# Adders/Subtractors                                   : 63
+ 16-bit adder                                          : 63
 # Counters                                             : 2
  16-bit down counter                                   : 1
  6-bit up counter                                      : 1
 # Accumulators                                         : 64
  16-bit up loadable accumulator                        : 64
-# Registers                                            : 6230
- Flip-Flops                                            : 6230
+# Registers                                            : 7238
+ Flip-Flops                                            : 7238
 # Multiplexers                                         : 67
  1024-bit 64-to-1 multiplexer                          : 3
  16-bit 2-to-1 multiplexer                             : 64
@@ -536,6 +523,68 @@ Optimizing unit <okHost> ...
 Optimizing unit <sixtyfourblock> ...
 
 Optimizing unit <controlcombiner> ...
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/adder/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/adder/sum_13> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/adder/sum_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <theBigOne/thirtytwoblockZero/adder/sum_14> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/adder/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/adder/sum_13> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/adder/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/adder/sum_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <theBigOne/thirtytwoblockOne/adder/sum_14> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/adder/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/adder/sum_13> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/adder/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/adder/sum_13> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/adder/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/adder/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/adder/sum_11> 
 
 Mapping all equations...
 Building and optimizing final netlist ...
@@ -569,8 +618,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 6237
- Flip-Flops                                            : 6237
+# Registers                                            : 6987
+ Flip-Flops                                            : 6987
 
 =========================================================================
 
@@ -593,22 +642,22 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 43578
+# BELS                             : 44054
 #      GND                         : 9
 #      INV                         : 37
 #      LUT1                        : 62
-#      LUT2                        : 1838
-#      LUT3                        : 1284
-#      LUT4                        : 3376
-#      LUT5                        : 6151
-#      LUT6                        : 26637
+#      LUT2                        : 2136
+#      LUT3                        : 975
+#      LUT4                        : 3322
+#      LUT5                        : 6026
+#      LUT6                        : 26847
 #      LUT6_2                      : 50
-#      MUXCY                       : 1753
-#      MUXF7                       : 556
+#      MUXCY                       : 2068
+#      MUXF7                       : 619
 #      VCC                         : 3
-#      XORCY                       : 1822
-# FlipFlops/Latches                : 7153
-#      FD                          : 1167
+#      XORCY                       : 1900
+# FlipFlops/Latches                : 7903
+#      FD                          : 1917
 #      FDC                         : 220
 #      FDCE                        : 215
 #      FDE                         : 5240
@@ -649,18 +698,18 @@ Selected Device : 6slx150fgg484-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            7105  out of  184304     3%  
- Number of Slice LUTs:                39480  out of  92152    42%  
-    Number used as Logic:             39435  out of  92152    42%  
+ Number of Slice Registers:            7855  out of  184304     4%  
+ Number of Slice LUTs:                39500  out of  92152    42%  
+    Number used as Logic:             39455  out of  92152    42%  
     Number used as Memory:               45  out of  21680     0%  
        Number used as RAM:               44
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  42547
-   Number with an unused Flip Flop:   35442  out of  42547    83%  
-   Number with an unused LUT:          3067  out of  42547     7%  
-   Number of fully used LUT-FF pairs:  4038  out of  42547     9%  
+ Number of LUT Flip Flop pairs used:  42572
+   Number with an unused Flip Flop:   34717  out of  42572    81%  
+   Number with an unused LUT:          3072  out of  42572     7%  
+   Number of fully used LUT-FF pairs:  4783  out of  42572    11%  
    Number of unique control sets:        78
 
 IO Utilization: 
@@ -695,7 +744,7 @@ Clock Information:
 -----------------------------------+------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                      | Load  |
 -----------------------------------+------------------------------------------------------------+-------+
-clk1                               | BUFGP                                                      | 3450  |
+clk1                               | BUFGP                                                      | 4200  |
 hi_in<0>                           | DCM_SP:CLK0                                                | 3905  |
 okHI/core0/okCH<1>                 | NONE(okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
 -----------------------------------+------------------------------------------------------------+-------+
@@ -709,9 +758,9 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 27.818ns (Maximum Frequency: 35.948MHz)
+   Minimum period: 16.326ns (Maximum Frequency: 61.251MHz)
    Minimum input arrival time before clock: 7.073ns
-   Maximum output required time after clock: 30.331ns
+   Maximum output required time after clock: 4.973ns
    Maximum combinational path delay: 1.328ns
 
 Timing Details:
@@ -720,61 +769,49 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk1'
-  Clock period: 27.818ns (frequency: 35.948MHz)
-  Total number of paths / destination ports: 156239574957853 / 4900
+  Clock period: 16.326ns (frequency: 61.251MHz)
+  Total number of paths / destination ports: 527450841 / 5650
 -------------------------------------------------------------------------
-Delay:               27.818ns (Levels of Logic = 36)
-  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 (FF)
-  Destination:       outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (RAM)
+Delay:               16.326ns (Levels of Logic = 25)
+  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/totalphase_11 (FF)
+  Destination:       theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_15 (FF)
   Source Clock:      clk1 rising
   Destination Clock: clk1 rising
 
-  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 to outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[28].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/totalphase_11 to theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_15
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             147   0.525   2.809  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11)
-     LUT6:I0->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471950_SW0 (theBigOne_N224)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471950 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471949)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471956 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471955)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471963 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471962)
-     LUT6:I5->O            1   0.254   0.681  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471964 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sineresult<6>)
-     DSP48A1:A12->M18      1   3.265   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/interimresult<18>)
-     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>3)
-     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>7)
-     LUT4:I2->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<2> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<3> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<4> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<5> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<6> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<6>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd39_xor<7> (theBigOne/ADDERTREE_INTERNAL_Madd_739)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd407 (theBigOne/ADDERTREE_INTERNAL_Madd407)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>8 (theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>8)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>_7 (theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>8)
-     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd40_xor<0>_8 (theBigOne/ADDERTREE_INTERNAL_Madd_940)
-     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_lut<9> (theBigOne/ADDERTREE_INTERNAL_Madd44_lut<9>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_cy<9> (theBigOne/ADDERTREE_INTERNAL_Madd44_cy<9>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd44_xor<10> (theBigOne/ADDERTREE_INTERNAL_Madd_1044)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd4510 (theBigOne/ADDERTREE_INTERNAL_Madd4510)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>11 (theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>11)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>_10 (theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>11)
-     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd45_xor<0>_11 (theBigOne/ADDERTREE_INTERNAL_Madd_1246)
-     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_lut<12> (theBigOne/ADDERTREE_INTERNAL_Madd61_lut<12>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_cy<12> (theBigOne/ADDERTREE_INTERNAL_Madd61_cy<12>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd61_xor<13> (theBigOne/ADDERTREE_INTERNAL_Madd_1361)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd6213 (theBigOne/ADDERTREE_INTERNAL_Madd6213)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>14 (theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>14)
-     MUXCY:S->O            0   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>_13 (theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>14)
-     XORCY:CI->O          32   0.206   1.519  theBigOne/ADDERTREE_INTERNAL_Madd62_xor<0>_14 (finalSum<15>)
-     begin scope: 'outfifo:din<15>'
-     begin scope: 'outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr:DINA<15>'
-     RAMB16BWER:DIPA0          0.300          ramloop[28].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
+     FD:C->Q             147   0.525   2.809  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/totalphase_11 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/totalphase_11)
+     LUT6:I0->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471950_SW0 (theBigOne_N636)
+     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471950 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471949)
+     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471956 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471955)
+     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471963 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471962)
+     LUT6:I5->O            1   0.254   0.681  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sinl/Mram_result3471964 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/sineresult<6>)
+     DSP48A1:A12->M18      1   3.265   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/interimresult<18>)
+     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/amp[15]_GND_21_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/amp[15]_GND_21_o_equal_2_o<31>3)
+     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/amp[15]_GND_21_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/amp[15]_GND_21_o_equal_2_o<31>7)
+     LUT4:I2->O            1   0.250   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_lut<0> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_lut<0>)
+     MUXCY:S->O            1   0.215   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<0> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<0>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<1> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<1>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<2> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<2>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<3> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<3>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<4> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<4>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<5> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<5>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<6> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<6>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<7> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<7>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<8> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<8>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<9> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<9>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<10> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<10>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<11> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<11>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<12> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<12>)
+     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<13> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<13>)
+     MUXCY:CI->O           0   0.023   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<14> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_cy<14>)
+     XORCY:CI->O           1   0.206   0.000  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/Madd_a[15]_b[15]_add_1_OUT_xor<15> (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/a[15]_b[15]_add_1_OUT<15>)
+     FD:D                      0.074          theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/adder/sum_15
     ----------------------------------------
-    Total                     27.818ns (10.808ns logic, 17.011ns route)
-                                       (38.9% logic, 61.1% route)
+    Total                     16.326ns (6.638ns logic, 9.688ns route)
+                                       (40.7% logic, 59.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hi_in<0>'
@@ -874,52 +911,22 @@ Offset:              4.162ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
-  Total number of paths / destination ports: 437249557998 / 8
+  Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              30.331ns (Levels of Logic = 31)
-  Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 (FF)
+Offset:              4.973ns (Levels of Logic = 1)
+  Source:            theBigOne/adder/sum_10 (FF)
   Destination:       led<7> (PAD)
   Source Clock:      clk1 rising
 
-  Data Path: theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 to led<7>
+  Data Path: theBigOne/adder/sum_10 to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             147   0.525   2.809  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11)
-     LUT6:I0->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471950_SW0 (theBigOne_N224)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471950 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471949)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471956 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471955)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471963 (theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471962)
-     LUT6:I5->O            1   0.254   0.681  theBigOne_thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sinl/Mram_result3471964 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/sineresult<6>)
-     DSP48A1:A12->M18      1   3.265   1.137  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/Mmult_interimresult (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/interimresult<18>)
-     LUT6:I0->O            2   0.254   1.156  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>4 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>3)
-     LUT6:I1->O           12   0.254   1.177  theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>7_1 (theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/amp[15]_GND_21_o_equal_2_o<31>7)
-     LUT4:I2->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_lut<0>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1> (theBigOne/ADDERTREE_INTERNAL_Madd39_cy<1>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd39_xor<2> (theBigOne/ADDERTREE_INTERNAL_Madd_239)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd402 (theBigOne/ADDERTREE_INTERNAL_Madd402)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3 (theBigOne/ADDERTREE_INTERNAL_Madd40_lut<0>3)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>_2 (theBigOne/ADDERTREE_INTERNAL_Madd40_cy<0>3)
-     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd40_xor<0>_3 (theBigOne/ADDERTREE_INTERNAL_Madd_440)
-     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_lut<4>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4> (theBigOne/ADDERTREE_INTERNAL_Madd44_cy<4>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd44_xor<5> (theBigOne/ADDERTREE_INTERNAL_Madd_544)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd455 (theBigOne/ADDERTREE_INTERNAL_Madd455)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6 (theBigOne/ADDERTREE_INTERNAL_Madd45_lut<0>6)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>_5 (theBigOne/ADDERTREE_INTERNAL_Madd45_cy<0>6)
-     XORCY:CI->O           1   0.206   0.790  theBigOne/ADDERTREE_INTERNAL_Madd45_xor<0>_6 (theBigOne/ADDERTREE_INTERNAL_Madd_745)
-     LUT2:I0->O            1   0.250   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_lut<7>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7> (theBigOne/ADDERTREE_INTERNAL_Madd61_cy<7>)
-     XORCY:CI->O           2   0.206   0.726  theBigOne/ADDERTREE_INTERNAL_Madd61_xor<8> (theBigOne/ADDERTREE_INTERNAL_Madd_861)
-     LUT3:I2->O            1   0.254   0.682  theBigOne/ADDERTREE_INTERNAL_Madd628 (theBigOne/ADDERTREE_INTERNAL_Madd628)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9 (theBigOne/ADDERTREE_INTERNAL_Madd62_lut<0>9)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>_8 (theBigOne/ADDERTREE_INTERNAL_Madd62_cy<0>9)
-     XORCY:CI->O          33   0.206   1.536  theBigOne/ADDERTREE_INTERNAL_Madd62_xor<0>_9 (led_7_OBUF)
+     FD:C->Q              33   0.525   1.536  theBigOne/adder/sum_10 (theBigOne/adder/sum_10)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                     30.331ns (13.303ns logic, 17.028ns route)
-                                       (43.9% logic, 56.1% route)
+    Total                      4.973ns (3.437ns logic, 1.536ns route)
+                                       (69.1% logic, 30.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -949,7 +956,7 @@ Clock to Setup on destination clock clk1
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk1           |   27.818|         |         |         |
+clk1           |   16.326|         |         |         |
 hi_in<0>       |    3.397|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -973,15 +980,15 @@ okHI/core0/okCH<1>|    3.081|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 527.00 secs
-Total CPU time to Xst completion: 522.70 secs
+Total REAL time to Xst completion: 477.00 secs
+Total CPU time to Xst completion: 472.95 secs
  
 --> 
 
 
-Total memory usage is 1070980 kilobytes
+Total memory usage is 1047536 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   38 (   0 filtered)
-Number of infos    :   26 (   0 filtered)
+Number of infos    :   88 (   0 filtered)
 

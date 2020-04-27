@@ -25,7 +25,7 @@ module sixteenblock(
     input wire [255:0] phasewords,
     input wire clk,
     input wire reset,
-    output reg signed [15:0] results
+    output wire signed [15:0] results
     );
 
 	wire signed [15:0] a, b;
@@ -48,8 +48,11 @@ module sixteenblock(
 		.results(b)
 	);
 	
-	always@(*) begin
-		results = a + b;
-	end
+	clockedadd adder(
+		.a(a),
+		.b(b),
+		.clk(clk),
+		.sum(results)
+	);
 	
 endmodule
