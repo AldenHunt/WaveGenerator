@@ -51,7 +51,7 @@ def sendRowToFPGA(row, dev):
 def readOut(num, dev):
     buf = bytearray(2*num)
     dev.ReadFromPipeOut(0xA0, buf)
-    for i in num:
+    for i in range(num):
         val = int.from_bytes(buf[2*i:2*i+1], byteorder='big', signed=True)
         wavelist.append(val)
 
@@ -107,6 +107,7 @@ def main():
         readOut(lastTime, dev)
 
         #Final plot
+        print(wavelist)
         plt.plot(wavelist)
         plt.title("FPGA-Generated Wave")
         plt.savefig("FPGAwave.png")
