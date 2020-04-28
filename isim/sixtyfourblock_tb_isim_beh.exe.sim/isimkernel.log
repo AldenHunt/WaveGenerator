@@ -2,27 +2,27 @@ Command line:
    sixtyfourblock_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  46042
+     -socket  41947
 
-Tue Apr 28 00:43:43 2020
+Tue Apr 28 01:22:22 2020
 
 
- Elaboration Time: 0.09 sec
+ Elaboration Time: 0.08 sec
 
- Current Memory Usage: 217.489 Meg
+ Current Memory Usage: 216.699 Meg
 
- Total Signals          : 1156
- Total Nets             : 6543
+ Total Signals          : 903
+ Total Nets             : 6527
  Total Signal Drivers   : 265
- Total Blocks           : 256
- Total Primitive Blocks : 128
+ Total Blocks           : 193
+ Total Primitive Blocks : 65
  Total Processes        : 522
  Total Traceable Variables  : 407
- Total Scalar Nets and Variables : 16497
+ Total Scalar Nets and Variables : 16481
 
- Total Simulation Time: 0.6 sec
+ Total Simulation Time: 0.49 sec
 
- Current Memory Usage: 295.088 Meg
+ Current Memory Usage: 294.298 Meg
 
-Tue Apr 28 00:55:33 2020
+Tue Apr 28 01:24:48 2020
 

@@ -5,7 +5,6 @@ Turning on mult-threading, number of parallel sub-compilation jobs: 4
 Determining compilation order of HDL files
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/clockedadd.v" into library work
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
 Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
@@ -16,11 +15,10 @@ Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock_tb.v" into 
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 97612 KB
-Fuse CPU Usage: 1120 ms
+Fuse Memory Usage: 97604 KB
+Fuse CPU Usage: 1110 ms
 Compiling module sinetable
 Compiling module singlecompute
-Compiling module clockedadd
 Compiling module twoblock
 Compiling module fourblock
 Compiling module eightblock
@@ -31,8 +29,8 @@ Compiling module sixtyfourblock_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 11 Verilog Units
+Compiled 10 Verilog Units
 Built simulation executable /home/ise/ise_projects/Thesis/sixtyfourblock_tb_isim_beh.exe
-Fuse Memory Usage: 407532 KB
-Fuse CPU Usage: 1720 ms
-GCC CPU Usage: 8250 ms
+Fuse Memory Usage: 407536 KB
+Fuse CPU Usage: 1800 ms
+GCC CPU Usage: 10520 ms

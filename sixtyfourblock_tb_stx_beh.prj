@@ -1,6 +1,5 @@
 verilog isim_temp "sinetable.v"
 verilog isim_temp "singlecompute.v"
-verilog isim_temp "clockedadd.v"
 verilog isim_temp "twoblock.v"
 verilog isim_temp "fourblock.v"
 verilog isim_temp "eightblock.v"
