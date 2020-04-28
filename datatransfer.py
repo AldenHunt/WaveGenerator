@@ -87,8 +87,9 @@ def main():
             
             #Wait until got word that last sequence was completed
             while(True):
-                dev.UpdateTriggerOuts()
-                if (dev.IsTriggered(0x60, 0) == True):
+                dev.UpdateWireOuts()
+                finished = dev.GetWireOutValue(0x20)
+                if (finished == 1):
                     break
             
             #read recently completed values and add to array
@@ -97,8 +98,9 @@ def main():
 
         #When no more rows from csv to send to FPGA, do one last read
         while(True):
-            dev.UpdateTriggerOuts()
-            if (dev.IsTriggered(0x60, 0) == True):
+            dev.UpdateWireOuts()
+            finished = dev.GetWireOutValue(0x20)
+            if (finished == 1):
                 break
         
         #read recently completed values and add to array
