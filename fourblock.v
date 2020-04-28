@@ -25,7 +25,7 @@ module fourblock(
     input wire [63:0] phasewords,
     input wire clk,
     input wire reset,
-    output wire signed [15:0] results
+    output reg signed [15:0] results
     );
 
 	wire signed [15:0] a, b;;
@@ -48,10 +48,7 @@ module fourblock(
 		.results(b)
 	);
 	
-	clockedadd adder(
-		.a(a),
-		.b(b),
-		.clk(clk),
-		.sum(results)
-	);
+	always@(*) begin
+		results = a + b;
+	end
 endmodule

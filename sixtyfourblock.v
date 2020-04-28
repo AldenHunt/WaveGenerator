@@ -25,11 +25,10 @@ module sixtyfourblock(
     input wire [1023:0] phasewords,
     input wire clk,
     input wire reset,
-    output wire signed [15:0] results
+    output reg signed [15:0] results
     );
 
 	wire signed [15:0] a, b;
-	wire signed [15:0] sumout;
 	
 	thirtytwoblock thirtytwoblockOne(
 		.amps(amps[1023:512]),
@@ -49,11 +48,9 @@ module sixtyfourblock(
 		.results(b)
 	);
 	
-	clockedadd adder(
-		.a(a),
-		.b(b),
-		.clk(clk),
-		.sum(results)
-	);
+	always@(*) begin
+		results = a + b;
+	end
+
 
 endmodule

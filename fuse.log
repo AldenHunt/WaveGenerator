@@ -1,22 +1,38 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -relaunch -intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "/home/ise/ise_projects/Thesis/controlcompiler_tb_isim_beh.exe" -prj "/home/ise/ise_projects/Thesis/controlcompiler_tb_beh.prj" "work.controlcompiler_tb" "work.glbl" 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/ise/ise_projects/Thesis/sixtyfourblock_tb_isim_beh.exe -prj /home/ise/ise_projects/Thesis/sixtyfourblock_tb_beh.prj work.sixtyfourblock_tb work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 2
 Turning on mult-threading, number of parallel sub-compilation jobs: 4 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcompiler_tb.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/clockedadd.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixteenblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/thirtytwoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock_tb.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
 Completed static elaboration
-Fuse Memory Usage: 94948 KB
-Fuse CPU Usage: 1220 ms
-Compiling module controlcombiner
-Compiling module controlcompiler_tb
+Fuse Memory Usage: 97612 KB
+Fuse CPU Usage: 1120 ms
+Compiling module sinetable
+Compiling module singlecompute
+Compiling module clockedadd
+Compiling module twoblock
+Compiling module fourblock
+Compiling module eightblock
+Compiling module sixteenblock
+Compiling module thirtytwoblock
+Compiling module sixtyfourblock
+Compiling module sixtyfourblock_tb
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 3 Verilog Units
-Built simulation executable /home/ise/ise_projects/Thesis/controlcompiler_tb_isim_beh.exe
-Fuse Memory Usage: 391252 KB
-Fuse CPU Usage: 1250 ms
-GCC CPU Usage: 180 ms
+Compiled 11 Verilog Units
+Built simulation executable /home/ise/ise_projects/Thesis/sixtyfourblock_tb_isim_beh.exe
+Fuse Memory Usage: 407532 KB
+Fuse CPU Usage: 1720 ms
+GCC CPU Usage: 8250 ms
