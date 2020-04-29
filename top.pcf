@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Tue Apr 28 03:01:59 2020
+// Written by: Map P.20131013 on Wed Apr 29 05:36:29 2020
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -2247,23 +2247,31 @@ TIMEGRP okHI_dcm_clk0 = BEL "currBlock_0" BEL "currBlock_1" BEL "currBlock_2"
         "resetCurrBlockTrigger/trigff1_0" BEL
         "resetCurrBlockTrigger/ep_trigger_0" BEL
         "nextSequenceTrigger/eptrig_0" BEL "nextSequenceTrigger/eptrig_1" BEL
-        "timeWire/ep_datahold_0" BEL "timeWire/ep_datahold_1" BEL
-        "timeWire/ep_datahold_2" BEL "timeWire/ep_datahold_3" BEL
-        "timeWire/ep_datahold_4" BEL "timeWire/ep_datahold_5" BEL
-        "timeWire/ep_datahold_6" BEL "timeWire/ep_datahold_7" BEL
-        "timeWire/ep_datahold_8" BEL "timeWire/ep_datahold_9" BEL
-        "timeWire/ep_datahold_10" BEL "timeWire/ep_datahold_11" BEL
-        "timeWire/ep_datahold_12" BEL "timeWire/ep_datahold_13" BEL
-        "timeWire/ep_datahold_14" BEL "timeWire/ep_datahold_15" BEL
-        "timeWire/ep_dataout_0" BEL "timeWire/ep_dataout_1" BEL
-        "timeWire/ep_dataout_2" BEL "timeWire/ep_dataout_3" BEL
-        "timeWire/ep_dataout_4" BEL "timeWire/ep_dataout_5" BEL
-        "timeWire/ep_dataout_6" BEL "timeWire/ep_dataout_7" BEL
-        "timeWire/ep_dataout_8" BEL "timeWire/ep_dataout_9" BEL
-        "timeWire/ep_dataout_10" BEL "timeWire/ep_dataout_11" BEL
-        "timeWire/ep_dataout_12" BEL "timeWire/ep_dataout_13" BEL
-        "timeWire/ep_dataout_14" BEL "timeWire/ep_dataout_15" BEL
-        "finishedWire/wirehold_0" BEL "phasewordpipe/ep_dataout_0" BEL
+        "finishedTrigger/captrig" BEL "timeWire/ep_datahold_0" BEL
+        "timeWire/ep_datahold_1" BEL "timeWire/ep_datahold_2" BEL
+        "timeWire/ep_datahold_3" BEL "timeWire/ep_datahold_4" BEL
+        "timeWire/ep_datahold_5" BEL "timeWire/ep_datahold_6" BEL
+        "timeWire/ep_datahold_7" BEL "timeWire/ep_datahold_8" BEL
+        "timeWire/ep_datahold_9" BEL "timeWire/ep_datahold_10" BEL
+        "timeWire/ep_datahold_11" BEL "timeWire/ep_datahold_12" BEL
+        "timeWire/ep_datahold_13" BEL "timeWire/ep_datahold_14" BEL
+        "timeWire/ep_datahold_15" BEL "timeWire/ep_dataout_0" BEL
+        "timeWire/ep_dataout_1" BEL "timeWire/ep_dataout_2" BEL
+        "timeWire/ep_dataout_3" BEL "timeWire/ep_dataout_4" BEL
+        "timeWire/ep_dataout_5" BEL "timeWire/ep_dataout_6" BEL
+        "timeWire/ep_dataout_7" BEL "timeWire/ep_dataout_8" BEL
+        "timeWire/ep_dataout_9" BEL "timeWire/ep_dataout_10" BEL
+        "timeWire/ep_dataout_11" BEL "timeWire/ep_dataout_12" BEL
+        "timeWire/ep_dataout_13" BEL "timeWire/ep_dataout_14" BEL
+        "timeWire/ep_dataout_15" BEL "activeampsWire/wirehold_0" BEL
+        "activeampsWire/wirehold_1" BEL "activeampsWire/wirehold_2" BEL
+        "activeampsWire/wirehold_3" BEL "activeampsWire/wirehold_4" BEL
+        "activeampsWire/wirehold_5" BEL "activeampsWire/wirehold_6" BEL
+        "activeampsWire/wirehold_7" BEL "activeampsWire/wirehold_8" BEL
+        "activeampsWire/wirehold_9" BEL "activeampsWire/wirehold_10" BEL
+        "activeampsWire/wirehold_11" BEL "activeampsWire/wirehold_12" BEL
+        "activeampsWire/wirehold_13" BEL "activeampsWire/wirehold_14" BEL
+        "activeampsWire/wirehold_15" BEL "phasewordpipe/ep_dataout_0" BEL
         "phasewordpipe/ep_dataout_1" BEL "phasewordpipe/ep_dataout_2" BEL
         "phasewordpipe/ep_dataout_3" BEL "phasewordpipe/ep_dataout_4" BEL
         "phasewordpipe/ep_dataout_5" BEL "phasewordpipe/ep_dataout_6" BEL
@@ -2302,37 +2310,37 @@ TIMEGRP okHI_dcm_clk0 = BEL "currBlock_0" BEL "currBlock_1" BEL "currBlock_2"
         "okHI/core0/core0/state_FSM_FFd16" BEL
         "okHI/core0/core0/state_FSM_FFd14" BEL
         "okHI/core0/core0/state_FSM_FFd17" BEL "okHI/core0/core0/ti_reset" BEL
-        "okHI/core0/core0/ti_wireupdate" BEL "okHI/core0/core0/ti_dataout_15"
-        BEL "okHI/core0/core0/ti_dataout_14" BEL
-        "okHI/core0/core0/ti_dataout_13" BEL "okHI/core0/core0/ti_dataout_12"
-        BEL "okHI/core0/core0/ti_dataout_11" BEL
-        "okHI/core0/core0/ti_dataout_10" BEL "okHI/core0/core0/ti_dataout_9"
-        BEL "okHI/core0/core0/ti_dataout_8" BEL
-        "okHI/core0/core0/ti_dataout_7" BEL "okHI/core0/core0/ti_dataout_6"
-        BEL "okHI/core0/core0/ti_dataout_5" BEL
-        "okHI/core0/core0/ti_dataout_4" BEL "okHI/core0/core0/ti_dataout_3"
-        BEL "okHI/core0/core0/ti_dataout_2" BEL
-        "okHI/core0/core0/ti_dataout_1" BEL "okHI/core0/core0/ti_dataout_0"
-        BEL "okHI/core0/core0/block_size_10" BEL
-        "okHI/core0/core0/block_size_9" BEL "okHI/core0/core0/block_size_8"
-        BEL "okHI/core0/core0/block_size_7" BEL
-        "okHI/core0/core0/block_size_6" BEL "okHI/core0/core0/block_size_5"
-        BEL "okHI/core0/core0/block_size_4" BEL
-        "okHI/core0/core0/block_size_3" BEL "okHI/core0/core0/block_size_2"
-        BEL "okHI/core0/core0/block_size_1" BEL
-        "okHI/core0/core0/block_size_0" BEL "okHI/core0/core0/ti_addr_7" BEL
-        "okHI/core0/core0/ti_addr_6" BEL "okHI/core0/core0/ti_addr_5" BEL
-        "okHI/core0/core0/ti_addr_4" BEL "okHI/core0/core0/ti_addr_3" BEL
-        "okHI/core0/core0/ti_addr_2" BEL "okHI/core0/core0/ti_addr_1" BEL
-        "okHI/core0/core0/ti_addr_0" BEL "okHI/core0/core0/block_count_10" BEL
-        "okHI/core0/core0/block_count_9" BEL "okHI/core0/core0/block_count_8"
-        BEL "okHI/core0/core0/block_count_7" BEL
-        "okHI/core0/core0/block_count_6" BEL "okHI/core0/core0/block_count_5"
-        BEL "okHI/core0/core0/block_count_4" BEL
-        "okHI/core0/core0/block_count_3" BEL "okHI/core0/core0/block_count_2"
-        BEL "okHI/core0/core0/block_count_1" BEL
-        "okHI/core0/core0/block_count_0" BEL "okHI/core0/core0/ti_read" BEL
-        "okHI/core0/core0/ti_write" BEL
+        "okHI/core0/core0/ti_wireupdate" BEL "okHI/core0/core0/ti_trigupdate"
+        BEL "okHI/core0/core0/ti_dataout_15" BEL
+        "okHI/core0/core0/ti_dataout_14" BEL "okHI/core0/core0/ti_dataout_13"
+        BEL "okHI/core0/core0/ti_dataout_12" BEL
+        "okHI/core0/core0/ti_dataout_11" BEL "okHI/core0/core0/ti_dataout_10"
+        BEL "okHI/core0/core0/ti_dataout_9" BEL
+        "okHI/core0/core0/ti_dataout_8" BEL "okHI/core0/core0/ti_dataout_7"
+        BEL "okHI/core0/core0/ti_dataout_6" BEL
+        "okHI/core0/core0/ti_dataout_5" BEL "okHI/core0/core0/ti_dataout_4"
+        BEL "okHI/core0/core0/ti_dataout_3" BEL
+        "okHI/core0/core0/ti_dataout_2" BEL "okHI/core0/core0/ti_dataout_1"
+        BEL "okHI/core0/core0/ti_dataout_0" BEL
+        "okHI/core0/core0/block_size_10" BEL "okHI/core0/core0/block_size_9"
+        BEL "okHI/core0/core0/block_size_8" BEL
+        "okHI/core0/core0/block_size_7" BEL "okHI/core0/core0/block_size_6"
+        BEL "okHI/core0/core0/block_size_5" BEL
+        "okHI/core0/core0/block_size_4" BEL "okHI/core0/core0/block_size_3"
+        BEL "okHI/core0/core0/block_size_2" BEL
+        "okHI/core0/core0/block_size_1" BEL "okHI/core0/core0/block_size_0"
+        BEL "okHI/core0/core0/ti_addr_7" BEL "okHI/core0/core0/ti_addr_6" BEL
+        "okHI/core0/core0/ti_addr_5" BEL "okHI/core0/core0/ti_addr_4" BEL
+        "okHI/core0/core0/ti_addr_3" BEL "okHI/core0/core0/ti_addr_2" BEL
+        "okHI/core0/core0/ti_addr_1" BEL "okHI/core0/core0/ti_addr_0" BEL
+        "okHI/core0/core0/block_count_10" BEL "okHI/core0/core0/block_count_9"
+        BEL "okHI/core0/core0/block_count_8" BEL
+        "okHI/core0/core0/block_count_7" BEL "okHI/core0/core0/block_count_6"
+        BEL "okHI/core0/core0/block_count_5" BEL
+        "okHI/core0/core0/block_count_4" BEL "okHI/core0/core0/block_count_3"
+        BEL "okHI/core0/core0/block_count_2" BEL
+        "okHI/core0/core0/block_count_1" BEL "okHI/core0/core0/block_count_0"
+        BEL "okHI/core0/core0/ti_read" BEL "okHI/core0/core0/ti_write" BEL
         "okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i"
         BEL
         "okHI/core0/core0/a0/cb0/BU2/U0/grf.rf/gl0.rd/grss.rsts/ram_empty_fb_i"

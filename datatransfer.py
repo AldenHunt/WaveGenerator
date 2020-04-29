@@ -2,6 +2,7 @@ import ok
 import sys
 import csv
 import matplotlib.pyplot as plt
+import time
 
 MAXARG = 0xFFFF
 SINEMODULES = 64
@@ -29,9 +30,13 @@ def sendRowToFPGA(row, dev):
         if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
             sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
         
-        ampbytes = bytearray(amp)
-        offsetbytes = bytearray(offset)
-        phaseaddbytes = bytearray(phaseadd)
+        ampbytes = bytearray(amp.to_bytes(2, byteorder='big'))
+        offsetbytes = bytearray(offset.to_bytes(2, byteorder='big'))
+        phaseaddbytes = bytearray(phaseadd.to_bytes(2, byteorder='big'))
+
+        print(ampbytes)
+        print(offsetbytes)
+        print(phaseaddbytes)
         #Write to pipes
         dev.WriteToPipeIn(0x80, ampbytes)
         dev.WriteToPipeIn(0x81, offsetbytes)
@@ -80,6 +85,14 @@ def main():
         lastTime = sendRowToFPGA(firstinputs, dev)
         dev.ActivateTriggerIn(0x40, 0)
         print("Sent one row of inputs in and triggered")
+        
+        #Test whether amplitudes got to active section
+        dev.UpdateWireOuts()
+        activeamp = dev.GetWireOutValue(0x21)
+        pw = dev.GetWireOutValue(0x22)
+        print(activeamp)
+        print(pw)
+
         for row in reader:
             #Go through one row of values and put in pipes
             print("Looping row send {}", reader.line_num)
@@ -87,9 +100,8 @@ def main():
             
             #Wait until got word that last sequence was completed
             while(True):
-                dev.UpdateWireOuts()
-                finished = dev.GetWireOutValue(0x20)
-                if (finished == 1):
+                dev.UpdateTriggerOuts()
+                if (dev.IsTriggered(0x60, 0) == True):
                     break
             
             #read recently completed values and add to array
@@ -98,9 +110,8 @@ def main():
 
         #When no more rows from csv to send to FPGA, do one last read
         while(True):
-            dev.UpdateWireOuts()
-            finished = dev.GetWireOutValue(0x20)
-            if (finished == 1):
+            dev.UpdateTriggerOuts()
+            if (dev.IsTriggered(0x60, 0) == True):
                 break
         
         #read recently completed values and add to array

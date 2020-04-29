@@ -1,5 +1,8 @@
-INFO:sim:172 - Generating IP...
-Applying current project options...
-Finished applying current project options.
+Welcome to Xilinx CORE Generator.
+Help system initialized.
+The IP Catalog has been reloaded.
+Opening project file
+/home/ise/ise_projects/WaveGenerator/ipcore_dir/coregen.cgp.
+Recustomize and Generate (Under Original Project Settings)INFO:sim:172 - Generating IP...
 Cancelled executing Tcl generator.
-Wrote CGP file for project 'two_clk_fifo'.
+Closed project file.
