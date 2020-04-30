@@ -1,14 +1,14 @@
-Release 14.7 - xst P.20160913 (lin64)
+Release 14.7 - xst P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
-Parameter TMPDIR set to /home/ise/ise_projects/Thesis/xst/projnav.tmp
+Parameter TMPDIR set to /home/ise/ise_projects/WaveGenerator/xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
-Parameter xsthdpdir set to /home/ise/ise_projects/Thesis/xst
+Parameter xsthdpdir set to /home/ise/ise_projects/WaveGenerator/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
@@ -42,13 +42,21 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-ERROR:Xst:2927 - "/home/ise/ise_projects/Thesis/singlecompute.prj" line 2: Source file testcompute.v does not exist
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sinetable.v" into library work
+Parsing module <sinetable>.
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/singlecompute.v" into library work
+Parsing module <singlecompute>.
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.42 secs
+ 
 --> 
 
 
-Total memory usage is 296652 kilobytes
+Total memory usage is 301032 kilobytes
 
-Number of errors   :    1 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

@@ -1,5 +1,5 @@
-set -tmpdir "/home/ise/ise_projects/Thesis/xst/projnav.tmp"
-set -xsthdpdir "/home/ise/ise_projects/Thesis/xst"
+set -tmpdir "/home/ise/ise_projects/WaveGenerator/xst/projnav.tmp"
+set -xsthdpdir "/home/ise/ise_projects/WaveGenerator/xst"
 run -compileonly yes
 -p xc6slx150-2-fgg484
 -top fourblock
@@ -12,6 +12,7 @@ run -compileonly yes
 -rtlview Yes
 -glob_opt AllClockNets
 -read_cores YES
+-sd {"ipcore_dir"  }
 -write_timing_constraints NO
 -cross_clock_analysis NO
 -hierarchy_separator /

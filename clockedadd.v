@@ -23,12 +23,16 @@ module clockedadd(
     input wire signed [15:0] a,
     input wire signed [15:0] b,
     input wire clk,
-    output reg signed [15:0] sum
+	 input wire activea,
+	 input wire activeb,
+    output reg signed [15:0] sum,
+	 output reg active
     );
 
 
 always@(posedge clk) begin
 	sum <= a + b;
+	active <= activea && activeb;
 end
 
 endmodule

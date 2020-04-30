@@ -25,10 +25,23 @@ module fourblock(
     input wire [63:0] phasewords,
     input wire clk,
     input wire reset,
-    output reg signed [15:0] results
+	 input wire activein,
+    output wire signed [15:0] results,
+	 output wire activeout
     );
 
-	wire signed [15:0] a, b;;
+	wire signed [15:0] a, b;
+	wire activea, activeb;
+	
+	clockedadd add(
+		.a(a),
+		.b(b),
+		.clk(clk),
+		.activea(activea),
+		.activeb(activeb),
+		.sum(results),
+		.active(activeout)
+    );
 	
 	twoblock twoblockOne(
 		.amps(amps[63:32]),
@@ -36,7 +49,9 @@ module fourblock(
 		.phasewords(phasewords[63:32]),
 		.clk(clk),
 		.reset(reset),
-		.results(a)
+		.activein(activein),
+		.results(a),
+		.activeout(activea)
 	);
 	
 	twoblock twoblockZero(
@@ -45,10 +60,9 @@ module fourblock(
 		.phasewords(phasewords[31:0]),
 		.clk(clk),
 		.reset(reset),
-		.results(b)
+		.activein(activein),
+		.results(b),
+		.activeout(activeb)
 	);
 	
-	always@(*) begin
-		results = a + b;
-	end
 endmodule

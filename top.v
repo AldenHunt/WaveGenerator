@@ -49,7 +49,7 @@ module top(
 	reg [5:0] currBlock;
 	reg [15:0] currTime;
 	reg resetbigblock, finishedloadin, timeup;
-	wire readout, fifoem, fifofull, fifowriteen;
+	wire readout, fifoem, fifofull, activeout;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
 	
@@ -60,7 +60,6 @@ module top(
 	
 	//Wire combinations
 	assign led[7:0] = currTime[7:0];
-	assign fifowriteen = 1'b1;
 	
 	always@(*) begin
 		switchinputs = (resetsignal[0] || (finishedloadin && timeup));
@@ -71,7 +70,7 @@ module top(
 	  .wr_clk(clk1),
 	  .rd_clk(ti_clk),
 	  .din(finalSum),
-	  .wr_en(!timeup),
+	  .wr_en(activeout),
 	  .rd_en(readout),
 	  .dout(fifoout),
 	  .full(fifofull),
@@ -152,7 +151,9 @@ module top(
 		.phasewords(activephasewords),
 		.clk(clk1),
 		.reset(resetbigblock),
-		.results(finalSum)
+		.activein(!timeup),
+		.results(finalSum),
+		.activeout(activeout)
 	);
 	
 	//OK Host connections

@@ -25,25 +25,26 @@ module singlecompute(
 	 input wire [15:0] phaseadd,
 	 input wire clk,
 	 input wire reset,
-    output reg signed [15:0] result
+	 input wire activein,
+    output reg signed [15:0] result,
+	 output reg activeout
     );
 
 	wire signed [9:0] sineresult;
-	reg signed [15:0] signedsine;
-	reg signed [31:0] interimresult;
+	reg signed [24:0] interimresult;
 	reg [15:0] totalphase;
 	
 	always@(*) begin
-		signedsine = sineresult <<< 6;
-		interimresult = amp * signedsine;
-		if (interimresult == 32'h40000000) begin //Max value and only overflow into 31st bit
+		interimresult = amp * sineresult;
+		if (interimresult == 25'h1000000) begin //Max value and only overflow into 31st bit
 			result = $signed(16'h7fff) >>> 6;
 		end else begin
-			result = $signed(interimresult[30:15]) >>> 6;
+			result = $signed(interimresult[24:9]) >>> 6;
 		end
 	end
 	
 	always@(posedge clk) begin
+		activeout <= activein;
 		if (reset)
 			totalphase <= phaseoffset;
 		else

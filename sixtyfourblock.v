@@ -25,10 +25,23 @@ module sixtyfourblock(
     input wire [1023:0] phasewords,
     input wire clk,
     input wire reset,
-    output reg signed [15:0] results
+	 input wire activein,
+    output wire signed [15:0] results,
+	 output wire activeout
     );
 
 	wire signed [15:0] a, b;
+	wire activea, activeb;
+	
+	clockedadd add(
+		.a(a),
+		.b(b),
+		.clk(clk),
+		.activea(activea),
+		.activeb(activeb),
+		.sum(results),
+		.active(activeout)
+    );
 	
 	thirtytwoblock thirtytwoblockOne(
 		.amps(amps[1023:512]),
@@ -36,7 +49,9 @@ module sixtyfourblock(
 		.phasewords(phasewords[1023:512]),
 		.clk(clk),
 		.reset(reset),
-		.results(a)
+		.activein(activein),
+		.results(a),
+		.activeout(activea)
 	);
 	
 	thirtytwoblock thirtytwoblockZero(
@@ -45,12 +60,12 @@ module sixtyfourblock(
 		.phasewords(phasewords[511:0]),
 		.clk(clk),
 		.reset(reset),
-		.results(b)
+		.activein(activein),
+		.results(b),
+		.activeout(activeb)
 	);
 	
-	always@(*) begin
-		results = a + b;
-	end
+	
 
 
 endmodule

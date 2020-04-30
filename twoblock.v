@@ -25,10 +25,23 @@ module twoblock(
     input wire [31:0] phasewords,
     input wire clk,
     input wire reset,
-    output reg signed [15:0] results
+	 input wire activein,
+    output wire signed [15:0] results,
+	 output wire activeout
     );
 
 	wire signed [15:0] a, b;
+	wire activea, activeb;
+	
+	clockedadd add(
+		.a(a),
+		.b(b),
+		.clk(clk),
+		.activea(activea),
+		.activeb(activeb),
+		.sum(results),
+		.active(activeout)
+    );
 	
 	singlecompute blockOne(
 		.amp(amps[31:16]),
@@ -36,7 +49,9 @@ module twoblock(
 		.phaseadd(phasewords[31:16]),
 		.clk(clk),
 		.reset(reset),
-		.result(a)
+		.activein(activein),
+		.result(a),
+		.activeout(activea)
 	);
 	
 	singlecompute blockZero(
@@ -45,11 +60,9 @@ module twoblock(
 		.phaseadd(phasewords[15:0]),
 		.clk(clk),
 		.reset(reset),
-		.result(b)
+		.activein(activein),
+		.result(b),
+		.activeout(activeb)
 	);
-	
-	always@(*) begin
-		results = a + b;
-	end
 	
 endmodule
