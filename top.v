@@ -37,16 +37,17 @@ module top(
     );
 	
 	//Endpoint connections
-	wire [15:0]  resetsignal, currblockreset, finishedout;
+	wire [15:0]  resetsignal, currblockreset;
 	wire [15:0]  ampwire, offsetwire, phasewordwire, timewire;
 	wire ampwrite, offsetwrite, phasewordwrite;
-	wire switchinputs;
+	reg switchinputs;
+	reg [15:0] finishedout;
 	wire signed [15:0]  finalSum, fifoout;
 	
 	
 	//Other variables
 	reg [5:0] currBlock;
-	reg [15:0] currTime ;
+	reg [15:0] currTime;
 	reg resetbigblock, finishedloadin, timeup;
 	wire readout, fifoem, fifofull, fifowriteen;
 	wire [1023:0] preamps, preoffsets, prephasewords;
@@ -58,10 +59,12 @@ module top(
 	assign hi_muxsel = 1'b0;
 	
 	//Wire combinations
-	assign led = activephasewords[7:0];
-	assign switchinputs = (resetsignal[0] || (finishedloadin && timeup));
+	assign led[7:0] = currTime[7:0];
 	assign fifowriteen = 1'b1;
-	assign finishedout = {15'b000000000000000, timeup}; 
+	
+	always@(*) begin
+		switchinputs = (resetsignal[0] || (finishedloadin && timeup));
+	end
 	
 	two_clk_fifo outfifo(
 	  .rst(switchinputs),
@@ -93,10 +96,12 @@ module top(
 	end
 	
 	always@(posedge clk1) begin
+		finishedout <= 8'h00;
 		if (resetsignal[1]) begin
 			finishedloadin <= 1;
 		end
 		if (switchinputs) begin
+			finishedout <= 8'h00;
 			timeup <= 0;
 			finishedloadin <= 0;
 			resetbigblock <= 1;
@@ -109,6 +114,8 @@ module top(
 			currTime <= currTime - 1;
 		end else if (currTime == 0) begin
 			resetbigblock <= 0;
+			if (timeup == 0)
+				finishedout <= 8'h01;
 			timeup <= 1;
 		end
 				
@@ -152,18 +159,20 @@ module top(
 	wire ti_clk;
 	wire [16:0] ok2;
 	wire [30:0] ok1;
-	wire [7*17-1:0] ok2x;
-	okWireOR # (.N(6)) wireOR (ok2, ok2x);
+	wire [9*17-1:0] ok2x;
+	okWireOR # (.N(9)) wireOR (ok2, ok2x);
 
 	okWireIn timeWire (.ok1(ok1), .ep_addr(8'h01), .ep_dataout(timewire));
 
 	okWireOut activeampsWire(.ok1(ok1), .ok2(ok2x[5*17 +: 17]), .ep_addr(8'h21), .ep_datain(activeamps[15:0]));
-	okWireOut activepwWire(.ok1(ok1), .ok2(ok2x[6*17 +: 17]), .ep_addr(8'h22), .ep_datain(activephasewords[15:0]));
+	okWireOut activeoffsetWire(.ok1(ok1), .ok2(ok2x[6*17 +: 17]), .ep_addr(8'h22), .ep_datain(activeoffsets[15:0]));
+	okWireOut activepwWire(.ok1(ok1), .ok2(ok2x[7*17 +: 17]), .ep_addr(8'h23), .ep_datain(activephasewords[15:0]));
+	okWireOut activetimeWire(.ok1(ok1), .ok2(ok2x[8*17 +: 17]), .ep_addr(8'h24), .ep_datain(currTime));
 	
 	okTriggerIn nextSequenceTrigger (.ok1(ok1), .ep_addr(8'h40), .ep_clk(clk1), .ep_trigger(resetsignal));
 	okTriggerIn resetCurrBlockTrigger (.ok1(ok1), .ep_addr(8'h41), .ep_clk(ti_clk), .ep_trigger(currblockreset));
 
-	okTriggerOut finishedTrigger(.ok1(ok1), .ok2(ok2x[4*17 +: 17]), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger(timeup));
+	okTriggerOut finishedTrigger(.ok1(ok1), .ok2(ok2x[4*17 +: 17]), .ep_addr(8'h60), .ep_clk(clk1), .ep_trigger({finishedout}));
 	 
 	okPipeIn amppipe(.ok1(ok1), .ok2(ok2x[0*17 +: 17]), .ep_addr(8'h80), .ep_write(ampwrite), .ep_dataout(ampwire));
 	okPipeIn offsetpipe(.ok1(ok1), .ok2(ok2x[1*17 +: 17]), .ep_addr(8'h81), .ep_write(offsetwrite), .ep_dataout(offsetwire));

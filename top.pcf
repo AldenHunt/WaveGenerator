@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Apr 29 05:36:29 2020
+// Written by: Map P.20131013 on Thu Apr 30 02:38:13 2020
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -2263,7 +2263,31 @@ TIMEGRP okHI_dcm_clk0 = BEL "currBlock_0" BEL "currBlock_1" BEL "currBlock_2"
         "timeWire/ep_dataout_9" BEL "timeWire/ep_dataout_10" BEL
         "timeWire/ep_dataout_11" BEL "timeWire/ep_dataout_12" BEL
         "timeWire/ep_dataout_13" BEL "timeWire/ep_dataout_14" BEL
-        "timeWire/ep_dataout_15" BEL "activeampsWire/wirehold_0" BEL
+        "timeWire/ep_dataout_15" BEL "activetimeWire/wirehold_0" BEL
+        "activetimeWire/wirehold_1" BEL "activetimeWire/wirehold_2" BEL
+        "activetimeWire/wirehold_3" BEL "activetimeWire/wirehold_4" BEL
+        "activetimeWire/wirehold_5" BEL "activetimeWire/wirehold_6" BEL
+        "activetimeWire/wirehold_7" BEL "activetimeWire/wirehold_8" BEL
+        "activetimeWire/wirehold_9" BEL "activetimeWire/wirehold_10" BEL
+        "activetimeWire/wirehold_11" BEL "activetimeWire/wirehold_12" BEL
+        "activetimeWire/wirehold_13" BEL "activetimeWire/wirehold_14" BEL
+        "activetimeWire/wirehold_15" BEL "activepwWire/wirehold_0" BEL
+        "activepwWire/wirehold_1" BEL "activepwWire/wirehold_2" BEL
+        "activepwWire/wirehold_3" BEL "activepwWire/wirehold_4" BEL
+        "activepwWire/wirehold_5" BEL "activepwWire/wirehold_6" BEL
+        "activepwWire/wirehold_7" BEL "activepwWire/wirehold_8" BEL
+        "activepwWire/wirehold_9" BEL "activepwWire/wirehold_10" BEL
+        "activepwWire/wirehold_11" BEL "activepwWire/wirehold_12" BEL
+        "activepwWire/wirehold_13" BEL "activepwWire/wirehold_14" BEL
+        "activepwWire/wirehold_15" BEL "activeoffsetWire/wirehold_0" BEL
+        "activeoffsetWire/wirehold_1" BEL "activeoffsetWire/wirehold_2" BEL
+        "activeoffsetWire/wirehold_3" BEL "activeoffsetWire/wirehold_4" BEL
+        "activeoffsetWire/wirehold_5" BEL "activeoffsetWire/wirehold_6" BEL
+        "activeoffsetWire/wirehold_7" BEL "activeoffsetWire/wirehold_8" BEL
+        "activeoffsetWire/wirehold_9" BEL "activeoffsetWire/wirehold_10" BEL
+        "activeoffsetWire/wirehold_11" BEL "activeoffsetWire/wirehold_12" BEL
+        "activeoffsetWire/wirehold_13" BEL "activeoffsetWire/wirehold_14" BEL
+        "activeoffsetWire/wirehold_15" BEL "activeampsWire/wirehold_0" BEL
         "activeampsWire/wirehold_1" BEL "activeampsWire/wirehold_2" BEL
         "activeampsWire/wirehold_3" BEL "activeampsWire/wirehold_4" BEL
         "activeampsWire/wirehold_5" BEL "activeampsWire/wirehold_6" BEL

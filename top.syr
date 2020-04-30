@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: top.prj
@@ -152,12 +152,11 @@ Parsing module <top>.
 
 Elaborating module <top>.
 WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 63: Assignment to fifowriteen ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 64: Assignment to finishedout ignored, since the identifier is never used
 
 Elaborating module <two_clk_fifo>.
 WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 74: Assignment to fifofull ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 75: Assignment to fifoem ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 77: Assignment to fifofull ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 78: Assignment to fifoem ignored, since the identifier is never used
 WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
 WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance
 
@@ -180,8 +179,8 @@ Elaborating module <FDRE>.
 Elaborating module <OBUF>.
 
 Elaborating module <okCoreHarness>.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 92: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 109: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 95: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 114: Result of 32-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <controlcombiner>.
 
@@ -201,8 +200,7 @@ Elaborating module <singlecompute>.
 
 Elaborating module <sinetable>.
 
-Elaborating module <okWireOR(N=6)>.
-WARNING:HDLCompiler:189 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 156: Size mismatch in connection of port <ok2s>. Formal port size is 102-bit while actual signal size is 119-bit.
+Elaborating module <okWireOR(N=9)>.
 
 Elaborating module <okWireIn>.
 
@@ -211,7 +209,6 @@ Elaborating module <okWireOut>.
 Elaborating module <okTriggerIn>.
 
 Elaborating module <okTriggerOut>.
-WARNING:HDLCompiler:189 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 166: Size mismatch in connection of port <ep_trigger>. Formal port size is 16-bit while actual signal size is 1-bit.
 
 Elaborating module <okPipeIn>.
 
@@ -223,9 +220,9 @@ Elaborating module <okPipeOut>.
 
 Synthesizing Unit <top>.
     Related source file is "/home/ise/ise_projects/WaveGenerator/top.v".
-INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 66: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 66: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 161: Output port <ok2> of the instance <activepwWire> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 69: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 69: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
+    Found 16-bit register for signal <finishedout>.
     Found 1-bit register for signal <finishedloadin>.
     Found 1-bit register for signal <timeup>.
     Found 1-bit register for signal <resetbigblock>.
@@ -234,14 +231,14 @@ INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 161: Output po
     Found 1024-bit register for signal <activeoffsets>.
     Found 1024-bit register for signal <activephasewords>.
     Found 6-bit register for signal <currBlock>.
-    Found 6-bit adder for signal <currBlock[5]_GND_1_o_add_3_OUT> created at line 92.
-    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_10_OUT<15:0>> created at line 109.
-    Found 1-bit tristate buffer for signal <i2c_sda> created at line 56
-    Found 1-bit tristate buffer for signal <i2c_scl> created at line 57
+    Found 6-bit adder for signal <currBlock[5]_GND_1_o_add_2_OUT> created at line 95.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_9_OUT<15:0>> created at line 114.
+    Found 1-bit tristate buffer for signal <i2c_sda> created at line 57
+    Found 1-bit tristate buffer for signal <i2c_scl> created at line 58
     Summary:
 	inferred   2 Adder/Subtractor(s).
-	inferred 3097 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred 3113 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
 	inferred   2 Tristate(s).
 Unit <top> synthesized.
 
@@ -371,7 +368,7 @@ Unit <sinetable> synthesized.
 
 Synthesizing Unit <okWireOR>.
     Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
-        N = 6
+        N = 9
     Summary:
 	no macro.
 Unit <okWireOR> synthesized.
@@ -388,14 +385,14 @@ Macro Statistics
  16-bit adder                                          : 127
  16-bit subtractor                                     : 1
  6-bit adder                                           : 1
-# Registers                                            : 75
+# Registers                                            : 76
  1-bit register                                        : 3
  1024-bit register                                     : 6
- 16-bit register                                       : 65
+ 16-bit register                                       : 66
  6-bit register                                        : 1
-# Multiplexers                                         : 132
+# Multiplexers                                         : 133
  1024-bit 64-to-1 multiplexer                          : 3
- 16-bit 2-to-1 multiplexer                             : 129
+ 16-bit 2-to-1 multiplexer                             : 130
 # Tristates                                            : 2
  1-bit tristate buffer                                 : 2
 
@@ -419,7 +416,9 @@ Loading core <okTriggerIn> for timing and area information for instance <nextSeq
 Loading core <okTriggerOut> for timing and area information for instance <finishedTrigger>.
 Loading core <okWireIn> for timing and area information for instance <timeWire>.
 Loading core <okWireOut> for timing and area information for instance <activeampsWire>.
+Loading core <okWireOut> for timing and area information for instance <activeoffsetWire>.
 Loading core <okWireOut> for timing and area information for instance <activepwWire>.
+Loading core <okWireOut> for timing and area information for instance <activetimeWire>.
 Loading core <okTriggerIn> for timing and area information for instance <resetCurrBlockTrigger>.
 Loading core <okPipeIn> for timing and area information for instance <amppipe>.
 Loading core <okPipeIn> for timing and area information for instance <offsetpipe>.
@@ -486,8 +485,8 @@ Macro Statistics
  6-bit up counter                                      : 1
 # Accumulators                                         : 64
  16-bit up loadable accumulator                        : 64
-# Registers                                            : 6199
- Flip-Flops                                            : 6199
+# Registers                                            : 6215
+ Flip-Flops                                            : 6215
 # Multiplexers                                         : 67
  1024-bit 64-to-1 multiplexer                          : 3
  16-bit 2-to-1 multiplexer                             : 64
@@ -497,6 +496,21 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <finishedout_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_4> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_5> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_6> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_7> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_8> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_9> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_10> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_11> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_12> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 
 Optimizing unit <top> ...
 
@@ -538,8 +552,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 6237
- Flip-Flops                                            : 6237
+# Registers                                            : 6238
+ Flip-Flops                                            : 6238
 
 =========================================================================
 
@@ -562,29 +576,29 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 43656
-#      GND                         : 11
+# BELS                             : 43714
+#      GND                         : 13
 #      INV                         : 37
 #      LUT1                        : 62
-#      LUT2                        : 1902
+#      LUT2                        : 1935
 #      LUT3                        : 1284
-#      LUT4                        : 3378
+#      LUT4                        : 3395
 #      LUT5                        : 6137
-#      LUT6                        : 26661
+#      LUT6                        : 26667
 #      LUT6_2                      : 50
 #      MUXCY                       : 1753
 #      MUXF7                       : 556
 #      VCC                         : 3
 #      XORCY                       : 1822
-# FlipFlops/Latches                : 7249
+# FlipFlops/Latches                : 7282
 #      FD                          : 1167
 #      FDC                         : 268
 #      FDCE                        : 215
 #      FDE                         : 5240
 #      FDP                         : 46
 #      FDPE                        : 10
-#      FDR                         : 65
-#      FDRE                        : 229
+#      FDR                         : 66
+#      FDRE                        : 261
 #      FDS                         : 7
 #      FDSE                        : 2
 # RAMS                             : 77
@@ -619,19 +633,19 @@ Selected Device : 6slx150fgg484-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            7201  out of  184304     3%  
- Number of Slice LUTs:                39556  out of  92152    42%  
-    Number used as Logic:             39511  out of  92152    42%  
+ Number of Slice Registers:            7234  out of  184304     3%  
+ Number of Slice LUTs:                39612  out of  92152    42%  
+    Number used as Logic:             39567  out of  92152    42%  
     Number used as Memory:               45  out of  21680     0%  
        Number used as RAM:               44
        Number used as SRL:                1
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  42687
-   Number with an unused Flip Flop:   35486  out of  42687    83%  
-   Number with an unused LUT:          3131  out of  42687     7%  
-   Number of fully used LUT-FF pairs:  4070  out of  42687     9%  
-   Number of unique control sets:        82
+ Number of LUT Flip Flop pairs used:  42782
+   Number with an unused Flip Flop:   35548  out of  42782    83%  
+   Number with an unused LUT:          3170  out of  42782     7%  
+   Number of fully used LUT-FF pairs:  4064  out of  42782     9%  
+   Number of unique control sets:        85
 
 IO Utilization: 
  Number of IOs:                          39
@@ -665,8 +679,8 @@ Clock Information:
 -----------------------------------+------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                      | Load  |
 -----------------------------------+------------------------------------------------------------+-------+
-clk1                               | BUFGP                                                      | 3450  |
-hi_in<0>                           | DCM_SP:CLK0                                                | 4001  |
+clk1                               | BUFGP                                                      | 3451  |
+hi_in<0>                           | DCM_SP:CLK0                                                | 4033  |
 okHI/core0/okCH<1>                 | NONE(okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
 -----------------------------------+------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -681,7 +695,7 @@ Speed Grade: -2
 
    Minimum period: 27.818ns (Maximum Frequency: 35.948MHz)
    Minimum input arrival time before clock: 7.073ns
-   Maximum output required time after clock: 4.202ns
+   Maximum output required time after clock: 4.240ns
    Maximum combinational path delay: 1.328ns
 
 Timing Details:
@@ -691,7 +705,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk1'
   Clock period: 27.818ns (frequency: 35.948MHz)
-  Total number of paths / destination ports: 156239574957736 / 4899
+  Total number of paths / destination ports: 156239574957772 / 4901
 -------------------------------------------------------------------------
 Delay:               27.818ns (Levels of Logic = 36)
   Source:            theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/totalphase_11 (FF)
@@ -748,10 +762,10 @@ Delay:               27.818ns (Levels of Logic = 36)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hi_in<0>'
-  Clock period: 9.479ns (frequency: 105.502MHz)
-  Total number of paths / destination ports: 68240 / 8823
+  Clock period: 9.532ns (frequency: 104.915MHz)
+  Total number of paths / destination ports: 68736 / 8887
 -------------------------------------------------------------------------
-Delay:               9.479ns (Levels of Logic = 8)
+Delay:               9.532ns (Levels of Logic = 8)
   Source:            okHI/core0/core0/ti_addr_1 (FF)
   Destination:       outfifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gbm.gbmg.gbmga.ngecc.bmg/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram (RAM)
   Source Clock:      hi_in<0> rising
@@ -761,7 +775,7 @@ Delay:               9.479ns (Levels of Logic = 8)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             16   0.525   1.612  core0/ti_addr_1 (ok1<17>)
+     FDE:C->Q             18   0.525   1.665  core0/ti_addr_1 (ok1<17>)
      end scope: 'okHI/core0:ok1<17>'
      begin scope: 'outputpipe:ok1<17>'
      LUT6:I1->O            1   0.254   1.137  ok2<16>81 (ok2<16>8)
@@ -774,8 +788,8 @@ Delay:               9.479ns (Levels of Logic = 8)
      LUT3:I2->O            7   0.254   0.909  out8 (ramloop[2].ram.ram_enb)
      RAMB16BWER:ENB            0.250          ramloop[2].ram.r/s6_noinit.ram/SDP.SIMPLE_PRIM18.ram
     ----------------------------------------
-    Total                      9.479ns (2.041ns logic, 7.438ns route)
-                                       (21.5% logic, 78.5% route)
+    Total                      9.532ns (2.041ns logic, 7.491ns route)
+                                       (21.4% logic, 78.6% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'okHI/core0/okCH<1>'
@@ -846,20 +860,20 @@ Offset:              4.162ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk1'
   Total number of paths / destination ports: 8 / 8
 -------------------------------------------------------------------------
-Offset:              4.202ns (Levels of Logic = 1)
-  Source:            activephasewords_7 (FF)
+Offset:              4.240ns (Levels of Logic = 1)
+  Source:            currTime_7 (FF)
   Destination:       led<7> (PAD)
   Source Clock:      clk1 rising
 
-  Data Path: activephasewords_7 to led<7>
+  Data Path: currTime_7 to led<7>
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q              3   0.525   0.765  activephasewords_7 (activephasewords_7)
+     FDE:C->Q              4   0.525   0.803  currTime_7 (currTime_7)
      OBUF:I->O                 2.912          led_7_OBUF (led<7>)
     ----------------------------------------
-    Total                      4.202ns (3.437ns logic, 0.765ns route)
-                                       (81.8% logic, 18.2% route)
+    Total                      4.240ns (3.437ns logic, 0.803ns route)
+                                       (81.1% logic, 18.9% route)
 
 =========================================================================
 Timing constraint: Default path analysis
@@ -890,7 +904,7 @@ Clock to Setup on destination clock clk1
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk1           |   27.818|         |         |         |
-hi_in<0>       |    3.419|         |         |         |
+hi_in<0>       |    3.423|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock hi_in<0>
@@ -899,7 +913,7 @@ Clock to Setup on destination clock hi_in<0>
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
 clk1           |    5.674|         |         |         |
-hi_in<0>       |    9.479|         |         |         |
+hi_in<0>       |    9.532|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock okHI/core0/okCH<1>
@@ -913,15 +927,15 @@ okHI/core0/okCH<1>|    3.081|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 556.00 secs
-Total CPU time to Xst completion: 551.24 secs
+Total REAL time to Xst completion: 537.00 secs
+Total CPU time to Xst completion: 532.50 secs
  
 --> 
 
 
-Total memory usage is 1069872 kilobytes
+Total memory usage is 1079220 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   11 (   0 filtered)
-Number of infos    :   27 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
+Number of infos    :   26 (   0 filtered)
 

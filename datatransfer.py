@@ -30,13 +30,10 @@ def sendRowToFPGA(row, dev):
         if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
             sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
         
-        ampbytes = bytearray(amp.to_bytes(2, byteorder='big'))
-        offsetbytes = bytearray(offset.to_bytes(2, byteorder='big'))
-        phaseaddbytes = bytearray(phaseadd.to_bytes(2, byteorder='big'))
+        ampbytes = bytearray(amp.to_bytes(2, byteorder='little'))
+        offsetbytes = bytearray(offset.to_bytes(2, byteorder='little'))
+        phaseaddbytes = bytearray(phaseadd.to_bytes(2, byteorder='little'))
 
-        print(ampbytes)
-        print(offsetbytes)
-        print(phaseaddbytes)
         #Write to pipes
         dev.WriteToPipeIn(0x80, ampbytes)
         dev.WriteToPipeIn(0x81, offsetbytes)
@@ -48,16 +45,19 @@ def sendRowToFPGA(row, dev):
         sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
     dev.SetWireInValue(0x01, time)
     dev.UpdateWireIns()
-    #Reset (Declares finished with loading)
-    dev.ActivateTriggerIn(0x40, 1)
     return time
 
 #Read a certain number of values from the FPGA (usually equivalent to a multiple of the timestep provided)
 def readOut(num, dev):
+    while(True):
+        dev.UpdateTriggerOuts()
+        if (dev.IsTriggered(0x60, 0x01) == True):
+            break
+    dev.ActivateTriggerIn(0x40, 0x01)
     buf = bytearray(2*num)
     dev.ReadFromPipeOut(0xA0, buf)
     for i in range(num):
-        val = int.from_bytes(buf[2*i:2*i+1], byteorder='big', signed=True)
+        val = int.from_bytes(buf[2*i:2*i+1], byteorder='little', signed=True)
         wavelist.append(val)
 
 #Main func
@@ -89,32 +89,35 @@ def main():
         #Test whether amplitudes got to active section
         dev.UpdateWireOuts()
         activeamp = dev.GetWireOutValue(0x21)
-        pw = dev.GetWireOutValue(0x22)
+        off = dev.GetWireOutValue(0x22)
+        pw = dev.GetWireOutValue(0x23)
+        time = dev.GetWireOutValue(0x24)
         print(activeamp)
+        print(off)
         print(pw)
+        print(time)
 
         for row in reader:
             #Go through one row of values and put in pipes
-            print("Looping row send {}", reader.line_num)
+            print("Looping row send {}".format(reader.line_num))
+
+            #Check if already done with last seq
             newerTime = sendRowToFPGA(row, dev)
-            
-            #Wait until got word that last sequence was completed
-            while(True):
-                dev.UpdateTriggerOuts()
-                if (dev.IsTriggered(0x60, 0) == True):
-                    break
-            
-            #read recently completed values and add to array
+
+            #Wait until last seq done, then read recently completed values and add to array
             readOut(lastTime, dev)
+            dev.UpdateWireOuts()
+            activeamp = dev.GetWireOutValue(0x21)
+            off = dev.GetWireOutValue(0x22)
+            pw = dev.GetWireOutValue(0x23)
+            time = dev.GetWireOutValue(0x24)
+            print(activeamp)
+            print(off)
+            print(pw)
+            print(time)
             lastTime = newerTime
 
         #When no more rows from csv to send to FPGA, do one last read
-        while(True):
-            dev.UpdateTriggerOuts()
-            if (dev.IsTriggered(0x60, 0) == True):
-                break
-        
-        #read recently completed values and add to array
         readOut(lastTime, dev)
 
         #Final plot
