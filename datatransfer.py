@@ -2,7 +2,6 @@ import ok
 import sys
 import csv
 import matplotlib.pyplot as plt
-import time
 
 MAXARG = 0xFFFF
 SINEMODULES = 64
@@ -10,7 +9,7 @@ wavelist = []
 
 #Endpoints:
 # 0x01: time input wire
-# 0x40: reset/state triggerIn (0:startup 1:after load new row of values 2:reset currBlock to 0)
+# 0x40: reset/state triggerIn (0:startup 1:after load new row of values 2:reset FIFO)
 # 0x41: resetcurrBlock triggerIn (0:reset currBlock to 0)
 # 0x60: timeup triggerOut (0: completed one configuration of waveforms)
 # 0x80: amp input pipe
@@ -62,6 +61,7 @@ def readOut(num, dev):
     for i in range(num):
         val = int.from_bytes(buf[2*i:2*i+2], byteorder='little', signed=True)
         wavelist.append(val)
+    print(wavelist[len(wavelist) - num:])
 
 #Main func
 def main():
@@ -84,7 +84,6 @@ def main():
         
         next(reader) #Discard first line (headers)
         firstinputs = next(reader)
-        dev.ActivateTriggerIn(0x41, 0)
         lastTime = sendRowToFPGA(firstinputs, dev)
         dev.ActivateTriggerIn(0x40, 0)
         print("Sent one row of inputs in and triggered")
@@ -101,10 +100,9 @@ def main():
         print(time)
 
         for row in reader:
-            #Go through one row of values and put in pipes
-            print("Looping row send {}".format(reader.line_num))
+            print("Sending row {}".format(reader.line_num))
 
-            #Check if already done with last seq
+            #Go through one row of values and put in pipes
             newerTime = sendRowToFPGA(row, dev)
 
             #Wait until last seq done, then read recently completed values and add to array
@@ -124,10 +122,10 @@ def main():
         readOut(lastTime, dev)
 
         #Final plot
-        print(wavelist)
+        #print(wavelist)
         plt.plot(wavelist)
-        plt.title("FPGA-Generated Wave")
-        plt.savefig("FPGAwave.png")
+        plt.title("Square Wave Approximation (Using 64 cores)")
+        plt.savefig("FPGASquareFull.png")
 
 if __name__ == "__main__":
     main()

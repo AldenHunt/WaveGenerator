@@ -66,7 +66,7 @@ module top(
 	end
 	
 	two_clk_fifo outfifo(
-	  .rst(switchinputs),
+	  .rst(resetsignal[2]),
 	  .wr_clk(clk1),
 	  .rd_clk(ti_clk),
 	  .din(finalSum),

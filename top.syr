@@ -771,7 +771,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk1'
   Clock period: 16.494ns (frequency: 60.627MHz)
-  Total number of paths / destination ports: 427519605 / 5664
+  Total number of paths / destination ports: 427519595 / 5664
 -------------------------------------------------------------------------
 Delay:               16.494ns (Levels of Logic = 25)
   Source:            theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/totalphase_11 (FF)
@@ -966,7 +966,7 @@ Clock to Setup on destination clock hi_in<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk1           |    5.674|         |         |         |
+clk1           |    4.619|         |         |         |
 hi_in<0>       |    9.532|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -981,13 +981,13 @@ okHI/core0/okCH<1>|    3.081|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 541.00 secs
-Total CPU time to Xst completion: 535.22 secs
+Total REAL time to Xst completion: 524.00 secs
+Total CPU time to Xst completion: 519.37 secs
  
 --> 
 
 
-Total memory usage is 1075624 kilobytes
+Total memory usage is 1047440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   22 (   0 filtered)
