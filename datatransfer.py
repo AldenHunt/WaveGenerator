@@ -20,6 +20,15 @@ wavelist = []
 
 #Take one row and send it to FPGA in appropriate pipes
 def sendRowToFPGA(row, dev):
+
+    #Send length of time
+    time = int(row[3*SINEMODULES])
+    if (time > MAXARG):
+        sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
+    dev.SetWireInValue(0x01, time)
+    dev.UpdateWireIns()
+
+    #Reset "currBlock" on FPGA and load new signal values in
     dev.ActivateTriggerIn(0x41, 0)
     for i in range(SINEMODULES):
         amp = int(row[i])
@@ -39,12 +48,6 @@ def sendRowToFPGA(row, dev):
         dev.WriteToPipeIn(0x81, offsetbytes)
         dev.WriteToPipeIn(0x82, phaseaddbytes)
 
-    #Send length of time
-    time = int(row[3*SINEMODULES])
-    if (time > MAXARG):
-        sys.exit("Error at row {}: Time argument must be less than 0xFFFF".format(row))
-    dev.SetWireInValue(0x01, time)
-    dev.UpdateWireIns()
     return time
 
 #Read a certain number of values from the FPGA (usually equivalent to a multiple of the timestep provided)
@@ -57,7 +60,7 @@ def readOut(num, dev):
     buf = bytearray(2*num)
     dev.ReadFromPipeOut(0xA0, buf)
     for i in range(num):
-        val = int.from_bytes(buf[2*i:2*i+1], byteorder='little', signed=True)
+        val = int.from_bytes(buf[2*i:2*i+2], byteorder='little', signed=True)
         wavelist.append(val)
 
 #Main func

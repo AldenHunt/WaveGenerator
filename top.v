@@ -47,8 +47,8 @@ module top(
 	
 	//Other variables
 	reg [5:0] currBlock;
-	reg [15:0] currTime;
-	reg resetbigblock, finishedloadin, timeup;
+	reg [15:0] currTime, preTime;
+	reg resetbigblock, finishedloadin, timeup, startedmachine;
 	wire readout, fifoem, fifofull, activeout;
 	wire [1023:0] preamps, preoffsets, prephasewords;
 	reg [1023:0] activeamps, activeoffsets, activephasewords;
@@ -90,6 +90,7 @@ module top(
 	always@(posedge ti_clk) begin
 		if (currblockreset[0]) begin
 			currBlock <= 6'b0;
+			preTime <= timewire;
 		end
 		else if (phasewordwrite) currBlock <= currBlock + 1; //Once done with all three, will increment
 	end
@@ -100,11 +101,12 @@ module top(
 			finishedloadin <= 1;
 		end
 		if (switchinputs) begin
+			startedmachine <= 1'b1;
 			finishedout <= 8'h00;
 			timeup <= 0;
 			finishedloadin <= 0;
 			resetbigblock <= 1;
-			currTime <= timewire;
+			currTime <= preTime;
 			activeamps <= preamps;
 			activeoffsets <= preoffsets;
 			activephasewords <= prephasewords;
@@ -151,7 +153,7 @@ module top(
 		.phasewords(activephasewords),
 		.clk(clk1),
 		.reset(resetbigblock),
-		.activein(!timeup),
+		.activein((!timeup & startedmachine)),
 		.results(finalSum),
 		.activeout(activeout)
 	);

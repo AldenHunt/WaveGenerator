@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Apr 30 04:18:10 2020
+// Written by: Map P.20131013 on Thu Apr 30 23:29:21 2020
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -348,8 +348,12 @@ PIN okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom_pins<28> = BEL
 PIN SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1_pins<1> = BEL
         "SP6_INS_BUFIO2FB_DCM_ML_BUFIO2FB_1" PINNAME O;
 PIN okHI/hi_dcm_pins<1> = BEL "okHI/hi_dcm" PINNAME CLKFB;
-TIMEGRP okHI_dcm_clk0 = BEL "currBlock_0" BEL "currBlock_1" BEL "currBlock_2"
-        BEL "currBlock_3" BEL "currBlock_4" BEL "currBlock_5" BEL
+TIMEGRP okHI_dcm_clk0 = BEL "preTime_0" BEL "preTime_1" BEL "preTime_2" BEL
+        "preTime_3" BEL "preTime_4" BEL "preTime_5" BEL "preTime_6" BEL
+        "preTime_7" BEL "preTime_8" BEL "preTime_9" BEL "preTime_10" BEL
+        "preTime_11" BEL "preTime_12" BEL "preTime_13" BEL "preTime_14" BEL
+        "preTime_15" BEL "currBlock_0" BEL "currBlock_1" BEL "currBlock_2" BEL
+        "currBlock_3" BEL "currBlock_4" BEL "currBlock_5" BEL
         "okHI/delays[15].fdrein0" BEL "okHI/delays[14].fdrein0" BEL
         "okHI/delays[13].fdrein0" BEL "okHI/delays[12].fdrein0" BEL
         "okHI/delays[11].fdrein0" BEL "okHI/delays[10].fdrein0" BEL
