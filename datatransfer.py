@@ -2,6 +2,7 @@ import ok
 import sys
 import csv
 import matplotlib.pyplot as plt
+from numpy.fft import fft, fftshift
 
 MAXARG = 0xFFFF
 SINEMODULES = 64

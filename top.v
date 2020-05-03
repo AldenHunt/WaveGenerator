@@ -48,7 +48,7 @@ module top(
 	
 	//Other variables
 	reg [5:0] currBlock;
-	reg [15:0] currTime, preTime;
+	reg [15:0] currTime, preTime, wavereg;
 	reg resetbigblock, finishedloadin, timeup, startedmachine;
 	wire readout, fifoem, fifofull, activeout;
 	wire [1023:0] preamps, preoffsets, prephasewords;
@@ -61,7 +61,12 @@ module top(
 	
 	//Wire combinations
 	assign led[7:0] = finalSum[15:8];
-	assign wave[15:0] = finalSum[15:0];
+	assign wave[15:0] = wavereg[15:0];
+	
+	always@(*) begin
+		if (activeout) wavereg[15:0] = finalSum;
+		else wavereg[15:0] = 16'h0000;
+	end
 	
 	always@(*) begin
 		switchinputs = (resetsignal[0] || (finishedloadin && timeup));
