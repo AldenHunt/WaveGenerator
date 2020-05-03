@@ -69,7 +69,22 @@ NET "clk1"   LOC="AB13"  | IOSTANDARD="LVCMOS33";
 ############################################################################
 ## Peripherals                                                          
 ############################################################################
-
+NET "wave[0]" LOC="T21" | IOSTANDARD=LVCMOS33; # JP2-41 
+NET "wave[1]" LOC="U20" | IOSTANDARD=LVCMOS33; # JP2-42 
+NET "wave[2]" LOC="T22" | IOSTANDARD=LVCMOS33; # JP2-43 
+NET "wave[3]" LOC="U22" | IOSTANDARD=LVCMOS33; # JP2-44 
+NET "wave[4]" LOC="P21" | IOSTANDARD=LVCMOS33; # JP2-45 
+NET "wave[5]" LOC="R20" | IOSTANDARD=LVCMOS33; # JP2-46 
+NET "wave[6]" LOC="P22" | IOSTANDARD=LVCMOS33; # JP2-47 
+NET "wave[7]" LOC="R22" | IOSTANDARD=LVCMOS33; # JP2-48 
+NET "wave[8]" LOC="M21" | IOSTANDARD=LVCMOS33; # JP2-49 
+NET "wave[9]" LOC="N20" | IOSTANDARD=LVCMOS33; # JP2-50 
+NET "wave[10]" LOC="M22" | IOSTANDARD=LVCMOS33; # JP2-51 
+NET "wave[11]" LOC="N22" | IOSTANDARD=LVCMOS33; # JP2-52 
+NET "wave[12]" LOC="L20" | IOSTANDARD=LVCMOS33; # JP2-53 
+NET "wave[13]" LOC="M20" | IOSTANDARD=LVCMOS33; # JP2-54 
+NET "wave[14]" LOC="L22" | IOSTANDARD=LVCMOS33; # JP2-57 
+NET "wave[15]" LOC="L19" | IOSTANDARD=LVCMOS33; # JP2-58
 # LEDs ################################################################
 NET "led[0]"     LOC="Y17"   | IOSTANDARD=LVCMOS33;
 NET "led[1]"     LOC="AB17"  | IOSTANDARD=LVCMOS33;

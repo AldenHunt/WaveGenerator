@@ -1,11 +1,11 @@
-/home/ise/ise_projects/WaveGenerator/top.ngc 1588294314
-ipcore_dir/two_clk_fifo.ngc 1587747494
-/home/ise/ise_projects/WaveGenerator/okTriggerIn.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okTriggerOut.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okWireIn.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okWireOut.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okPipeIn.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okPipeOut.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/okCoreHarness.ngc 1585062567
-/home/ise/ise_projects/WaveGenerator/TFIFO64x8a_64x8b.ngc 1585062567
+/home/ise/ise_projects/Thesis/top.ngc 1588464662
+ipcore_dir/two_clk_fifo.ngc 1588470154
+/home/ise/ise_projects/Thesis/okTriggerIn.ngc 1525201188
+/home/ise/ise_projects/Thesis/okTriggerOut.ngc 1525201188
+/home/ise/ise_projects/Thesis/okWireIn.ngc 1525201188
+/home/ise/ise_projects/Thesis/okWireOut.ngc 1525201188
+/home/ise/ise_projects/Thesis/okPipeIn.ngc 1525201188
+/home/ise/ise_projects/Thesis/okPipeOut.ngc 1525201188
+/home/ise/ise_projects/Thesis/okCoreHarness.ngc 1525201188
+/home/ise/ise_projects/Thesis/TFIFO64x8a_64x8b.ngc 1525201188
 OK

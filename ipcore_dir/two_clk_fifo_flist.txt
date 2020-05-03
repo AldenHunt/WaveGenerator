@@ -49,6 +49,7 @@ two_clk_fifo/simulation/two_clk_fifo_tb.vhd
 two_clk_fifo.asy
 two_clk_fifo.gise
 two_clk_fifo.ngc
+two_clk_fifo.sym
 two_clk_fifo.v
 two_clk_fifo.veo
 two_clk_fifo.xco

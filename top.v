@@ -33,7 +33,8 @@ module top(
 	 output wire i2c_sda,
 	 output wire i2c_scl,
 	 output wire hi_muxsel,
-	 output wire [7:0] led
+	 output wire [7:0] led,
+	 output wire [15:0] wave
     );
 	
 	//Endpoint connections
@@ -59,7 +60,8 @@ module top(
 	assign hi_muxsel = 1'b0;
 	
 	//Wire combinations
-	assign led[7:0] = currTime[7:0];
+	assign led[7:0] = finalSum[15:8];
+	assign wave[15:0] = finalSum[15:0];
 	
 	always@(*) begin
 		switchinputs = (resetsignal[0] || (finishedloadin && timeup));
@@ -115,6 +117,9 @@ module top(
 			currTime <= currTime - 1;
 		end else if (currTime == 0) begin
 			resetbigblock <= 0;
+			activeamps <= 0;
+			activeoffsets <= 0;
+			activephasewords <= 0;
 			if (timeup == 0)
 				finishedout <= 8'h01;
 			timeup <= 1;
