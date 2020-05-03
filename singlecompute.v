@@ -30,21 +30,34 @@ module singlecompute(
 	 output reg activeout
     );
 
-	wire signed [9:0] sineresult;
-	reg signed [24:0] interimresult;
+	reg activesinereference, activemultcoreone, activemultcoretwo;
+	wire signed [7:0] sineresult;
+	wire signed [23:0] interimresult;
 	reg [15:0] totalphase;
 	
+	//Multiplier is optimized for a two clock latency
+	multiplier mult (
+	  .clk(clk), // input clk
+	  .a(amp), // input [15 : 0] a
+	  .b(sineresult), // input [7 : 0] b
+	  .p(interimresult) // output [23 : 0] p
+	);
+	
 	always@(*) begin
-		interimresult = amp * sineresult;
-		if (interimresult == 25'h1000000) begin //Max value and only overflow into 31st bit
-			result = $signed(16'h7fff) >>> 6;
+		if (interimresult == 24'h400000) begin //Only two max neg values overflow into 24th bit
+			result = $signed(16'h01ff);
 		end else begin
-			result = $signed(interimresult[24:9]) >>> 6;
+			result = $signed(interimresult[22:7]) >>> 6;
 		end
 	end
 	
 	always@(posedge clk) begin
-		activeout <= activein;
+		//This should synthesize to a shift register
+		activeout <= activemultcoretwo;
+		activemultcoretwo <= activemultcoreone;
+		activemultcoreone <= activesinereference;
+		activesinereference <= activein;
+		
 		if (reset)
 			totalphase <= phaseoffset;
 		else
@@ -53,6 +66,7 @@ module singlecompute(
 	
 	sinetable sinl(
 		.phase(totalphase[15:4]),
+		.clk(clk),
 		.result(sineresult)
 	);
 	

@@ -9,39 +9,39 @@
 # $Rev$ $Date$
 #-------------------------------------------------------------------------
 CONFIG VCCAUX = "3.3"; //Required for Spartan-6
-NET "hi_muxsel"     LOC = "AA22" | IOSTANDARD="LVCMOS33";
-NET "i2c_sda"       LOC = "AB9"  | IOSTANDARD="LVCMOS33" | PULLUP;
-NET "i2c_scl"       LOC = "Y9"   | IOSTANDARD="LVCMOS33" | PULLUP;
+NET "hi_muxsel"     LOC = "AA22" |IOSTANDARD="LVCMOS33";
+NET "i2c_sda"       LOC = "AB9"  |IOSTANDARD="LVCMOS33" |PULLUP;
+NET "i2c_scl"       LOC = "Y9"   |IOSTANDARD="LVCMOS33" |PULLUP;
 ############################################################################
 ## FrontPanel Host Interface pins                                                       
 ############################################################################
-NET "hi_in<0>"      LOC="Y12"  | IOSTANDARD="LVCMOS33";
-NET "hi_in<1>"      LOC="AB20" | IOSTANDARD="LVCMOS33";
-NET "hi_in<2>"      LOC="AB7"  | IOSTANDARD="LVCMOS33";
-NET "hi_in<3>"      LOC="AB8"  | IOSTANDARD="LVCMOS33";
-NET "hi_in<4>"      LOC="AA4"  | IOSTANDARD="LVCMOS33";
-NET "hi_in<5>"      LOC="AB4"  | IOSTANDARD="LVCMOS33";
-NET "hi_in<6>"      LOC="Y3"   | IOSTANDARD="LVCMOS33";
-NET "hi_in<7>"      LOC="AB3"  | IOSTANDARD="LVCMOS33";
-NET "hi_out<0>"     LOC="Y19"  | IOSTANDARD="LVCMOS33";
-NET "hi_out<1>"     LOC="AA8"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<0>"   LOC="AB12" | IOSTANDARD="LVCMOS33";
-NET "hi_inout<1>"   LOC="AA12" | IOSTANDARD="LVCMOS33";
-NET "hi_inout<2>"   LOC="Y13"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<3>"   LOC="AB18" | IOSTANDARD="LVCMOS33";
-NET "hi_inout<4>"   LOC="AA18" | IOSTANDARD="LVCMOS33";
-NET "hi_inout<5>"   LOC="V15"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<6>"   LOC="AB2"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<7>"   LOC="AA2"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<8>"   LOC="Y7"   | IOSTANDARD="LVCMOS33";
-NET "hi_inout<9>"   LOC="Y4"   | IOSTANDARD="LVCMOS33";
-NET "hi_inout<10>"  LOC="W4"   | IOSTANDARD="LVCMOS33";
-NET "hi_inout<11>"  LOC="AB6"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<12>"  LOC="AA6"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<13>"  LOC="U13"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<14>"  LOC="U14"  | IOSTANDARD="LVCMOS33";
-NET "hi_inout<15>"  LOC="AA20" | IOSTANDARD="LVCMOS33";
-NET "hi_aa"         LOC="W11"  | IOSTANDARD="LVCMOS33";
+NET "hi_in<0>"      LOC="Y12"  |IOSTANDARD="LVCMOS33";
+NET "hi_in<1>"      LOC="AB20" |IOSTANDARD="LVCMOS33";
+NET "hi_in<2>"      LOC="AB7"  |IOSTANDARD="LVCMOS33";
+NET "hi_in<3>"      LOC="AB8"  |IOSTANDARD="LVCMOS33";
+NET "hi_in<4>"      LOC="AA4"  |IOSTANDARD="LVCMOS33";
+NET "hi_in<5>"      LOC="AB4"  |IOSTANDARD="LVCMOS33";
+NET "hi_in<6>"      LOC="Y3"   |IOSTANDARD="LVCMOS33";
+NET "hi_in<7>"      LOC="AB3"  |IOSTANDARD="LVCMOS33";
+NET "hi_out<0>"     LOC="Y19"  |IOSTANDARD="LVCMOS33";
+NET "hi_out<1>"     LOC="AA8"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<0>"   LOC="AB12" |IOSTANDARD="LVCMOS33";
+NET "hi_inout<1>"   LOC="AA12" |IOSTANDARD="LVCMOS33";
+NET "hi_inout<2>"   LOC="Y13"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<3>"   LOC="AB18" |IOSTANDARD="LVCMOS33";
+NET "hi_inout<4>"   LOC="AA18" |IOSTANDARD="LVCMOS33";
+NET "hi_inout<5>"   LOC="V15"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<6>"   LOC="AB2"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<7>"   LOC="AA2"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<8>"   LOC="Y7"   |IOSTANDARD="LVCMOS33";
+NET "hi_inout<9>"   LOC="Y4"   |IOSTANDARD="LVCMOS33";
+NET "hi_inout<10>"  LOC="W4"   |IOSTANDARD="LVCMOS33";
+NET "hi_inout<11>"  LOC="AB6"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<12>"  LOC="AA6"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<13>"  LOC="U13"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<14>"  LOC="U14"  |IOSTANDARD="LVCMOS33";
+NET "hi_inout<15>"  LOC="AA20" |IOSTANDARD="LVCMOS33";
+NET "hi_aa"         LOC="W11"  |IOSTANDARD="LVCMOS33";
 
 
 NET "hi_in<0>" TNM_NET = "okHostClk";
@@ -62,35 +62,37 @@ NET "hi_in<7>" OFFSET = IN 13.33 ns VALID 20.83 ns BEFORE "hi_in<0>" RISING;
 ############################################################################
 ## System Clocks                                                        
 ############################################################################
-NET "clk1"   LOC="AB13"  | IOSTANDARD="LVCMOS33";
+NET "clk1"   LOC="AB13"  |IOSTANDARD="LVCMOS33";
 #NET "clk2"   LOC="Y11"   | IOSTANDARD="LVCMOS33";
 #NET "clk3"   LOC="AB11"  | IOSTANDARD="LVCMOS33";
-
 ############################################################################
 ## Peripherals                                                          
 ############################################################################
-NET "wave[0]" LOC="T21" | IOSTANDARD=LVCMOS33; # JP2-41 
-NET "wave[1]" LOC="U20" | IOSTANDARD=LVCMOS33; # JP2-42 
-NET "wave[2]" LOC="T22" | IOSTANDARD=LVCMOS33; # JP2-43 
-NET "wave[3]" LOC="U22" | IOSTANDARD=LVCMOS33; # JP2-44 
-NET "wave[4]" LOC="P21" | IOSTANDARD=LVCMOS33; # JP2-45 
-NET "wave[5]" LOC="R20" | IOSTANDARD=LVCMOS33; # JP2-46 
-NET "wave[6]" LOC="P22" | IOSTANDARD=LVCMOS33; # JP2-47 
-NET "wave[7]" LOC="R22" | IOSTANDARD=LVCMOS33; # JP2-48 
-NET "wave[8]" LOC="M21" | IOSTANDARD=LVCMOS33; # JP2-49 
-NET "wave[9]" LOC="N20" | IOSTANDARD=LVCMOS33; # JP2-50 
-NET "wave[10]" LOC="M22" | IOSTANDARD=LVCMOS33; # JP2-51 
-NET "wave[11]" LOC="N22" | IOSTANDARD=LVCMOS33; # JP2-52 
-NET "wave[12]" LOC="L20" | IOSTANDARD=LVCMOS33; # JP2-53 
-NET "wave[13]" LOC="M20" | IOSTANDARD=LVCMOS33; # JP2-54 
-NET "wave[14]" LOC="L22" | IOSTANDARD=LVCMOS33; # JP2-57 
-NET "wave[15]" LOC="L19" | IOSTANDARD=LVCMOS33; # JP2-58
+NET "wave[0]" LOC="T21" |IOSTANDARD=LVCMOS33; # JP2-41 
+NET "wave[1]" LOC="U20" |IOSTANDARD=LVCMOS33; # JP2-42 
+NET "wave[2]" LOC="T22" |IOSTANDARD=LVCMOS33; # JP2-43 
+NET "wave[3]" LOC="U22" |IOSTANDARD=LVCMOS33; # JP2-44 
+NET "wave[4]" LOC="P21" |IOSTANDARD=LVCMOS33; # JP2-45 
+NET "wave[5]" LOC="R20" |IOSTANDARD=LVCMOS33; # JP2-46 
+NET "wave[6]" LOC="P22" |IOSTANDARD=LVCMOS33; # JP2-47 
+NET "wave[7]" LOC="R22" |IOSTANDARD=LVCMOS33; # JP2-48 
+NET "wave[8]" LOC="M21" |IOSTANDARD=LVCMOS33; # JP2-49 
+NET "wave[9]" LOC="N20" |IOSTANDARD=LVCMOS33; # JP2-50 
+NET "wave[10]" LOC="M22" |IOSTANDARD=LVCMOS33; # JP2-51 
+NET "wave[11]" LOC="N22" |IOSTANDARD=LVCMOS33; # JP2-52 
+NET "wave[12]" LOC="L20" |IOSTANDARD=LVCMOS33; # JP2-53 
+NET "wave[13]" LOC="M20" |IOSTANDARD=LVCMOS33; # JP2-54 
+NET "wave[14]" LOC="L22" |IOSTANDARD=LVCMOS33; # JP2-57 
+NET "wave[15]" LOC="L19" |IOSTANDARD=LVCMOS33; # JP2-58
 # LEDs ################################################################
-NET "led[0]"     LOC="Y17"   | IOSTANDARD=LVCMOS33;
-NET "led[1]"     LOC="AB17"  | IOSTANDARD=LVCMOS33;
-NET "led[2]"     LOC="AA14"  | IOSTANDARD=LVCMOS33;
-NET "led[3]"     LOC="AB14"  | IOSTANDARD=LVCMOS33;
-NET "led[4]"     LOC="AA16"  | IOSTANDARD=LVCMOS33;
-NET "led[5]"     LOC="AB16"  | IOSTANDARD=LVCMOS33;
-NET "led[6]"     LOC="AA10"  | IOSTANDARD=LVCMOS33;
-NET "led[7]"     LOC="AB10"  | IOSTANDARD=LVCMOS33;
+NET "led[0]"     LOC="Y17"   |IOSTANDARD=LVCMOS33;
+NET "led[1]"     LOC="AB17"  |IOSTANDARD=LVCMOS33;
+NET "led[2]"     LOC="AA14"  |IOSTANDARD=LVCMOS33;
+NET "led[3]"     LOC="AB14"  |IOSTANDARD=LVCMOS33;
+NET "led[4]"     LOC="AA16"  |IOSTANDARD=LVCMOS33;
+NET "led[5]"     LOC="AB16"  |IOSTANDARD=LVCMOS33;
+NET "led[6]"     LOC="AA10"  |IOSTANDARD=LVCMOS33;
+NET "led[7]"     LOC="AB10"  |IOSTANDARD=LVCMOS33;
+#Created by Constraints Editor (xc6slx150-fgg484-2) - 2020/05/03
+NET "clk1" TNM_NET = clk1;
+TIMESPEC TS_clk1 = PERIOD "clk1" 9.09 ns HIGH 50%;

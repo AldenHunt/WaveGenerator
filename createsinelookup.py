@@ -3,14 +3,14 @@ from bitstring import BitArray, Bits
 
 f = open("sinetable.v", "w")
 
-resultBits = 10
+resultBits = 8
 precisionBits = 12
 totalEntries = 2**precisionBits
 f.write("`timescale 1ns / 1ps\n")
 f.write("`default_nettype none\n\n\n")
 f.write("//Created by script createsinelookup.py\n")
-f.write("module sinetable(input wire [{}:0] phase, output reg [{}:0] result);\n\n".format(precisionBits - 1, resultBits - 1))
-f.write("always @(*)\n  case(phase)\n")
+f.write("module sinetable(input wire [{}:0] phase, input wire clk, output reg [{}:0] result);\n\n".format(precisionBits - 1, resultBits - 1))
+f.write("always @(posedge clk)\n  case(phase)\n")
 
 
 for i in range(totalEntries):

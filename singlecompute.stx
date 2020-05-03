@@ -44,17 +44,19 @@ TABLE OF CONTENTS
 =========================================================================
 Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sinetable.v" into library work
 Parsing module <sinetable>.
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/ipcore_dir/multiplier.v" into library work
+Parsing module <multiplier>.
 Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/singlecompute.v" into library work
 Parsing module <singlecompute>.
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.42 secs
+Total CPU time to Xst completion: 4.40 secs
  
 --> 
 
 
-Total memory usage is 301032 kilobytes
+Total memory usage is 397916 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -1,4 +1,5 @@
 verilog work "sinetable.v"
+verilog work "ipcore_dir/multiplier.v"
 verilog work "singlecompute.v"
 verilog work "clockedadd.v"
 verilog work "twoblock.v"

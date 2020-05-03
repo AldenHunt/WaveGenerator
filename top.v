@@ -28,8 +28,6 @@ module top(
     inout wire hi_aa,
 	 
 	 input wire clk1,
-	 //input wire clk2,
-	 //input wire clk3,
 	 output wire i2c_sda,
 	 output wire i2c_scl,
 	 output wire hi_muxsel,

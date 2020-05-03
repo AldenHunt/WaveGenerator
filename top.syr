@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.10 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: top.prj
@@ -111,25 +111,27 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sinetable.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sinetable.v" into library work
 Parsing module <sinetable>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/singlecompute.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/ipcore_dir/multiplier.v" into library work
+Parsing module <multiplier>.
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/singlecompute.v" into library work
 Parsing module <singlecompute>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/clockedadd.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/clockedadd.v" into library work
 Parsing module <clockedadd>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/twoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/twoblock.v" into library work
 Parsing module <twoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/fourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/fourblock.v" into library work
 Parsing module <fourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/eightblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/eightblock.v" into library work
 Parsing module <eightblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixteenblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixteenblock.v" into library work
 Parsing module <sixteenblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/thirtytwoblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v" into library work
 Parsing module <thirtytwoblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/sixtyfourblock.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v" into library work
 Parsing module <sixtyfourblock>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/okLibrary.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/okLibrary.v" into library work
 Parsing module <okHost>.
 Parsing module <okCoreHarness>.
 Parsing module <okWireIn>.
@@ -141,11 +143,11 @@ Parsing module <okPipeOut>.
 Parsing module <okBTPipeIn>.
 Parsing module <okBTPipeOut>.
 Parsing module <okWireOR>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/ipcore_dir/two_clk_fifo.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" into library work
 Parsing module <two_clk_fifo>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/controlcombiner.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/controlcombiner.v" into library work
 Parsing module <controlcombiner>.
-Analyzing Verilog file "/home/ise/ise_projects/Thesis/top.v" into library work
+Analyzing Verilog file "/home/ise/ise_projects/WaveGenerator/top.v" into library work
 Parsing module <top>.
 
 =========================================================================
@@ -155,11 +157,11 @@ Parsing module <top>.
 Elaborating module <top>.
 
 Elaborating module <two_clk_fifo>.
-WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/Thesis/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 83: Assignment to fifofull ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/Thesis/top.v" Line 84: Assignment to fifoem ignored, since the identifier is never used
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
-WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/Thesis/okLibrary.v" Line 68: Port BUSY is not connected to this instance
+WARNING:HDLCompiler:1499 - "/home/ise/ise_projects/WaveGenerator/ipcore_dir/two_clk_fifo.v" Line 39: Empty module <two_clk_fifo> remains a black box.
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 81: Assignment to fifofull ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 82: Assignment to fifoem ignored, since the identifier is never used
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 40: Port CLK180 is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/ise/ise_projects/WaveGenerator/okLibrary.v" Line 68: Port BUSY is not connected to this instance
 
 Elaborating module <okHost>.
 
@@ -180,8 +182,8 @@ Elaborating module <FDRE>.
 Elaborating module <OBUF>.
 
 Elaborating module <okCoreHarness>.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 102: Result of 7-bit expression is truncated to fit in 6-bit target.
-WARNING:HDLCompiler:413 - "/home/ise/ise_projects/Thesis/top.v" Line 122: Result of 32-bit expression is truncated to fit in 16-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 100: Result of 7-bit expression is truncated to fit in 6-bit target.
+WARNING:HDLCompiler:413 - "/home/ise/ise_projects/WaveGenerator/top.v" Line 120: Result of 32-bit expression is truncated to fit in 16-bit target.
 
 Elaborating module <controlcombiner>.
 
@@ -200,6 +202,8 @@ Elaborating module <fourblock>.
 Elaborating module <twoblock>.
 
 Elaborating module <singlecompute>.
+
+Elaborating module <multiplier>.
 
 Elaborating module <sinetable>.
 
@@ -222,9 +226,9 @@ Elaborating module <okPipeOut>.
 =========================================================================
 
 Synthesizing Unit <top>.
-    Related source file is "/home/ise/ise_projects/Thesis/top.v".
-INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 75: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 75: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
+    Related source file is "/home/ise/ise_projects/WaveGenerator/top.v".
+INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 73: Output port <full> of the instance <outfifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ise/ise_projects/WaveGenerator/top.v" line 73: Output port <empty> of the instance <outfifo> is unconnected or connected to loadless signal.
     Found 16-bit register for signal <preTime>.
     Found 16-bit register for signal <finishedout>.
     Found 1-bit register for signal <finishedloadin>.
@@ -235,10 +239,10 @@ INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 75: Output port <empt
     Found 1024-bit register for signal <activeoffsets>.
     Found 1024-bit register for signal <activephasewords>.
     Found 6-bit register for signal <currBlock>.
-    Found 6-bit adder for signal <currBlock[5]_GND_1_o_add_4_OUT> created at line 102.
-    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT<15:0>> created at line 122.
-    Found 1-bit tristate buffer for signal <i2c_sda> created at line 58
-    Found 1-bit tristate buffer for signal <i2c_scl> created at line 59
+    Found 6-bit adder for signal <currBlock[5]_GND_1_o_add_4_OUT> created at line 100.
+    Found 16-bit subtractor for signal <GND_1_o_GND_1_o_sub_13_OUT<15:0>> created at line 120.
+    Found 1-bit tristate buffer for signal <i2c_sda> created at line 56
+    Found 1-bit tristate buffer for signal <i2c_scl> created at line 57
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred 3129 D-type flip-flop(s).
@@ -247,7 +251,7 @@ INFO:Xst:3210 - "/home/ise/ise_projects/Thesis/top.v" line 75: Output port <empt
 Unit <top> synthesized.
 
 Synthesizing Unit <okHost>.
-    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
     Set property "IOB = TRUE" for instance <delays[0].fdrein0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout0>.
     Set property "IOB = TRUE" for instance <delays[0].fdreout1>.
@@ -301,7 +305,7 @@ Synthesizing Unit <okHost>.
 Unit <okHost> synthesized.
 
 Synthesizing Unit <controlcombiner>.
-    Related source file is "/home/ise/ise_projects/Thesis/controlcombiner.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/controlcombiner.v".
     Found 1024-bit register for signal <combinedout>.
     Found 1024-bit 64-to-1 multiplexer for signal <blockaddress[5]_signal[15]_wide_mux_1_OUT> created at line 16.
     Summary:
@@ -310,13 +314,13 @@ Synthesizing Unit <controlcombiner>.
 Unit <controlcombiner> synthesized.
 
 Synthesizing Unit <sixtyfourblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/sixtyfourblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sixtyfourblock.v".
     Summary:
 	no macro.
 Unit <sixtyfourblock> synthesized.
 
 Synthesizing Unit <clockedadd>.
-    Related source file is "/home/ise/ise_projects/Thesis/clockedadd.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/clockedadd.v".
     Found 1-bit register for signal <active>.
     Found 16-bit register for signal <sum>.
     Found 16-bit adder for signal <a[15]_b[15]_add_1_OUT> created at line 34.
@@ -326,57 +330,60 @@ Synthesizing Unit <clockedadd>.
 Unit <clockedadd> synthesized.
 
 Synthesizing Unit <thirtytwoblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/thirtytwoblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/thirtytwoblock.v".
     Summary:
 	no macro.
 Unit <thirtytwoblock> synthesized.
 
 Synthesizing Unit <sixteenblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/sixteenblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sixteenblock.v".
     Summary:
 	no macro.
 Unit <sixteenblock> synthesized.
 
 Synthesizing Unit <eightblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/eightblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/eightblock.v".
     Summary:
 	no macro.
 Unit <eightblock> synthesized.
 
 Synthesizing Unit <fourblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/fourblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/fourblock.v".
     Summary:
 	no macro.
 Unit <fourblock> synthesized.
 
 Synthesizing Unit <twoblock>.
-    Related source file is "/home/ise/ise_projects/Thesis/twoblock.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/twoblock.v".
     Summary:
 	no macro.
 Unit <twoblock> synthesized.
 
 Synthesizing Unit <singlecompute>.
-    Related source file is "/home/ise/ise_projects/Thesis/singlecompute.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/singlecompute.v".
+    Found 1-bit register for signal <activemultcoretwo>.
+    Found 1-bit register for signal <activemultcoreone>.
+    Found 1-bit register for signal <activesinereference>.
     Found 16-bit register for signal <totalphase>.
     Found 1-bit register for signal <activeout>.
-    Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_4_OUT> created at line 51.
-    Found 16x10-bit multiplier for signal <n0012> created at line 38.
+    Found 16-bit adder for signal <totalphase[15]_phaseadd[15]_add_3_OUT> created at line 64.
     Summary:
-	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
-	inferred  17 D-type flip-flop(s).
+	inferred  20 D-type flip-flop(s).
 	inferred   2 Multiplexer(s).
 Unit <singlecompute> synthesized.
 
 Synthesizing Unit <sinetable>.
-    Related source file is "/home/ise/ise_projects/Thesis/sinetable.v".
-    Found 4096x10-bit Read Only RAM for signal <result>
+    Related source file is "/home/ise/ise_projects/WaveGenerator/sinetable.v".
+    Found 8-bit register for signal <result>.
+    Found 4096x8-bit Read Only RAM for signal <phase[11]_GND_25_o_wide_mux_1_OUT>
     Summary:
 	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
 Unit <sinetable> synthesized.
 
 Synthesizing Unit <okWireOR>.
-    Related source file is "/home/ise/ise_projects/Thesis/okLibrary.v".
+    Related source file is "/home/ise/ise_projects/WaveGenerator/okLibrary.v".
         N = 9
     Summary:
 	no macro.
@@ -387,18 +394,17 @@ HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 64
- 4096x10-bit single-port Read Only RAM                 : 64
-# Multipliers                                          : 64
- 16x10-bit multiplier                                  : 64
+ 4096x8-bit single-port Read Only RAM                  : 64
 # Adders/Subtractors                                   : 129
  16-bit adder                                          : 127
  16-bit subtractor                                     : 1
  6-bit adder                                           : 1
-# Registers                                            : 267
- 1-bit register                                        : 130
+# Registers                                            : 523
+ 1-bit register                                        : 322
  1024-bit register                                     : 6
  16-bit register                                       : 130
  6-bit register                                        : 1
+ 8-bit register                                        : 64
 # Multiplexers                                         : 134
  1024-bit 64-to-1 multiplexer                          : 3
  16-bit 2-to-1 multiplexer                             : 131
@@ -420,6 +426,8 @@ Reading core <okPipeIn.ngc>.
 Reading core <okPipeOut.ngc>.
 Reading core <okCoreHarness.ngc>.
 Reading core <TFIFO64x8a_64x8b.ngc>.
+Reading core <ipcore_dir/multiplier.ngc>.
+Reading Secure Unit <blk00000001>.
 Loading core <two_clk_fifo> for timing and area information for instance <outfifo>.
 Loading core <okTriggerIn> for timing and area information for instance <nextSequenceTrigger>.
 Loading core <okTriggerOut> for timing and area information for instance <finishedTrigger>.
@@ -435,18 +443,23 @@ Loading core <okPipeIn> for timing and area information for instance <phasewordp
 Loading core <okPipeOut> for timing and area information for instance <outputpipe>.
 Loading core <TFIFO64x8a_64x8b> for timing and area information for instance <core0/a0/cb0>.
 Loading core <okCoreHarness> for timing and area information for instance <core0>.
+Loading core <multiplier> for timing and area information for instance <mult>.
 
 Synthesizing (advanced) Unit <sinetable>.
-INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram_result> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+INFO:Xst:3226 - The RAM <Mram_phase[11]_GND_25_o_wide_mux_1_OUT> will be implemented as a BLOCK RAM, absorbing the following register(s): <result>
     -----------------------------------------------------------------------
-    | ram_type           | Distributed                         |          |
+    | ram_type           | Block                               |          |
     -----------------------------------------------------------------------
     | Port A                                                              |
-    |     aspect ratio   | 4096-word x 10-bit                  |          |
+    |     aspect ratio   | 4096-word x 8-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
     |     weA            | connected to signal <GND>           | high     |
     |     addrA          | connected to signal <phase>         |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to signal <result>        |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 Unit <sinetable> synthesized (advanced).
 
@@ -464,9 +477,7 @@ Advanced HDL Synthesis Report
 
 Macro Statistics
 # RAMs                                                 : 64
- 4096x10-bit single-port distributed Read Only RAM     : 64
-# Multipliers                                          : 64
- 16x10-bit multiplier                                  : 64
+ 4096x8-bit single-port block Read Only RAM            : 64
 # Adders/Subtractors                                   : 63
  16-bit adder                                          : 63
 # Counters                                             : 2
@@ -474,8 +485,8 @@ Macro Statistics
  6-bit up counter                                      : 1
 # Accumulators                                         : 64
  16-bit up loadable accumulator                        : 64
-# Registers                                            : 7366
- Flip-Flops                                            : 7366
+# Registers                                            : 7558
+ Flip-Flops                                            : 7558
 # Multiplexers                                         : 69
  1024-bit 64-to-1 multiplexer                          : 3
  16-bit 2-to-1 multiplexer                             : 66
@@ -485,16 +496,6 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
-INFO:Xst:2261 - The FF/Latch <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> in Unit <sixtyfourblock> is equivalent to the following 63 FFs/Latches, which will be removed : <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout>
-   <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout>
-   <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout>
-   <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout>
-   <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout>
-   <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout>
-   <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout>
-INFO:Xst:2261 - The FF/Latch <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/active> in Unit <sixtyfourblock> is equivalent to the following 31 FFs/Latches, which will be removed : <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/active>
-   <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/add/active>
-   <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/active> 
 WARNING:Xst:1710 - FF/Latch <finishedout_1> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_2> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_3> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -510,14 +511,14 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_12> (wi
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_13> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_14> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <finishedout_15> (without init value) has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-INFO:Xst:2261 - The FF/Latch <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/add/active> in Unit <sixtyfourblock> is equivalent to the following 15 FFs/Latches, which will be removed : <thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/add/active> <thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/add/active> <thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/add/active> <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/add/active>
-   <thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/add/active> <thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/active> 
 
 Optimizing unit <top> ...
 
 Optimizing unit <okHost> ...
 
 Optimizing unit <sixtyfourblock> ...
+
+Optimizing unit <singlecompute> ...
 
 Optimizing unit <controlcombiner> ...
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/sum_10> 
@@ -539,13 +540,45 @@ INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightb
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/add/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/add/sum_12> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/add/sum_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <theBigOne/thirtytwoblockZero/add/sum_14> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/sum_11> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> in Unit <top> is equivalent to the following 63 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activeout>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activeout>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activeout> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activeout>
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/active> in Unit <top> is equivalent to the following 15 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/add/active>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/add/active> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/add/sum_11> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/sum_15> in Unit <top> is equivalent to the following 4 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/add/sum_11> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_10> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoretwo> in Unit <top> is equivalent to the following 63 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoretwo> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoretwo>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoretwo>
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/active> in Unit <top> is equivalent to the following 31 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/add/active>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/add/active>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/active>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/active> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/active> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/add/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/add/sum_12> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_10> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/add/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/add/sum_13> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/add/sum_15> in Unit <top> is equivalent to the following 3 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/add/sum_12> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoreone> in Unit <top> is equivalent to the following 63 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activemultcoreone> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activemultcoreone>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activemultcoreone>
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/add/sum_10> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/add/sum_10> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/add/sum_10> 
@@ -577,6 +610,15 @@ INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eigh
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/add/sum_10> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/add/active> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <theBigOne/thirtytwoblockZero/add/active> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/add/sum_15> in Unit <top> is equivalent to the following FF/Latch, which will be removed : <theBigOne/thirtytwoblockOne/add/sum_14> 
+INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activesinereference> in Unit <top> is equivalent to the following 63 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockOne/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockZero/sixteenblockZero/eightblockZero/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockOne/fourblockOne/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockOne/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockOne/blockZero/activesinereference> <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockOne/activesinereference>
+   <theBigOne/thirtytwoblockZero/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/blockZero/activesinereference>
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockZero/twoblockZero/add/sum_10> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/add/sum_15> in Unit <top> is equivalent to the following 2 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/add/sum_13> 
 INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_15> in Unit <top> is equivalent to the following 5 FFs/Latches, which will be removed : <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_14> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_13> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_12> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_11> <theBigOne/thirtytwoblockOne/sixteenblockOne/eightblockZero/fourblockOne/twoblockZero/add/sum_10> 
@@ -588,7 +630,7 @@ INFO:Xst:2261 - The FF/Latch <theBigOne/thirtytwoblockZero/sixteenblockZero/eigh
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 38.
+Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 16.
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <outfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <outfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <outfifo> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
@@ -614,12 +656,18 @@ INFO:Xst:2260 - The FF/Latch <U0/grf.rf/gl0.rd/grss.rsts/ram_empty_i> in Unit <B
 
 Final Macro Processing ...
 
+Processing Unit <top> :
+	Found 10-bit shift register for signal <theBigOne/add/active>.
+Unit <top> processed.
+
 =========================================================================
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 8019
- Flip-Flops                                            : 8019
+# Registers                                            : 8012
+ Flip-Flops                                            : 8012
+# Shift Registers                                      : 1
+ 10-bit shift register                                 : 1
 
 =========================================================================
 
@@ -642,39 +690,39 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 47347
-#      GND                         : 13
-#      INV                         : 43
+# BELS                             : 15469
+#      GND                         : 77
+#      INV                         : 37
 #      LUT1                        : 64
-#      LUT2                        : 1874
-#      LUT3                        : 999
-#      LUT4                        : 3357
-#      LUT5                        : 9308
-#      LUT6                        : 27049
+#      LUT2                        : 1713
+#      LUT3                        : 104
+#      LUT4                        : 1789
+#      LUT5                        : 6716
+#      LUT6                        : 873
 #      LUT6_2                      : 50
 #      MUXCY                       : 2074
-#      MUXF7                       : 611
-#      VCC                         : 3
+#      MUXF7                       : 3
+#      VCC                         : 67
 #      XORCY                       : 1902
-# FlipFlops/Latches                : 9077
+# FlipFlops/Latches                : 9071
 #      FD                          : 1918
 #      FDC                         : 276
 #      FDCE                        : 220
-#      FDE                         : 3193
+#      FDE                         : 3194
 #      FDP                         : 46
 #      FDPE                        : 10
-#      FDR                         : 3143
+#      FDR                         : 3136
 #      FDRE                        : 261
 #      FDS                         : 8
 #      FDSE                        : 2
-# RAMS                             : 137
+# RAMS                             : 265
 #      RAM128X1S                   : 8
 #      RAM32M                      : 4
 #      RAM64M                      : 2
 #      RAM64X1D                    : 2
-#      RAMB16BWER                  : 121
-# Shift Registers                  : 1
-#      SRLC16E                     : 1
+#      RAMB16BWER                  : 249
+# Shift Registers                  : 2
+#      SRLC16E                     : 2
 # Clock Buffers                    : 2
 #      BUFG                        : 1
 #      BUFGP                       : 1
@@ -699,19 +747,19 @@ Selected Device : 6slx150fgg484-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            9029  out of  184304     4%  
- Number of Slice LUTs:                42789  out of  92152    46%  
-    Number used as Logic:             42744  out of  92152    46%  
-    Number used as Memory:               45  out of  21680     0%  
+ Number of Slice Registers:            9023  out of  184304     4%  
+ Number of Slice LUTs:                11392  out of  92152    12%  
+    Number used as Logic:             11346  out of  92152    12%  
+    Number used as Memory:               46  out of  21680     0%  
        Number used as RAM:               44
-       Number used as SRL:                1
+       Number used as SRL:                2
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:  44144
-   Number with an unused Flip Flop:   35115  out of  44144    79%  
-   Number with an unused LUT:          1355  out of  44144     3%  
-   Number of fully used LUT-FF pairs:  7674  out of  44144    17%  
-   Number of unique control sets:        91
+ Number of LUT Flip Flop pairs used:  11978
+   Number with an unused Flip Flop:    2955  out of  11978    24%  
+   Number with an unused LUT:           586  out of  11978     4%  
+   Number of fully used LUT-FF pairs:  8437  out of  11978    70%  
+   Number of unique control sets:        85
 
 IO Utilization: 
  Number of IOs:                          55
@@ -719,8 +767,8 @@ IO Utilization:
     IOB Flip Flops/Latches:              48
 
 Specific Feature Utilization:
- Number of Block RAM/FIFO:              121  out of    268    45%  
-    Number using Block RAM only:        121
+ Number of Block RAM/FIFO:              249  out of    268    92%  
+    Number using Block RAM only:        249
  Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
  Number of DSP48A1s:                     64  out of    180    35%  
 
@@ -745,7 +793,7 @@ Clock Information:
 -----------------------------------+------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                      | Load  |
 -----------------------------------+------------------------------------------------------------+-------+
-clk1                               | BUFGP                                                      | 5283  |
+clk1                               | BUFGP                                                      | 5406  |
 hi_in<0>                           | DCM_SP:CLK0                                                | 4116  |
 okHI/core0/okCH<1>                 | NONE(okHI/core0/core0/a0/pm0/ram_1k_generate.s6.kcpsm6_rom)| 1     |
 -----------------------------------+------------------------------------------------------------+-------+
@@ -759,7 +807,7 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 16.494ns (Maximum Frequency: 60.627MHz)
+   Minimum period: 10.304ns (Maximum Frequency: 97.050MHz)
    Minimum input arrival time before clock: 7.073ns
    Maximum output required time after clock: 6.317ns
    Maximum combinational path delay: 1.328ns
@@ -770,49 +818,25 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk1'
-  Clock period: 16.494ns (frequency: 60.627MHz)
-  Total number of paths / destination ports: 427591731 / 12272
+  Clock period: 7.883ns (frequency: 126.860MHz)
+  Total number of paths / destination ports: 300246 / 14884
 -------------------------------------------------------------------------
-Delay:               16.494ns (Levels of Logic = 25)
-  Source:            theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/totalphase_11 (FF)
-  Destination:       theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_15 (FF)
+Delay:               7.883ns (Levels of Logic = 1)
+  Source:            finishedloadin (FF)
+  Destination:       activeamps_0 (FF)
   Source Clock:      clk1 rising
   Destination Clock: clk1 rising
 
-  Data Path: theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/totalphase_11 to theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_15
+  Data Path: finishedloadin to activeamps_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q             147   0.525   2.809  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/totalphase_11 (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/totalphase_11)
-     LUT6:I0->O            1   0.254   0.682  theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471950_SW0 (theBigOne_N632)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471950 (theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471949)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471956 (theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471955)
-     LUT6:I5->O            1   0.254   0.682  theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471963 (theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471962)
-     LUT6:I5->O            1   0.254   0.681  theBigOne_thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sinl/Mram_result3471964 (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/sineresult<6>)
-     DSP48A1:A6->M12       1   3.265   1.137  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/Mmult_n0012 (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/n0012<12>)
-     LUT6:I0->O           11   0.254   1.315  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/amp[15]_PWR_22_o_equal_2_o<24>3 (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/amp[15]_PWR_22_o_equal_2_o<24>2)
-     LUT5:I1->O           16   0.254   1.182  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/amp[15]_PWR_22_o_equal_2_o<24>5 (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/blockOne/amp[15]_PWR_22_o_equal_2_o)
-     LUT4:I3->O            1   0.254   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_lut<0> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_lut<0>)
-     MUXCY:S->O            1   0.215   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<0> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<0>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<1> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<1>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<2> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<2>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<3> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<3>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<4> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<4>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<5> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<5>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<6> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<6>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<7> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<7>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<8> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<8>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<9> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<9>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<10> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<10>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<11> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<11>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<12> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<12>)
-     MUXCY:CI->O           1   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<13> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<13>)
-     MUXCY:CI->O           0   0.023   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<14> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_cy<14>)
-     XORCY:CI->O           1   0.206   0.000  theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/Madd_a[15]_b[15]_add_1_OUT_xor<15> (theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/a[15]_b[15]_add_1_OUT<15>)
-     FD:D                      0.074          theBigOne/thirtytwoblockOne/sixteenblockZero/eightblockOne/fourblockZero/twoblockOne/add/sum_15
+     FDR:C->Q           3093   0.525   3.464  finishedloadin (finishedloadin)
+     LUT4:I0->O         3072   0.254   3.181  _n01291 (_n0129)
+     FDR:R                     0.459          activeamps_0
     ----------------------------------------
-    Total                     16.494ns (6.643ns logic, 9.852ns route)
-                                       (40.3% logic, 59.7% route)
+    Total                      7.883ns (1.238ns logic, 6.645ns route)
+                                       (15.7% logic, 84.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'hi_in<0>'
@@ -959,7 +983,7 @@ Clock to Setup on destination clock clk1
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk1           |   16.494|         |         |         |
+clk1           |    7.883|         |         |         |
 hi_in<0>       |    3.423|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -968,7 +992,7 @@ Clock to Setup on destination clock hi_in<0>
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk1           |    4.619|         |         |         |
+clk1           |    4.723|         |         |         |
 hi_in<0>       |   10.304|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -983,15 +1007,15 @@ okHI/core0/okCH<1>|    3.081|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 596.00 secs
-Total CPU time to Xst completion: 590.77 secs
+Total REAL time to Xst completion: 111.00 secs
+Total CPU time to Xst completion: 107.68 secs
  
 --> 
 
 
-Total memory usage is 1073356 kilobytes
+Total memory usage is 690056 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   22 (   0 filtered)
-Number of infos    :   94 (   0 filtered)
+Number of infos    :   97 (   0 filtered)
 

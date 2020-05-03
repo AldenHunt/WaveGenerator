@@ -6,7 +6,7 @@ from numpy.fft import fft, fftshift
 
 MAXARG = 0xFFFF
 SINEMODULES = 64
-wavelist = []
+masterwavelist = []
 
 #Endpoints:
 # 0x01: time input wire
@@ -36,10 +36,10 @@ def sendRowToFPGA(row, dev):
         phaseadd = int(row[i+2*SINEMODULES])  
 
         #Check vals within range
-        if ((amp > MAXARG) | (offset > MAXARG) | (phaseadd > MAXARG)):
+        if ((amp > (MAXARG / 2)) | (amp < (-MAXARG / 2)) | (offset > MAXARG) | (phaseadd > MAXARG)):
             sys.exit("Error at row {}, module {}: Wave arguments must be less than 0xFFFF".format(row, i))
         
-        ampbytes = bytearray(amp.to_bytes(2, byteorder='little'))
+        ampbytes = bytearray(amp.to_bytes(2, byteorder='little', signed="true"))
         offsetbytes = bytearray(offset.to_bytes(2, byteorder='little'))
         phaseaddbytes = bytearray(phaseadd.to_bytes(2, byteorder='little'))
 
@@ -52,6 +52,7 @@ def sendRowToFPGA(row, dev):
 
 #Read a certain number of values from the FPGA (usually equivalent to a multiple of the timestep provided)
 def readOut(num, dev):
+    wavelist = []
     while(True):
         dev.UpdateTriggerOuts()
         if (dev.IsTriggered(0x60, 0x01) == True):
@@ -62,7 +63,7 @@ def readOut(num, dev):
     for i in range(num):
         val = int.from_bytes(buf[2*i:2*i+2], byteorder='little', signed=True)
         wavelist.append(val)
-    print(wavelist[len(wavelist) - num:])
+    masterwavelist.append(wavelist)
 
 #Main func
 def main():
@@ -86,6 +87,7 @@ def main():
         next(reader) #Discard first line (headers)
         firstinputs = next(reader)
         lastTime = sendRowToFPGA(firstinputs, dev)
+        dev.ActivateTriggerIn(0x40, 2)
         dev.ActivateTriggerIn(0x40, 0)
         print("Sent one row of inputs in and triggered")
         
@@ -124,9 +126,13 @@ def main():
 
         #Final plot
         #print(wavelist)
-        plt.plot(wavelist)
-        plt.title("Square Wave Approximation (Using 64 cores)")
-        plt.savefig("FPGASquareFull.png")
+        for i in masterwavelist:
+            plt.plot(i)
+        plt.title("Effect of Different Phase Word Parameters")
+        plt.legend(["Word = 40", "Word = 80", "Word = 120"])
+        plt.xlabel("Clock Cycles @110 MHz")
+        plt.ylabel("Amplitude")
+        plt.savefig("FPGApwdemo.png")
 
 if __name__ == "__main__":
     main()

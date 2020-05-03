@@ -1,9 +1,10 @@
 import csv
+import math
 
 ##################################
 # YOUR DESIRED FILENAME AND ROWS OF VALUES GO HERE
-fileName = 'squarewave32.csv'
-rows = 1
+fileName = 'offsetdemo.csv'
+rows = 3
 ##################################
 
 with open(fileName, mode='w') as newFile:
@@ -23,10 +24,10 @@ with open(fileName, mode='w') as newFile:
         offset.clear()
         pw.clear()
         for j in range(64):
-            if (j < 32):
-                ampVal = int(32000.0/(2*j + 1)) #YOUR FORMULAS FOR AMP, OFFSET, PHASEWORD GO HERE
-                offsetVal = 0
-                pwVal = 20 * (2*j + 1)
+            if (j < 64):
+                ampVal = 10000   #YOUR FORMULAS FOR AMP, OFFSET, PHASEWORD GO HERE
+                offsetVal = 15000 * (1 + i)
+                pwVal = 40
                 amp.append(ampVal)
                 offset.append(offsetVal)
                 pw.append(pwVal)
