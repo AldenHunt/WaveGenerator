@@ -122,24 +122,25 @@ def main():
         #When no more rows from csv to send to FPGA, do one last read
         readOut(lastTime, dev)
 
-        #Final plot
-        plt.plot(wavelist)
-        plt.title("FPGA-Generated Wave")
-        plt.xlabel("Cycles @ 110 MHz")
-        plt.ylabel("Magnitude")
-        plt.savefig("fpgaresult.png")
+        npWavelist = np.array(wavelist)
+        npWavelist = npWavelist / 32000.0
+        
+        # Number of sample points
+        N = len(npWavelist)
+        # sample spacing
+        T = 1.0 / 110000000
+        
+        xf = np.linspace(0.0, 1.0/(2.0*T), N//2)
+        window = np.hanning(len(wavelist))
+        smoothed = npWavelist * window
+        sp = np.fft.fft(smoothed)
+        mag = 20 * np.log10(np.abs(sp))
+        plt.plot(xf[0:4000], mag[0:4000])
+
+        plt.title("Frequencies in 64-core Sawtooth Wave")
+        plt.xlabel("Frequency")
+        plt.ylabel("Magnitude (dB)")
+        plt.savefig("longsawfft.png")
 
 if __name__ == "__main__":
     main()
-
-
-
-
-
-
-
-
-
-  
-
-    

@@ -3,8 +3,8 @@ import math
 
 ##################################
 # YOUR DESIRED FILENAME AND ROWS OF VALUES GO HERE
-fileName = 'offsetdemo.csv'
-rows = 3
+fileName = 'basicsine.csv'
+rows = 1
 ##################################
 
 with open(fileName, mode='w') as newFile:
@@ -25,9 +25,9 @@ with open(fileName, mode='w') as newFile:
         pw.clear()
         for j in range(64):
             if (j < 64):
-                ampVal = 10000   #YOUR FORMULAS FOR AMP, OFFSET, PHASEWORD GO HERE
-                offsetVal = 15000 * (1 + i)
-                pwVal = 40
+                ampVal = 32000  #YOUR FORMULAS FOR AMP, OFFSET, PHASEWORD GO HERE
+                offsetVal = 0
+                pwVal = 128 * (j//16)
                 amp.append(ampVal)
                 offset.append(offsetVal)
                 pw.append(pwVal)
@@ -36,7 +36,7 @@ with open(fileName, mode='w') as newFile:
                 offset.append(0)
                 pw.append(0)
         newrow = amp + offset + pw
-        time = 5000 #YOUR TIME FORMULA GOES HERE
+        time = 4096 #YOUR TIME FORMULA GOES HERE
         newrow.append(time)
         fileWriter.writerow(newrow)
             
