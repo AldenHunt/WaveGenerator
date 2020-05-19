@@ -1,3 +1,0 @@
-vhdtdtfi -lang verilog -prj Thesis -o /home/ise/ise_projects/Thesis/testcompute.tfi -lib work /home/ise/ise_projects/Thesis//testcompute.v -module testcompute -template /opt/Xilinx/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
-vhdtdtfi -lib work /home/ise/ise_projects/Thesis/testcompute.v -lang verilog -prj Thesis -o testcompute.spl -module testcompute -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family aspartan6 testcompute.spl /home/ise/ise_projects/Thesis/testcompute.sym 
