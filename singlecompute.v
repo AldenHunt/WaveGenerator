@@ -30,7 +30,7 @@ module singlecompute(
 	 output reg activeout
     );
 
-	reg activesinereference, activemultcoreone, activemultcoretwo;
+	reg activesinereference, activemultcoreone, activemultcoretwo, activeROMRegOne, activeROMRegTwo;
 	wire signed [7:0] sineresult;
 	wire signed [23:0] interimresult;
 	reg [15:0] totalphase;
@@ -55,8 +55,11 @@ module singlecompute(
 		//This should synthesize to a shift register
 		activeout <= activemultcoretwo;
 		activemultcoretwo <= activemultcoreone;
-		activemultcoreone <= activesinereference;
+		activemultcoreone <= activeROMRegTwo;
+		activeROMRegTwo <= activeROMRegOne;
+		activeROMRegOne <= activesinereference;
 		activesinereference <= activein;
+		
 		
 		if (reset)
 			totalphase <= phaseoffset;
@@ -64,10 +67,11 @@ module singlecompute(
 			totalphase <= totalphase + phaseadd;
 	end
 	
-	sinetable sinl(
-		.phase(totalphase[15:4]),
-		.clk(clk),
-		.result(sineresult)
+	sineblock sinl(
+		.addra(totalphase[15:4]),
+		.clka(clk),
+		.douta(sineresult)
 	);
+
 	
 endmodule
